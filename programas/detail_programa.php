@@ -26,9 +26,16 @@ if (isset($programa) && $programa) : ?>
     <h1><?php echo esc_html($programa->name); ?></h1>
     <p><strong>Área:</strong> <?php echo esc_html($area->name); ?></p>
     <p><?php echo esc_html($programa->description); // Asumiendo que tienes una descripción ?></p>
+
+    <?php if (!empty($programa->image_url)) : ?>
+        <div class="program-image">
+            <img src="<?php echo esc_url($programa->image_url); ?>" alt="<?php echo esc_attr($programa->name); ?>" />
+        </div>
+    <?php endif; ?>
 <?php else : ?>
     <p>Programa no encontrado o no existe en esta área.</p>
 <?php endif; ?>
+
 <?php
 get_footer();
 ?>
