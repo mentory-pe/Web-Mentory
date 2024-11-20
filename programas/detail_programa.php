@@ -2,7 +2,7 @@
 get_header(); // Carga el encabezado del tema (header.php)
 ?>
 
-<!-- Llamar al CSS directamente en la plantilla -->
+<!-- Si es solo para pruebas, puedes dejar el CSS aquí -->
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/general-styles.css" type="text/css">
 
 <?php
@@ -34,6 +34,18 @@ if (isset($programa) && $programa) : ?>
     <?php endif; ?>
 <?php else : ?>
     <p>Programa no encontrado o no existe en esta área.</p>
+<?php endif; ?>
+
+<?php
+// Obtener los docentes asociados al programa
+$docentes = mentory_get_docentes_by_program($programa->id);
+if (!empty($docentes)) : ?>
+    <h3>Docentes</h3>
+    <ul>
+        <?php foreach ($docentes as $docente) : ?>
+            <li><?php echo esc_html($docente->nombre . ' ' . $docente->apellidos); ?></li>
+        <?php endforeach; ?>
+    </ul>
 <?php endif; ?>
 
 <?php
