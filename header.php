@@ -1,38 +1,75 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
+
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php wp_title(''); ?><?php if(wp_title('', false)) { echo ' | '; } ?><?php bloginfo('name'); ?></title>
+    <title>
+        <?php wp_title(''); ?>
+        <?php if(wp_title('', false)) { echo ' | '; } ?>
+        <?php bloginfo('name'); ?>
+    </title>
     <?php wp_head(); ?> <!-- Llama a la cabecera de WordPress (necesario para plugins y funciones) -->
 
     <!-- Llamar al CSS directamente en la plantilla -->
-<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/general-styles.css" type="text/css">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/header.css"
+        type="text/css">
 
 </head>
+
 <body <?php body_class(); ?>>
 
-    <header>
-        <div class="container">
-            <!-- Logo o título del sitio -->
-            <div class="site-logo">
-                <?php if ( has_custom_logo() ) : ?>
-                    <?php the_custom_logo(); ?>
-                <?php else : ?>
-                    <h1><a href="<?php echo esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a></h1>
-                    <p><?php bloginfo('description'); ?></p>
-                <?php endif; ?>
+    <header style="background-color: #ffffff">
+        <div style="" class="header_main">
+            <div class="header_submain">
+                <div class="header_items">
+                    <div class="header_btn_item_img">
+                        <a class="">
+                            <img loading="lazy" id="megaMenu-logo"
+                                src="<?php echo get_template_directory_uri(); ?>/assets/images/header-logomentory.png"
+                                alt="menu_logo">
+                        </a>
+                    </div>
+                    <div class="header_btn_items" id="">
+                        <a href="">
+                            <button class="item__menu">
+                                <span>Inicio</span>
+                            </button>
+                        </a>
+                        <a href="">
+                            <button class="item__menu">
+                                <span>Nosotros</span>
+                            </button>
+                        </a>
+                        <a href="<?php echo home_url('/programas/'); ?>">
+                            <button class="item__menu">
+                                <span>Programas</span>
+                            </button>
+                        </a>
+                        <a href="">
+                            <button class="item__menu">
+                                <span>Masterclass</span>
+                            </button>
+                        </a>
+                        <a href="">
+                            <button class="item__menu">
+                                <span>Mentory in house</span>
+                            </button>
+                        </a>
+                    </div>
+                    <div class="header_subtns" id="">
+                        <a id="">
+                                <img loading="lazy" id="megaMenu-logo"
+                                src="<?php echo get_template_directory_uri(); ?>/assets/images/search.png"
+                                alt="menu_logo">
+                        </a>
+                        <a id="" class="" target="_blank" href="">
+                            <button class="item__aulavirtual">
+                                <span>Aula Virtual</span>
+                            </button>
+                        </a>
+                    </div>
+                </div>
             </div>
-
-            <!-- Menú de navegación principal -->
-            <nav class="main-navigation">
-                <?php
-                    wp_nav_menu(array(
-                        'theme_location' => 'primary', // Ubicación del menú definida en functions.php
-                        'menu_class' => 'nav-menu',    // Clase CSS para el menú
-                        'container' => 'ul'           // Usar un <ul> para el menú
-                    ));
-                ?>
-            </nav>
         </div>
     </header>

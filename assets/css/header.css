@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.header_btn_item_img{
+    margin-right: 5rem;
+}
+.header_main {}
+
+.header_submain {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.header_items {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.header_btn_items {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 3rem;
+}
+
+.item__menu span {
+    font-family: Poppins;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 33px;
+    color: #252641;
+}
+
+
+
+.item__menu {
+    border: none;
+    background: none;
+}
+
+.header_subtns {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-left: 4rem;
+}
+
+.item__aulavirtual {
+    width: 222px;
+    height: 63.03px;
+    border-radius: 10px;
+    background: #CF9B24;
+    border: none;
+}
+
+.item__aulavirtual span {
+    font-family: Poppins;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 33px;
+    letter-spacing: 0.02em;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #FFFFFF;
+}
