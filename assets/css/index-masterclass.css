@@ -1,0 +1,646 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    font-family: Poppins;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+
+
+
+
+/* portada */
+.portada_masterclass {
+    height: 365px;
+    background-image: url('../images/masterclass-index/header-masterclass.png');
+    background-size: cover;
+    /* Ajusta la imagen para cubrir todo el área */
+    background-repeat: no-repeat;
+    /* Evita que la imagen se repita */
+    background-position: center center;
+    /* Centra la imagen en la pantalla */
+}
+
+.portada_masterclass_title {
+    font-family: Poppins;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 66px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+
+
+
+/* cards filtro masterclass  */
+
+
+
+
+
+
+
+
+
+
+/* .masterclass-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin: 0 auto;
+    max-width: 1600px;
+} */
+
+.masterclass_card_img_content {
+    max-width: 340px;
+    height: 100%;
+}
+
+.masterclass_card_img_content img {
+    border-radius: 10px;
+    width: 100%;
+}
+
+/* .masterclass_card_information {
+    padding: 0 1rem;
+} */
+
+.masterclass_card_inf_title {
+    color: #080808;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 500;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 360px;
+}
+
+.masterclass_card_subcont {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+.masterclass_card_item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    font-family: Poppins;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.masterclass_card_teacher {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.master_teacher_content1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.master_teacher_content2_btn {
+    width: 120px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #0E2A46;
+    border: none;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+
+
+
+
+@media(max-width: 1024px) {
+
+    .masterclass-filters {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: stretch;
+        padding: 2rem 0;
+    }
+
+
+
+    .btn_slider {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .btn_slider button {
+        background: #FFFFFF;
+        color: #0E2A46;
+        font-family: Poppins;
+        font-size: 15px;
+        font-weight: 500;
+        text-align: center;
+        padding: 0.5rem 1rem;
+        border-radius: 10px;
+        border: 1px solid #0E2A46;
+    }
+
+
+
+    .portada_masterclass {
+        display: none;
+    }
+
+    .portada_masterclass_movil {
+        height: 100px;
+        background: #ECECEC;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .portada_masterclass_movil_txt {
+        font-family: Poppins;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 30px;
+        text-align: center;
+
+    }
+
+    .masterclass-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+        padding: 2rem 1rem;
+    }
+
+    .masterclass_card_container_item {
+        padding: 0 0.5rem;
+    }
+
+    .masterclass_card {
+        width: 100%;
+        height: 135px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px 0px #00000014;
+    }
+
+    .masterclass_card_img_content {
+        width: 115px;
+        height: 100%;
+        overflow: hidden;
+        /* Recorta el contenido excedente */
+        position: relative;
+        /* Contexto para el contenido */
+    }
+
+    .masterclass_card_img_content img {
+        width: 100%;
+        /* Ocupar todo el ancho */
+        height: 100%;
+        /* Ocupar todo el alto */
+        object-fit: cover;
+        /* Ajusta la imagen sin distorsionarla */
+    }
+
+    .masterclass_card_information {
+        padding: 0.8rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        height: 100%;
+        gap: 0rem;
+    }
+
+    #masterclass_card_item_online {
+        display: none;
+    }
+
+    .masterclass_card_item {
+        gap: 0.5rem;
+        font-family: Poppins;
+        font-size: 10px;
+        font-weight: 500;
+    }
+
+    .master_teacher_name {
+        font-size: 10px;
+        font-weight: 500;
+    }
+
+    .master_teacher_cargo {
+        font-size: 8px;
+        font-weight: 400;
+    }
+
+    .master_teacher_content2_btn {
+        width: 62px;
+        height: 21px;
+        font-size: 9px;
+        font-weight: 500;
+        line-height: 20px;
+    }
+
+    .masterclass_card_teacher {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        gap: 1rem;
+    }
+
+    .master_teacher_content1 {
+        gap: 0.5rem;
+    }
+
+    .masterclass_card_subcont {
+        padding: 0.5rem 0;
+        width: 100%;
+    }
+
+
+    .masterclass_card_inf_title {
+        font-size: 12px;
+        font-weight: 500;
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+
+    .master_teacher_imgcont {
+        width: 25px;
+        height: auto;
+    }
+
+    .master_teacher_imgcont img {
+        width: 100%;
+        height: auto;
+    }
+
+    .masterclass_card_img_content img {
+        border-radius: 10px 0px 0px 10px;
+        width: 100%;
+    }
+
+    .masterclass_section_title {
+        font-size: 20px;
+        font-weight: 500;
+        padding-bottom: 2rem;
+    }
+
+    .masterclass_section_button {
+        display: none;
+    }
+
+    .masterclass_section_main_btn_movil {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .masterclass_section_main_btn_movil button {
+        font-family: Poppins;
+        font-size: 12px;
+        font-weight: 500;
+        text-align: center;
+        width: 100%;
+        max-width: 191px;
+        height: 25px;
+        background: #fffaef;
+        border: 1px dashed #CF9B24;
+        padding: 10px 15px 10px 15px;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .masterclass_section_title_vector {
+        position: absolute;
+        transform: translate(-250px, 26px);
+        width: 120px;
+    }
+
+
+    .masterclass_section_container {
+        padding: 2rem 1.5rem;
+        margin: 0 auto;
+    }
+
+    .my-slider-masterclass .slick-prev {
+
+        left: -20px;
+
+    }
+
+    .my-slider-masterclass .slick-next {
+
+        right: -20px;
+
+    }
+
+
+
+    .masterclass-filters button {
+        background: #FFFFFF;
+        color: #0E2A46;
+        font-family: Poppins;
+        font-size: 15px;
+        font-weight: 500;
+        text-align: center;
+        padding: 0.5rem 1rem;
+        border-radius: 10px;
+        border: 1px solid #0E2A46;
+
+    }
+
+    .masterclass-filters button:active {
+        background: linear-gradient(180deg, #0E2A46 0%, #0E2A46 100%);
+        color: #FFFFFF;
+        font-family: Poppins;
+        font-size: 15px;
+        font-weight: 500;
+        text-align: center;
+        padding: 0.5rem 1rem;
+        border-radius: 10px;
+
+    }
+
+
+
+
+    .filter-btn {
+        background: #FFFFFF;
+        color: #0E2A46;
+        font-family: Poppins;
+        font-size: 15px;
+        font-weight: 500;
+        text-align: center;
+        padding: 0.5rem 1rem;
+        border-radius: 10px;
+        border: 1px solid #0E2A46;
+        cursor: pointer;
+    }
+
+    .filter-btn:hover {
+        background-color: transparent;
+    }
+
+    .filter-btn.active {
+        background: linear-gradient(180deg, #0E2A46 0%, #0E2A46 100%);
+        color: #FFFFFF;
+        font-family: Poppins;
+        font-size: 15px;
+        font-weight: 500;
+        text-align: center;
+        padding: 0.5rem 1rem;
+        border-radius: 10px;
+    }
+
+
+
+
+
+
+}
+
+@media(min-width: 1024px) {
+
+    .masterclass-filters {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        padding: 4rem 0;
+    }
+
+
+
+    .masterclass-filters button {
+        background: #FFFFFF;
+        color: #0E2A46;
+        font-family: Poppins;
+        font-size: 24px;
+        font-weight: 500;
+        text-align: center;
+        padding: 1rem 2rem;
+        border-radius: 10px;
+        border: 1px solid #0E2A46;
+
+    }
+
+    .masterclass-filters button:active {
+        background: linear-gradient(180deg, #0E2A46 0%, #0E2A46 100%);
+        color: #FFFFFF;
+        font-family: Poppins;
+        font-size: 24px;
+        font-weight: 500;
+        text-align: center;
+        padding: 1rem 2rem;
+        border-radius: 10px;
+
+    }
+
+
+
+    .filter-btn {
+        background: #FFFFFF;
+        color: #0E2A46;
+        font-family: Poppins;
+        font-size: 24px;
+        font-weight: 500;
+        text-align: center;
+        padding: 1rem 2rem;
+        border-radius: 10px;
+        border: 1px solid #0E2A46;
+        cursor: pointer;
+    }
+
+    .filter-btn:hover {
+        background-color: transparent;
+    }
+
+    .filter-btn.active {
+        background: linear-gradient(180deg, #0E2A46 0%, #0E2A46 100%);
+        color: #FFFFFF;
+        font-family: Poppins;
+        font-size: 24px;
+        font-weight: 500;
+        text-align: center;
+        padding: 1rem 2rem;
+        border-radius: 10px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+    .masterclass-filters-movil {
+        display: none;
+    }
+
+    .portada_masterclass_movil {
+        display: none;
+    }
+
+    .masterclass-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        margin: 0 auto;
+        max-width: 1600px;
+    }
+
+    .masterclass_card {
+        border: 1px solid #F1F1F1;
+        padding: 1rem;
+        width: 750px;
+        height: 200px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .masterclass_card_img_content {
+        /* max-width: 340px; */
+        width: 100%;
+        height: 190px;
+    }
+
+    .masterclass_card_information {
+        padding: 0 1rem;
+        width: 100%;
+    }
+
+    .master_teacher_imgcont {
+        width: 50px;
+        height: auto;
+    }
+
+    .master_teacher_imgcont img {
+        width: 100%;
+        height: auto;
+    }
+
+
+    .masterclass_card_item {
+        gap: 0.5rem;
+        font-family: Poppins;
+        font-size: 13px;
+        font-weight: 500;
+    }
+
+    .master_teacher_name {
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .master_teacher_cargo {
+        font-size: 12px;
+        font-weight: 400;
+    }
+
+    .master_teacher_content2_btn {
+        width: 120px;
+        height: 40px;
+    }
+
+    .masterclass_card_teacher {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+
+    .master_teacher_content1 {
+        gap: 0.5rem;
+    }
+
+    .masterclass_card_subcont {
+        padding: 1rem 0;
+    }
+
+    .masterclass_card_inf_title {
+        font-size: 16px;
+        font-weight: 500;
+        width: 360px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+
+    .masterclass_card_img_content img {
+        border-radius: 10px;
+        width: 100%;
+        height: 163px;
+        object-fit: cover;
+
+    }
+
+    .masterclass_section_title {
+        font-size: 52px;
+        font-weight: 500;
+    }
+
+    .masterclass_section_main_btn_movil {
+        display: none;
+    }
+
+    .masterclass_section_title_vector {
+        position: absolute;
+        transform: translate(-565px, 65px);
+    }
+
+    .masterclass_section_main_cards {
+        width: 1500px;
+        max-width: 1500px;
+        margin: 0 auto;
+    }
+
+    .masterclass_section_container {
+        padding: 4rem 0;
+        margin: 0 auto;
+        max-width: 1800px;
+    }
+
+}

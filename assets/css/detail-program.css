@@ -1,0 +1,1437 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    font-family: Poppins;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+
+.zona_portada_detail {
+    background: #ECECEC;
+}
+
+
+
+
+.zona_portada_detail_subtitle {
+    font-family: Poppins;
+    text-align: left;
+    color: #CF9B24;
+}
+
+.zona_portada_detail_cards_detail {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    gap: 4rem;
+}
+
+.zona_portada_detail_cards_detail_item {
+    width: 330px;
+    height: 111px;
+    border-radius: 20px;
+    background: #FFFFFF;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 0 2rem;
+}
+
+.zona_portada_detail_cards_detail_item_image {}
+
+.zona_portada_detail_cards_detail_item_txt {}
+
+.zona_portada_detail_cards_detail_item_title {
+    font-family: Poppins;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: left;
+    color: #595959;
+}
+
+.zona_portada_detail_cards_detail_item_fecha {
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: left;
+    color: #545567;
+}
+
+
+.zona_portada_detail_items_imgzone {
+    height: auto;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.zona_portada_detail_items_imgzone img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+
+.zona_portada_detail_items_imgzone::after {
+    content: '';
+    /* Crea la superposición oscura */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    /* Inicialmente transparente */
+    transition: background-color 0.3s ease;
+    /* Transición suave */
+    z-index: 1;
+    /* Asegura que esté encima de la imagen */
+}
+
+.zona_portada_detail_items_imgzone:hover::after {
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Superposición oscura al pasar el mouse */
+}
+
+.zona_portada_detail_items_imgzone .play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 2;
+}
+
+.zona_portada_detail_items_imgzone .play-icon::before {
+    content: '';
+    /* Crea el triángulo del ícono "play" */
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 20px 0 20px 30px;
+    /* Tamaño del triángulo */
+    border-color: transparent transparent transparent #CF9B24;
+    /* Color del triángulo */
+}
+
+.zona_portada_detail_items_imgzone:hover .play-icon {
+    opacity: 1;
+    /* Muestra el ícono al pasar el mouse */
+}
+
+
+/* control de media querys
+ */
+
+@media (max-width:1536px) and (min-width:1024px) {
+    .zona_portada_detail_items_imgzone {
+        width: 800px;
+        max-width: 100%;
+        height: auto;
+        border-radius: 30px;
+        position: relative;
+        display: inline-block;
+        overflow: hidden;
+    }
+
+    .zona_portada_detail_subtitle {
+        font-size: 27px;
+        font-weight: 500;
+        padding-bottom: 2rem;
+    }
+
+}
+
+
+@media(max-width: 1024px) {
+    .zona_portada_detail_items_imgzone {
+        width: 100%;
+        height: auto;
+        position: relative;
+        display: inline-block;
+        overflow: hidden;
+    }
+
+    .zona_portada_detail_container {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-around;
+        align-items: flex-start;
+        padding: 1rem 0;
+    }
+
+    .zona_portada_detail_subtitle {
+        font-size: 14px;
+        font-weight: 500;
+        padding-bottom: 1rem;
+    }
+
+}
+
+
+/* Estilos para pantallas mayores a 1920px */
+@media (min-width: 1536px) {
+    .zona_portada_detail_items_imgzone {
+        width: 800px;
+        max-width: 100%;
+        height: auto;
+        border-radius: 30px;
+        position: relative;
+        display: inline-block;
+        overflow: hidden;
+    }
+
+    .zona_portada_detail_subtitle {
+        font-size: 27px;
+        font-weight: 500;
+        padding-bottom: 2rem;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* segunda zona de detalles 
+ */
+
+/* Botones de los tabs fuera del contenedor principal */
+/* Botones de los tabs fuera del contenedor principal     */
+/* .tab-buttons {
+    display: flex;
+    justify-content: flex-start;
+    max-width: 1800px;
+    margin: 0 auto;
+    align-items: center;
+} */
+
+.tab-button {
+    position: relative;
+    /* Necesario para usar ::after */
+    background-color: #f1f1f1;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-align: center;
+    color: #0E2A46;
+}
+
+.tab-button:hover {
+    background-color: #e2e2e2;
+}
+
+/* Estilo del botón activo */
+.tab-button.active {
+    background-color: #f1f1f1;
+    color: #0E2A46;
+    font-weight: bold;
+    border-color: #247BA0;
+}
+
+.tab-button:focus {
+    outline: none;
+    /* Elimina el borde predeterminado */
+}
+
+/* Borde decorativo solo en el botón activo */
+.tab-button.active::after {
+    content: "";
+    /* Contenido vacío para el pseudo-elemento */
+    position: absolute;
+    bottom: 0;
+    /* Posicionado al fondo del botón */
+    left: 50%;
+    /* Centrado horizontalmente */
+    transform: translateX(-50%);
+    width: 50%;
+    /* Controla el ancho del borde (ajústalo como desees) */
+    height: 3px;
+    /* Altura del borde */
+    background-color: #247BA0;
+    /* Color del borde */
+    border-radius: 2px;
+    /* Opcional: esquinas redondeadas */
+}
+
+/* Contenedor de los tabs */
+.tabs {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+    background-color: white;
+}
+
+/* Contenido de los tabs */
+.tab-content {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Contenido visible */
+.tab-content.active {
+    display: block;
+    opacity: 1;
+}
+
+/* control de media querys
+ */
+
+@media (max-width:1536px) and (min-width:1024px) {
+    .tab-content {
+        padding: 0 2rem;
+    }
+    .tab-button {
+        padding: 2rem;
+        font-size: 24px;
+    }
+
+    .tab-buttons {
+        display: flex;
+        justify-content: flex-start;
+        max-width: 1800px;
+        margin: 0 auto;
+        align-items: center;
+    }
+}
+
+/* Estilos para pantallas mayores a 1920px */
+@media (min-width: 1536px) {
+    .tab-content {
+        padding: 0 4rem;
+    }
+
+    .tab-button {
+        padding: 2rem;
+        font-size: 24px;
+    }
+
+    .tab-buttons {
+        display: flex;
+        justify-content: flex-start;
+        max-width: 1800px;
+        margin: 0 auto;
+        align-items: center;
+    }
+
+}
+
+
+@media(max-width: 1024px) {
+    .tab-content {
+        padding: 0 1rem;
+    }
+
+    .tab-button {
+        position: relative;
+        /* Necesario para usar ::after */
+        padding: 1rem;
+        font-size: 14px;
+    }
+
+    .tab-buttons {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* seccion de detalles  */
+.section_detail {}
+
+.section_detail_container {}
+
+.section_detail_buttons_container {
+    border: 1px solid #b4bde1;
+}
+
+.section_detail_txt_container {}
+
+.section_detail_txt_container_tabitems {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1800px;
+}
+
+.section_detail_txt_container_tabitem {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.section_detail_lateral {
+    width: 386px;
+    height: 743px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* control de media querys
+ */
+
+@media (max-width:1536px) and (min-width:1024px) {}
+
+/* Estilos para pantallas mayores a 1920px */
+@media (min-width: 1536px) {}
+
+/* Laptop estándar (1536px y menores) */
+@media (max-width: 1536px) {}
+
+
+/* Monitores pequeños (1366px y menores) */
+@media (max-width: 1366px) {}
+
+
+@media(max-width: 1024px) {
+    .section_detail_txt_container_tabitem {
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* detail
+ */
+
+.contenttab1 {}
+
+.contenttab1_title {
+    font-family: Poppins;
+    font-weight: 600;
+    text-align: left;
+    color: #0E2A46;
+}
+
+.contenttab1_desc {
+    font-family: Poppins;
+    font-weight: 400;
+    color: #0E2A46;
+}
+
+.contenttab1_aprenderas {}
+
+.contenttab1_aprenderas_title {
+    font-family: Poppins;
+    text-align: left;
+    color: #0E2A46;
+}
+
+
+.contenttab1_aprenderas_txtdetail {
+    color: #0E2A46BD;
+    font-family: Poppins;
+    font-size: 24px;
+    font-weight: 400;
+    text-align: left;
+
+}
+
+.contenttab1_aprenderas_txtdetail li::marker {
+    color: #CF9B24;
+}
+
+
+
+
+
+
+.contenttab1_cert_txtcont {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    background: #f1f3f8;
+}
+
+.contenttab1_cert_txtcont_title {
+    font-family: Poppins;
+    text-align: left;
+    color: #0E2A46;
+}
+
+.contenttab1_cert_txtcont_txt {
+    font-family: Poppins;
+    color: #0E2A46;
+}
+
+/* control de media querys
+ */
+
+@media (max-width:1536px) and (min-width:1024px) {
+    .contenttab1_cert {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 5rem 0;
+    }
+
+    .contenttab1_cert_img {
+        padding: 3rem 1.5rem;
+        background: #dce2ee;
+        border-radius: 24px 0px 0px 24px;
+    }
+
+    .contenttab1_cert_txtcont_title {
+        font-size: 32px;
+        font-weight: 400;
+        line-height: 48px;
+    }
+
+    .contenttab1_cert_txtcont_txt {
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 36px;
+        padding-right: 4rem;
+        text-align: left;
+    }
+
+    .contenttab1_cert_txtcont {
+        padding: 0 2rem;
+        border-radius: 0px 24px 24px 0px;
+    }
+
+    .contenttab1_title {
+        font-size: 36px;
+        padding: 4rem 0;
+    }
+
+    .contenttab1_desc {
+        font-size: 24px;
+        text-align: justify;
+    }
+
+    .contenttab1_aprenderas_txtdetail {
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+    .contenttab1_aprenderas_title {
+        font-size: 36px;
+        font-weight: 600;
+        padding: 4rem 0;
+    }
+
+
+}
+
+/* Estilos para pantallas mayores a 1920px */
+@media (min-width: 1536px) {
+    .contenttab1_cert {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 5rem 0;
+    }
+
+    .contenttab1_cert_img {
+        padding: 3rem 1.5rem;
+        background: #dce2ee;
+        border-radius: 24px 0px 0px 24px;
+    }
+
+    .contenttab1_cert_txtcont_title {
+        font-size: 32px;
+        font-weight: 400;
+        line-height: 48px;
+    }
+
+    .contenttab1_cert_txtcont_txt {
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 36px;
+        padding-right: 4rem;
+        text-align: left;
+    }
+
+    .contenttab1_cert_txtcont {
+        padding: 0 2rem;
+        border-radius: 0px 24px 24px 0px;
+    }
+
+    .contenttab1_title {
+        font-size: 36px;
+        padding: 4rem 0;
+    }
+
+    .contenttab1_desc {
+        font-size: 24px;
+        text-align: justify;
+    }
+
+    .contenttab1_aprenderas_txtdetail {
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+    .contenttab1_aprenderas_title {
+        font-size: 36px;
+        font-weight: 600;
+        padding: 4rem 0;
+    }
+
+}
+
+
+@media(max-width: 1024px) {
+    .contenttab1_cert {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-bottom: 2rem
+    }
+
+    .contenttab1_cert_img {
+        padding: 3rem 2rem;
+        background: #dce2ee;
+        border-radius: 24px 24px 0px 0px;
+    }
+
+    .contenttab1_cert_img img {
+        width: 100%;
+    }
+
+    .contenttab1_cert_txtcont_title {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 21px;
+        padding-bottom: 1rem;
+    }
+
+    .contenttab1_cert_txtcont_txt {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        text-align: justify;
+    }
+
+    .contenttab1_cert_txtcont {
+        padding: 2rem;
+        border-radius: 0px 0px 24px 24px;
+    }
+
+    .contenttab1_title {
+        font-size: 21px;
+        padding: 1rem 0;
+    }
+
+    .contenttab1_desc {
+        font-size: 14px;
+        text-align: justify;
+    }
+
+    .contenttab1_aprenderas_txtdetail {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .contenttab1_aprenderas_title {
+        font-size: 16px;
+        font-weight: 600;
+        padding: 1.5rem 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* contenido del  segundo tab  */
+
+.tap2content {}
+
+.tap2content_subcontainer {}
+
+.tap2content_title {
+    color: #0E2A46;
+    font-family: Poppins;
+    font-size: 36px;
+    font-weight: 600;
+    text-align: left;
+    padding: 3rem 0;
+}
+
+.tap2content_card_container {}
+
+.tap2content_card_title {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+
+.tap2content_card_accordion {
+    padding: 2rem 0rem;
+}
+
+
+
+/* estilos del accordion */
+
+.accordion {
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.accordion-item {
+    border-bottom: 1px solid #ddd;
+}
+
+.accordion-header {
+    padding: 15px 20px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: left;
+
+}
+
+.accordion-header:hover {
+    background-color: #F3F7FB;
+}
+
+.accordion-header.active {
+    background-color: #F3F7FB;
+    color: #000000;
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: left;
+
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 20px;
+    background-color: white;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.accordion-content p {
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+/* Icon for accordion header */
+.accordion-header span {
+    transition: transform 0.3s ease;
+}
+
+.accordion-header.active span {
+    transform: rotate(180deg);
+}
+
+/* control de media querys
+ */
+
+@media (max-width:1536px) and (min-width:1024px) {}
+
+/* Estilos para pantallas mayores a 1920px */
+@media (min-width: 1536px) {}
+
+/* Laptop estándar (1536px y menores) */
+@media (max-width: 1536px) {}
+
+
+/* Monitores pequeños (1366px y menores) */
+@media (max-width: 1366px) {}
+
+
+@media(max-width: 1024px) {
+    .tap2content_title {
+        display: none;
+    }
+
+    .tap2content_card_title {
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* seccion 3 
+ */
+
+.teacher_container {}
+
+.teacher_imginfo {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    padding: 2rem 0;
+    gap: 1rem;
+}
+
+.teacher_txtdesc {
+    font-family: Poppins;
+    font-weight: 400;
+    text-align: justify;
+    color: #0E2A46BD;
+}
+
+.teacher_img {
+
+    /* Ancho máximo del contenedor */
+    width: 100%;
+    /* Altura fija */
+    overflow: hidden;
+    /* Oculta cualquier parte de la imagen que sobresalga */
+    position: relative;
+    /* Asegura que los elementos hijos se posicionen correctamente */
+
+}
+
+.teacher_img img {
+    width: 100%;
+    /* La imagen toma todo el ancho del contenedor */
+    height: 100%;
+    /* La imagen toma toda la altura del contenedor */
+    object-fit: contain;
+    /* Asegura que la imagen rellene el contenedor manteniendo su proporción */
+    object-position: center;
+    /* Centra la imagen dentro del contenedor */
+    display: block;
+    /* Elimina el espacio extra generado por la imagen en línea */
+
+}
+
+.teacher_descdoc_container {
+    display: flex;
+    flex-direction: column;
+    /* Alinea el contenido en columna */
+    justify-content: space-between;
+    /* Distribuye los elementos verticalmente */
+    flex: 1;
+    /* Ocupa el espacio restante del contenedor */
+}
+
+.teacher_descdoc_item {}
+
+.teacher_descdoc_item_subtitle {
+    font-family: Poppins;
+    font-weight: 500;
+    text-align: left;
+    color: #0E2A46;
+}
+
+.teacher_descdoc_item_title {
+    color: #CF9B24;
+    font-family: Poppins;
+    font-size: 36px;
+    font-weight: 500;
+    text-align: left;
+    padding-top: 2.5rem;
+}
+
+.teacher_descdoc_item_cargo {
+    font-family: Poppins;
+    font-size: 24px;
+    font-weight: 400;
+    text-align: left;
+    color: #0E2A46;
+}
+
+/* control de media querys
+ */
+
+@media (max-width:1536px) and (min-width:1024px) {
+    .teacher_descdoc_item_subtitle {
+        font-size: 20px;
+        padding-top: 1rem;
+    }
+
+    .teacher_descdoc_item_title {
+        font-size: 36px;
+        padding-top: 2.5rem;
+    }
+
+    .teacher_descdoc_item_cargo {
+        font-size: 24px;
+    }
+
+    .teacher_img {
+        max-width: 120px;
+        /* El contenedor se adapta al 100% de su contenedor padre */
+        height: 130px;
+
+    }
+
+    .teacher_img {
+        max-width: 350px;
+        /* Ancho máximo del contenedor */
+        height: 305px;
+        /* Altura fija */
+
+    }
+
+    .teacher_txtdesc {
+        font-size: 24px;
+        line-height: 36px;
+    }
+    .teacher_container {
+        padding: 2rem 0;
+    }
+}
+
+/* Estilos para pantallas mayores a 1920px */
+@media (min-width: 1536px) {
+    .teacher_descdoc_item_subtitle {
+        font-size: 20px;
+        padding-top: 1rem;
+    }
+
+    .teacher_descdoc_item_title {
+        font-size: 36px;
+        padding-top: 2.5rem;
+    }
+
+    .teacher_descdoc_item_cargo {
+        font-size: 24px;
+    }
+
+    .teacher_img {
+        max-width: 120px;
+        /* El contenedor se adapta al 100% de su contenedor padre */
+        height: 130px;
+
+    }
+
+    .teacher_img {
+        max-width: 350px;
+        /* Ancho máximo del contenedor */
+        height: 305px;
+        /* Altura fija */
+
+    }
+
+    .teacher_txtdesc {
+        font-size: 24px;
+        line-height: 36px;
+    }
+    .teacher_container {
+        padding: 2rem 0;
+    }
+
+}
+
+/* Laptop estándar (1536px y menores) */
+@media (max-width: 1536px) {}
+
+
+/* Monitores pequeños (1366px y menores) */
+@media (max-width: 1366px) {}
+
+
+@media(max-width: 1024px) {
+
+    .teacher_descdoc_item_subtitle {
+        font-size: 10px;
+        padding-top: 1rem;
+    }
+
+    .teacher_descdoc_item_title {
+        font-size: 15px;
+        padding-top: 0.5rem;
+    }
+
+    .teacher_descdoc_item_cargo {
+        font-size: 10px;
+    }
+
+    .teacher_img {
+        max-width: 120px;
+        /* El contenedor se adapta al 100% de su contenedor padre */
+        height: 130px;
+
+    }
+    .teacher_txtdesc {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .teacher_container {
+        padding: 1rem 0;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* card detalle precio  */
+.detallesprogram_title {
+    font-family: Poppins;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: left;
+    color: #0E2A46;
+    padding: 2rem 0;
+}
+
+.detallesprogram {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.detallesprogram_img {}
+
+.detallesprogram_txt {
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 60px;
+    text-align: left;
+    color: #1B1B1BE5;
+
+}
+
+.detallesprogram_precio {
+    color: #000000;
+    font-family: Poppins;
+    font-size: 32px;
+    font-weight: 500;
+    text-align: left;
+    padding-top: 3rem;
+}
+
+
+
+.section_detail_lateral_items {}
+
+.section_detail_lateral_btn {
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: left;
+    color: #FFFFFF;
+    background: #0E2A46;
+    border-radius: 18px;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.section_detail_lateral_items_part2 a {
+    max-width: 338px;
+    width: 100%;
+}
+
+.section_detail_lateral_txt {
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: left;
+    color: #0E2A46;
+    padding: 3rem 0rem 2rem 0rem;
+}
+
+.section_detail_lateral_img_items {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 1rem;
+}
+
+.section_detail_lateral_items_part2 {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+
+}
+
+
+
+
+
+
+/* zona de responsive 
+
+tamaños a considerar  
+
+- 1366px 100% monitores pequeños aun no movil 
+
+- 1536px 100% laptop estandar
+
+- 1920px 100% monitores grandes 
+
+
+*/
+
+
+
+
+
+
+
+@media (max-width:1536px) and (min-width:1024px) {
+
+    /* zona de portada  */
+    .zona_portada_detail_title {
+        font-family: Poppins;
+        font-size: clamp(47px, 5vw, 67px);
+        font-weight: 600;
+        text-align: left;
+        color: #0E2A46;
+        padding-bottom: 3rem;
+    }
+
+    .zona_portada_detail_container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+        margin: 0 auto;
+        max-width: 1800px;
+        padding: 6rem 0;
+    }
+
+
+    .zona_portada_detail_items {
+        width: 100%;
+        max-width: clamp(350px, 60%, 750px);
+    }
+
+    .section_detail_lateral_items {
+        display: none;
+    }
+
+    .zona_portada_detail_price {
+        display: none;
+    }
+
+    #idtab1, #tab2Container{
+        display: none !important;
+    }
+
+
+}
+
+
+
+/* Estilos para pantallas mayores a 1920px */
+@media (min-width: 1536px) {
+    #idtab1, #tab2Container {
+        display: none !important;
+    }
+    .zona_portada_detail_title {
+        font-family: Poppins;
+        font-size: 67px;
+        font-weight: 600;
+        text-align: left;
+        color: #0E2A46;
+        padding-bottom: 3rem;
+    }
+
+    .zona_portada_detail_container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+        margin: 0 auto;
+        max-width: 1800px;
+        padding: 6rem 0;
+    }
+
+
+    .zona_portada_detail_items {
+        width: 100%;
+        max-width: 750px;
+    }
+
+    .detallesprogram_txt {
+        font-size: 20px;
+        line-height: 60px;
+    }
+
+    .zona_portada_detail_price {
+        display: none;
+    }
+
+
+}
+
+/* Laptop estándar (1536px y menores) */
+@media (max-width: 1536px) {}
+
+
+/* Monitores pequeños (1366px y menores) */
+@media (max-width: 1366px) {}
+
+
+@media(max-width: 1024px) {
+    .zona_portada_detail_cards_detail {
+        display: none;
+    }
+
+    .detallesprogram_txt {
+        font-size: 14px;
+        line-height: 40px;
+    }
+
+    .section_detail_lateral_items {
+        padding-top: 2rem;
+    }
+
+    .zona_portada_detail_items {
+        padding: 1rem 2rem;
+    }
+
+    .zona_portada_detail_price {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 1rem;
+    }
+
+    .zona_portada_detail_price_img {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .zona_portada_detail_title {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 24px;
+        text-align: left;
+    }
+
+}
+
+/* Monitores grandes (1920px y menores)
+@media (max-width: 1920px) {
+
+} */

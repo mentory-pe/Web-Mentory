@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.header_btn_item_img {
+    margin-right: 5rem;
+}
+
+.header_main {}
+
+.header_submain {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.header_items {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.header_btn_items {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 3rem;
+}
+
+.item__menu span {
+    font-family: Poppins;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 33px;
+    color: #252641;
+}
+
+
+
+.item__menu {
+    border: none;
+    background: none;
+}
+
+.header_subtns {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-left: 4rem;
+}
+
+.item__aulavirtual {
+    width: 222px;
+    height: 63.03px;
+    border-radius: 10px;
+    background: #CF9B24;
+    border: none;
+}
+
+.item__aulavirtual span {
+    font-family: Poppins;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 33px;
+    letter-spacing: 0.02em;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #FFFFFF;
+}
+
+
+/* control de media querys  */
+
+/* 
+Rangos de resolución comunes:
+Pantallas pequeñas (móviles): Generalmente, entre 320px y 768px.
+Pantallas medianas (tabletas): Entre 769px y 1024px.
+Pantallas grandes (escritorio): Más de 1024px. 
+
+*/
+
+/* version movil 
+ */
+
+
+
+
+@media (min-width: 1024px) {
+    .header_main_movil {
+        display: none;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1400px) {
+    /* Estilos que se aplican entre 600px y 1200px */
+
+}
+
+
+@media (max-width: 1024px) {
+    #iten_no {
+        display: none;
+    }
+    .header_main {
+        display: none;
+    }
+
+    .header_main_movil {
+        width: 100%;
+        height: 80px;
+        background: #F9FBFF;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 1rem;
+    }
+
+    .header_main_movil_parte1 {
+        max-width: 150px;
+        width: 100%;
+        height: auto;
+    }
+
+    .header_main_movil_parte1 img {
+        width: 100%;
+    }
+
+    .header_main_movil_parte2 {}
+
+    .btn_movil_header_aula,
+    .btn_movil_header_burger {
+        border: none;
+        background: transparent;
+    }
+
+    .btn_movil_header_aula {
+        font-family: Poppins;
+        padding: 0.5rem 1rem;
+        font-size: 14px;
+        font-weight: 500;
+        text-align: center;
+        /* width: 71px;
+        height: 19.64px; */
+        border-radius: 3px;
+        background: #CF9B24;
+        color: #FFFFFF;
+
+    }
+
+
+
+
+
+    /* Contenedor del diálogo oculto por defecto */
+    .dialog-overlay {
+        display: none;
+        /* Oculto inicialmente */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 1000;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        /* Invisible al principio */
+        transition: opacity 0.3s ease-in-out;
+        /* Suaviza la transición */
+    }
+
+    /* Diálogo inicial */
+    .dialog {
+        background: #fff;
+        border-radius: 10px;
+        padding: 20px;
+        width: 100%;
+        height: 100%;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        text-align: center;
+        position: relative;
+        transform: scale(0.8);
+        /* Comienza pequeño */
+        transition: transform 0.3s ease-in-out;
+        /* Suaviza el escalado */
+    }
+
+    /* Mostrar el contenedor */
+    .dialog-overlay.active {
+        display: flex;
+        opacity: 1;
+    }
+
+    /* Diálogo completamente visible */
+    .dialog-overlay.active .dialog {
+        transform: scale(1);
+        /* Escalado completo */
+    }
+
+    .dialog button {
+        border: none;
+        background: none;
+    }
+
+
+    .dialog_btnclose {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        padding: 1rem;
+    }
+
+    .dialog_container {}
+
+
+
+}
