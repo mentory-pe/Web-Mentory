@@ -256,51 +256,8 @@ if (isset($programa) && $programa) : ?>
                                         <div class="tap2content_card_accordion">
 
 
+                                        <?php echo htmlspecialchars_decode($programa->malla_curricular); ?>
 
-                                            <div class="accordion">
-                                                <div class="accordion-item">
-                                                    <div class="accordion-header">
-                                                        <div>Sección 1</div>
-                                                        <span>⮟</span>
-                                                    </div>
-                                                    <div class="accordion-content">
-                                                        <p>Este es el contenido de la primera sección del accordion.
-                                                            Puedes incluir texto, imágenes, o cualquier otro contenido.
-                                                            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                                                            Quisquam id quidem, alias non voluptas quae placeat in
-                                                            nesciunt porro explicabo magnam consequatur vel laboriosam
-                                                            saepe! Ex laborum illum ratione officiis?
-                                                            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                                                            Aliquam, libero. Ipsum quas commodi provident laudantium,
-                                                            alias aut! Quasi labore obcaecati sed consequuntur officiis.
-                                                            Rem iste illo voluptatibus magnam eius id?
-                                                        </p>
-                                                    </div>
-                                                </div>
-
-                                                <div class="accordion-item">
-                                                    <div class="accordion-header">
-                                                        <div>Sección 2</div>
-                                                        <span>⮟</span>
-                                                    </div>
-                                                    <div class="accordion-content">
-                                                        <p>Este es el contenido de la segunda sección del accordion. La
-                                                            altura se ajusta automáticamente al contenido.</p>
-                                                    </div>
-                                                </div>
-
-                                                <div class="accordion-item">
-                                                    <div class="accordion-header">
-                                                        <div>Sección 3</div>
-                                                        <span>⮟</span>
-                                                    </div>
-                                                    <div class="accordion-content">
-
-
-
-                                                    </div>
-                                                </div>
-                                            </div>
 
                                         </div>
                                     </div>

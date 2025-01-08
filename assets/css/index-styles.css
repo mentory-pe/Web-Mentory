@@ -161,11 +161,7 @@ body {
     background: #ffffff;
 }
 
-.area_section {
-    padding: 4rem 0;
-    margin: 0 auto;
-    max-width: 1800px;
-}
+
 
 .area_section_span {
     background-color: #ebf5ff;
@@ -218,6 +214,13 @@ body {
 
 
 @media(max-width: 1024px) {
+
+    .area_section {
+        padding: 4rem 0rem;
+        margin: 0 auto;
+        max-width: 1800px;
+    }
+
     .area_section_title {
         font-size: 20px;
         font-weight: 500;
@@ -279,6 +282,14 @@ body {
 }
 
 @media(min-width: 1024px) {
+
+    .area_section {
+        padding: 4rem 2rem;
+        margin: 0 auto;
+        max-width: 1800px;
+    }
+
+
     .area_section_title {
         font-size: 48px;
         font-weight: 500;
@@ -418,11 +429,12 @@ body {
 } */
 
 .card_program_imgcont {
-    max-width: 344px;
+    max-width: 320px;
+    width: 100%;
 }
 
 .card_program_imgcont img {
-    max-width: 344px;
+    max-width: 320px;
     width: 100%;
 }
 
@@ -622,7 +634,7 @@ body {
 
 @media(min-width: 1024px) {
     .programs_section_container {
-        padding: 4rem 0;
+        padding: 4rem 2rem;
         margin: 0 auto;
         max-width: 1800px;
     }
@@ -675,7 +687,8 @@ body {
     }
 
     .card_program {
-        width: 344px;
+        width: 100%;
+        max-width: 320px;
         height: 446px;
         border-radius: 14px;
         display: flex;
@@ -769,7 +782,12 @@ body {
     display: none !important;
 }
 
-.card_image {}
+.card_image {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
 
 /* .card_image_container {
     width: 165px;
@@ -851,7 +869,7 @@ body {
     .empresas_section_container {
         display: flex;
         align-items: center;
-        padding: 4rem 0;
+        padding: 4rem 2rem;
         margin: 0 auto;
         max-width: 1800px;
         justify-content: space-between;
@@ -865,7 +883,7 @@ body {
 
     .empresas_section_imgs_slide {
         margin: 0 auto;
-        max-width: 900px;
+        max-width: 700px;
     }
 
     .card_image_container {
@@ -877,6 +895,25 @@ body {
         transform: translate(50px, -10px);
         position: absolute;
     }
+
+    .empresas_section_imgs_slide .slick-slider {
+        margin-bottom: 0px;
+    }
+
+    .my-slider-empresas {
+
+        background-image: url('../images/index/flame.png');
+        background-size: cover;
+        /* Ajusta la imagen para cubrir todo el área */
+        background-repeat: no-repeat;
+        /* Evita que la imagen se repita */
+        background-position: center center;
+        /* Centra la imagen en la pantalla */
+        background: #fdfaf3;
+        padding: 2rem;
+        border-radius: 15px;
+    }
+
 
 }
 
@@ -1246,11 +1283,22 @@ body {
     .masterclass_card {
         border: 1px solid #F1F1F1;
         padding: 1rem;
-        width: 750px;
+        width: 100%;
         display: flex;
         flex-direction: row;
         align-items: center;
     }
+
+    .master_teacher_imgcont {
+        width: 50px;
+        height: auto;
+    }
+
+    .master_teacher_imgcont img {
+        width: 100%;
+        height: auto;
+    }
+
 
     .masterclass_card_img_content {
         max-width: 340px;
@@ -1309,6 +1357,7 @@ body {
         border-radius: 10px;
         width: 100%;
         height: 163px;
+        object-fit: cover;
     }
 
     .masterclass_section_title {
@@ -1326,13 +1375,13 @@ body {
     }
 
     .masterclass_section_main_cards {
-        width: 1500px;
+        width: 100%;
         max-width: 1500px;
         margin: 0 auto;
     }
 
     .masterclass_section_container {
-        padding: 4rem 0;
+        padding: 4rem 2rem;
         margin: 0 auto;
         max-width: 1800px;
     }
@@ -1504,7 +1553,8 @@ body {
     }
 
     .card_testimonio {
-        width: 418px;
+        width: 100%;
+        max-width: 380px;
         height: 507px;
     }
 
@@ -1622,6 +1672,10 @@ body {
 @media(min-width: 1024px) {
     .testimonios_zone_slide .slick-prev {
         left: -50px;
+    }
+
+    .slider-testimonio-container {
+        padding: 0 2rem;
     }
 }
 
@@ -2210,7 +2264,7 @@ body {
 
 @media(min-width: 1024px) {
     .logros_zone_container {
-        padding: 4rem 0;
+        padding: 4rem 2rem;
         margin: 0 auto;
         max-width: 1800px;
         display: flex;

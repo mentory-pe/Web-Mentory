@@ -157,7 +157,7 @@ $masterclasses = $wpdb->get_results($query);
                                             
                                         </div>
                                         <div class="master_teacher_content2">
-                                            <a href="<?php echo esc_html($masterclass->link_inscripcion); ?>">
+                                            <a href="<?php echo home_url('/masterclass/'. $masterclass->slugMasterclass); ?>">
                                                 <button class="master_teacher_content2_btn">
                                                     ASISTIR
                                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/arrow.png"

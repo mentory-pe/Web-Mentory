@@ -53,7 +53,7 @@
                         </a>
                         <a href="">
                             <button class="item__menu">
-                                <span>Mentory in house</span>
+                                <span>Para Empresas</span>
                             </button>
                         </a>
                     </div>

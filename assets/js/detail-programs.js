@@ -34,7 +34,7 @@ accordionHeaders.forEach(header => {
     if (header.classList.contains('active')) {
       // Expandir el contenido
       content.style.maxHeight = content.scrollHeight + 'px';
-      content.style.padding = '10px 20px';
+      content.style.padding = '0px 20px';
     } else {
       // Colapsar el contenido
       content.style.maxHeight = '0';

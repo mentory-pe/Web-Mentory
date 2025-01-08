@@ -531,7 +531,8 @@ body {
     .masterclass_card {
         border: 1px solid #F1F1F1;
         padding: 1rem;
-        width: 750px;
+        max-width: 750px;
+        width: 100%;
         height: 200px;
         display: flex;
         flex-direction: row;

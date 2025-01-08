@@ -124,7 +124,7 @@ $page_title = is_search() ? 'Resultados de búsqueda: ' . get_search_query() : g
                                     <?php echo esc_html($program->name); ?>
                                 </div>
                                 <div class="card_program_txt_desc">
-                                    Este programa internacional de alta especialización te brindará conocimientos y habilidades en el diagnóstico y mantenimiento de transformadores.
+                                <?php echo esc_html($program->descripcion); ?>
                                 </div>
                                 <div class="card_program_btn_cont">
                                     <a href="<?php echo esc_url($program_url); ?>">

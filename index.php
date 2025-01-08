@@ -220,15 +220,15 @@ get_header(); // Carga el encabezado del tema (header.php)
                                             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/card_program1.png"
                                                 alt="">
                                         </div>
-                                        <div>
-                                            6 Modulos
+                                        <div> 
+                                            <?php echo esc_attr($program->nro_modulos); ?> Modulos
                                         </div>
                                     </div>
                                     <div class="card_program_datos_item">
                                         <div><img
                                                 src="<?php echo get_template_directory_uri(); ?>/assets/images/index/card_program2.png"
                                                 alt=""></div>
-                                        <div>40 horas</div>
+                                        <div><?php echo esc_attr($program->nro_horas); ?></div>
 
                                     </div>
                                     <div class="card_program_datos_item">
@@ -243,9 +243,7 @@ get_header(); // Carga el encabezado del tema (header.php)
                                     <?php echo esc_html($program->name); ?>
                                 </div>
                                 <div class="card_program_txt_desc">
-                                    Este programa internacional de alta especialización te brindará conocimientos y
-                                    habilidades en
-                                    el diagnóstico y mantenimiento de transformadores
+                                    <?php echo esc_html($program->descripcion); ?>
                                 </div>
                                 <div class="card_program_datos_movile">
                                     <div class="card_program_datos_movile_card">
@@ -362,6 +360,9 @@ get_header(); // Carga el encabezado del tema (header.php)
                 // Obtener todas las masterclass de la base de datos
                 global $wpdb;
                 $table_name = $wpdb->prefix . 'masterclass';
+                $table_relation = $wpdb->prefix . 'masterclass_docente';
+                $table_docente = $wpdb->prefix . 'docentes';
+
                 $masterclasses = $wpdb->get_results("SELECT * FROM $table_name");
 
                 if ($masterclasses) :
@@ -404,16 +405,36 @@ get_header(); // Carga el encabezado del tema (header.php)
                                         </div>
                                     </div>
                                     <div class="masterclass_card_teacher">
-                                        <div class="master_teacher_content1">
-                                            <div class="master_teacher_imgcont">
-                                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/example_teacher.png"
-                                                    alt="">
-                                            </div>
-                                            <div class="master_teacher_txtinfo">
-                                                <div class="master_teacher_name">Ing. David Yactayo</div>
-                                                <div class="master_teacher_cargo">Expositor</div>
-                                            </div>
-                                        </div>
+                                    <?php
+                                        // Obtener los docentes relacionados con la masterclass
+                                        $docentes = $wpdb->get_results($wpdb->prepare(
+                                            "SELECT d.nombre, d.apellidos, d.cargo, d.foto_url
+                                            FROM $table_docente AS d
+                                            INNER JOIN $table_relation AS r ON d.id = r.docente_id
+                                            WHERE r.masterclass_id = %d",
+                                            $masterclass->id
+                                        ));
+
+                                        if ($docentes) :
+                                            foreach ($docentes as $docente) : ?>
+                                                <div class="master_teacher_content1">
+                                                    <div class="master_teacher_imgcont">
+                                                        <img style="border-radius: 50%;" src="<?php echo esc_url($docente->foto_url); ?>" alt="">
+                                                    </div>
+                                                    <div class="master_teacher_txtinfo">
+                                                        <div class="master_teacher_name">
+                                                            <?php echo esc_html($docente->nombre . ' ' . $docente->apellidos); ?>
+                                                        </div>
+                                                        <div class="master_teacher_cargo">
+                                                            <?php echo esc_html($docente->cargo); ?>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            <?php endforeach;
+                                        else : ?>
+                                            <p>No hay docentes asociados a esta masterclass.</p>
+                                        <?php endif; ?>
+
                                         <div class="master_teacher_content2">
                                             <a href="<?php echo esc_html($masterclass->link_inscripcion); ?>">
                                                 <button class="master_teacher_content2_btn">
@@ -616,176 +637,180 @@ get_header(); // Carga el encabezado del tema (header.php)
                         alt="">
                     TESTIMONIOS DE NUESTROS ALUMNOS
                 </div>
-                <div class="my-slider-alumnos">
-                    <div>
-                        <div class="card_testimonio">
-                            <div class="card_testimonio_img">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/Desktop.png"
-                                    alt="">
-                            </div>
-                            <div class="card_testimonio_personal">
-                                <div class="card_testimonio_personal_img">
-                                    <div><img
-                                            src="<?php echo get_template_directory_uri(); ?>/assets/images/index/teacher_example.png"
-                                            alt=""></div>
-                                    <div class="card_testimonio_personal_txtinfo">
-                                        <div class="card_testimonio_personal_txtinfo_title">Alice Ruiz</div>
-                                        <div class="card_testimonio_personal_txtinfo_subtxt">Ingeniero</div>
-                                    </div>
-                                </div>
-                                <div class="card_testimonio_personal_comilla">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/comillas.png"
+
+                <div class="slider-testimonio-container">
+                    <div class="my-slider-alumnos">
+                        <div>
+                            <div class="card_testimonio">
+                                <div class="card_testimonio_img">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/Desktop.png"
                                         alt="">
                                 </div>
-                            </div>
-                            <div class="card_testimonio_txt">
-                                Ut pharetra ipsum nec leo blandit, sit amet tincidunt eros pharetra. Nam sed imperdiet
-                                turpis. In hac habitasse platea dictumst.
-                                Praesent nulla massa, hendrerit vestibulum gravida in, feugiat auctor felis.
+                                <div class="card_testimonio_personal">
+                                    <div class="card_testimonio_personal_img">
+                                        <div><img
+                                                src="<?php echo get_template_directory_uri(); ?>/assets/images/index/teacher_example.png"
+                                                alt=""></div>
+                                        <div class="card_testimonio_personal_txtinfo">
+                                            <div class="card_testimonio_personal_txtinfo_title">Alice Ruiz</div>
+                                            <div class="card_testimonio_personal_txtinfo_subtxt">Ingeniero</div>
+                                        </div>
+                                    </div>
+                                    <div class="card_testimonio_personal_comilla">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/comillas.png"
+                                            alt="">
+                                    </div>
+                                </div>
+                                <div class="card_testimonio_txt">
+                                    Ut pharetra ipsum nec leo blandit, sit amet tincidunt eros pharetra. Nam sed imperdiet
+                                    turpis. In hac habitasse platea dictumst.
+                                    Praesent nulla massa, hendrerit vestibulum gravida in, feugiat auctor felis.
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div>
-                        <div class="card_testimonio">
-                            <div class="card_testimonio_img">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/Desktop.png"
-                                    alt="">
-                            </div>
-                            <div class="card_testimonio_personal">
-                                <div class="card_testimonio_personal_img">
-                                    <div><img
-                                            src="<?php echo get_template_directory_uri(); ?>/assets/images/index/teacher_example.png"
-                                            alt=""></div>
-                                    <div class="card_testimonio_personal_txtinfo">
-                                        <div class="card_testimonio_personal_txtinfo_title">Alice Ruiz</div>
-                                        <div class="card_testimonio_personal_txtinfo_subtxt">Ingeniero</div>
-                                    </div>
-                                </div>
-                                <div class="card_testimonio_personal_comilla">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/comillas.png"
+                        <div>
+                            <div class="card_testimonio">
+                                <div class="card_testimonio_img">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/Desktop.png"
                                         alt="">
                                 </div>
-                            </div>
-                            <div class="card_testimonio_txt">
-                                Ut pharetra ipsum nec leo blandit, sit amet tincidunt eros pharetra. Nam sed imperdiet
-                                turpis. In hac habitasse platea dictumst.
-                                Praesent nulla massa, hendrerit vestibulum gravida in, feugiat auctor felis.
+                                <div class="card_testimonio_personal">
+                                    <div class="card_testimonio_personal_img">
+                                        <div><img
+                                                src="<?php echo get_template_directory_uri(); ?>/assets/images/index/teacher_example.png"
+                                                alt=""></div>
+                                        <div class="card_testimonio_personal_txtinfo">
+                                            <div class="card_testimonio_personal_txtinfo_title">Alice Ruiz</div>
+                                            <div class="card_testimonio_personal_txtinfo_subtxt">Ingeniero</div>
+                                        </div>
+                                    </div>
+                                    <div class="card_testimonio_personal_comilla">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/comillas.png"
+                                            alt="">
+                                    </div>
+                                </div>
+                                <div class="card_testimonio_txt">
+                                    Ut pharetra ipsum nec leo blandit, sit amet tincidunt eros pharetra. Nam sed imperdiet
+                                    turpis. In hac habitasse platea dictumst.
+                                    Praesent nulla massa, hendrerit vestibulum gravida in, feugiat auctor felis.
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div>
-                        <div class="card_testimonio">
-                            <div class="card_testimonio_img">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/Desktop.png"
-                                    alt="">
-                            </div>
-                            <div class="card_testimonio_personal">
-                                <div class="card_testimonio_personal_img">
-                                    <div><img
-                                            src="<?php echo get_template_directory_uri(); ?>/assets/images/index/teacher_example.png"
-                                            alt=""></div>
-                                    <div class="card_testimonio_personal_txtinfo">
-                                        <div class="card_testimonio_personal_txtinfo_title">Alice Ruiz</div>
-                                        <div class="card_testimonio_personal_txtinfo_subtxt">Ingeniero</div>
-                                    </div>
-                                </div>
-                                <div class="card_testimonio_personal_comilla">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/comillas.png"
+                        <div>
+                            <div class="card_testimonio">
+                                <div class="card_testimonio_img">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/Desktop.png"
                                         alt="">
                                 </div>
-                            </div>
-                            <div class="card_testimonio_txt">
-                                Ut pharetra ipsum nec leo blandit, sit amet tincidunt eros pharetra. Nam sed imperdiet
-                                turpis. In hac habitasse platea dictumst.
-                                Praesent nulla massa, hendrerit vestibulum gravida in, feugiat auctor felis.
+                                <div class="card_testimonio_personal">
+                                    <div class="card_testimonio_personal_img">
+                                        <div><img
+                                                src="<?php echo get_template_directory_uri(); ?>/assets/images/index/teacher_example.png"
+                                                alt=""></div>
+                                        <div class="card_testimonio_personal_txtinfo">
+                                            <div class="card_testimonio_personal_txtinfo_title">Alice Ruiz</div>
+                                            <div class="card_testimonio_personal_txtinfo_subtxt">Ingeniero</div>
+                                        </div>
+                                    </div>
+                                    <div class="card_testimonio_personal_comilla">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/comillas.png"
+                                            alt="">
+                                    </div>
+                                </div>
+                                <div class="card_testimonio_txt">
+                                    Ut pharetra ipsum nec leo blandit, sit amet tincidunt eros pharetra. Nam sed imperdiet
+                                    turpis. In hac habitasse platea dictumst.
+                                    Praesent nulla massa, hendrerit vestibulum gravida in, feugiat auctor felis.
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div>
-                        <div class="card_testimonio">
-                            <div class="card_testimonio_img">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/Desktop.png"
-                                    alt="">
-                            </div>
-                            <div class="card_testimonio_personal">
-                                <div class="card_testimonio_personal_img">
-                                    <div><img
-                                            src="<?php echo get_template_directory_uri(); ?>/assets/images/index/teacher_example.png"
-                                            alt=""></div>
-                                    <div class="card_testimonio_personal_txtinfo">
-                                        <div class="card_testimonio_personal_txtinfo_title">Alice Ruiz</div>
-                                        <div class="card_testimonio_personal_txtinfo_subtxt">Ingeniero</div>
-                                    </div>
-                                </div>
-                                <div class="card_testimonio_personal_comilla">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/comillas.png"
+                        <div>
+                            <div class="card_testimonio">
+                                <div class="card_testimonio_img">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/Desktop.png"
                                         alt="">
                                 </div>
-                            </div>
-                            <div class="card_testimonio_txt">
-                                Ut pharetra ipsum nec leo blandit, sit amet tincidunt eros pharetra. Nam sed imperdiet
-                                turpis. In hac habitasse platea dictumst.
-                                Praesent nulla massa, hendrerit vestibulum gravida in, feugiat auctor felis.
+                                <div class="card_testimonio_personal">
+                                    <div class="card_testimonio_personal_img">
+                                        <div><img
+                                                src="<?php echo get_template_directory_uri(); ?>/assets/images/index/teacher_example.png"
+                                                alt=""></div>
+                                        <div class="card_testimonio_personal_txtinfo">
+                                            <div class="card_testimonio_personal_txtinfo_title">Alice Ruiz</div>
+                                            <div class="card_testimonio_personal_txtinfo_subtxt">Ingeniero</div>
+                                        </div>
+                                    </div>
+                                    <div class="card_testimonio_personal_comilla">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/comillas.png"
+                                            alt="">
+                                    </div>
+                                </div>
+                                <div class="card_testimonio_txt">
+                                    Ut pharetra ipsum nec leo blandit, sit amet tincidunt eros pharetra. Nam sed imperdiet
+                                    turpis. In hac habitasse platea dictumst.
+                                    Praesent nulla massa, hendrerit vestibulum gravida in, feugiat auctor felis.
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div>
-                        <div class="card_testimonio">
-                            <div class="card_testimonio_img">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/Desktop.png"
-                                    alt="">
-                            </div>
-                            <div class="card_testimonio_personal">
-                                <div class="card_testimonio_personal_img">
-                                    <div><img
-                                            src="<?php echo get_template_directory_uri(); ?>/assets/images/index/teacher_example.png"
-                                            alt=""></div>
-                                    <div class="card_testimonio_personal_txtinfo">
-                                        <div class="card_testimonio_personal_txtinfo_title">Alice Ruiz</div>
-                                        <div class="card_testimonio_personal_txtinfo_subtxt">Ingeniero</div>
-                                    </div>
-                                </div>
-                                <div class="card_testimonio_personal_comilla">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/comillas.png"
+                        <div>
+                            <div class="card_testimonio">
+                                <div class="card_testimonio_img">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/Desktop.png"
                                         alt="">
                                 </div>
-                            </div>
-                            <div class="card_testimonio_txt">
-                                Ut pharetra ipsum nec leo blandit, sit amet tincidunt eros pharetra. Nam sed imperdiet
-                                turpis. In hac habitasse platea dictumst.
-                                Praesent nulla massa, hendrerit vestibulum gravida in, feugiat auctor felis.
+                                <div class="card_testimonio_personal">
+                                    <div class="card_testimonio_personal_img">
+                                        <div><img
+                                                src="<?php echo get_template_directory_uri(); ?>/assets/images/index/teacher_example.png"
+                                                alt=""></div>
+                                        <div class="card_testimonio_personal_txtinfo">
+                                            <div class="card_testimonio_personal_txtinfo_title">Alice Ruiz</div>
+                                            <div class="card_testimonio_personal_txtinfo_subtxt">Ingeniero</div>
+                                        </div>
+                                    </div>
+                                    <div class="card_testimonio_personal_comilla">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/comillas.png"
+                                            alt="">
+                                    </div>
+                                </div>
+                                <div class="card_testimonio_txt">
+                                    Ut pharetra ipsum nec leo blandit, sit amet tincidunt eros pharetra. Nam sed imperdiet
+                                    turpis. In hac habitasse platea dictumst.
+                                    Praesent nulla massa, hendrerit vestibulum gravida in, feugiat auctor felis.
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div>
-                        <div class="card_testimonio">
-                            <div class="card_testimonio_img">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/Desktop.png"
-                                    alt="">
-                            </div>
-                            <div class="card_testimonio_personal">
-                                <div class="card_testimonio_personal_img">
-                                    <div><img
-                                            src="<?php echo get_template_directory_uri(); ?>/assets/images/index/teacher_example.png"
-                                            alt=""></div>
-                                    <div class="card_testimonio_personal_txtinfo">
-                                        <div class="card_testimonio_personal_txtinfo_title">Alice Ruiz</div>
-                                        <div class="card_testimonio_personal_txtinfo_subtxt">Ingeniero</div>
-                                    </div>
-                                </div>
-                                <div class="card_testimonio_personal_comilla">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/comillas.png"
+                        <div>
+                            <div class="card_testimonio">
+                                <div class="card_testimonio_img">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/Desktop.png"
                                         alt="">
                                 </div>
-                            </div>
-                            <div class="card_testimonio_txt">
-                                Ut pharetra ipsum nec leo blandit, sit amet tincidunt eros pharetra. Nam sed imperdiet
-                                turpis. In hac habitasse platea dictumst.
-                                Praesent nulla massa, hendrerit vestibulum gravida in, feugiat auctor felis.
+                                <div class="card_testimonio_personal">
+                                    <div class="card_testimonio_personal_img">
+                                        <div><img
+                                                src="<?php echo get_template_directory_uri(); ?>/assets/images/index/teacher_example.png"
+                                                alt=""></div>
+                                        <div class="card_testimonio_personal_txtinfo">
+                                            <div class="card_testimonio_personal_txtinfo_title">Alice Ruiz</div>
+                                            <div class="card_testimonio_personal_txtinfo_subtxt">Ingeniero</div>
+                                        </div>
+                                    </div>
+                                    <div class="card_testimonio_personal_comilla">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/comillas.png"
+                                            alt="">
+                                    </div>
+                                </div>
+                                <div class="card_testimonio_txt">
+                                    Ut pharetra ipsum nec leo blandit, sit amet tincidunt eros pharetra. Nam sed imperdiet
+                                    turpis. In hac habitasse platea dictumst.
+                                    Praesent nulla massa, hendrerit vestibulum gravida in, feugiat auctor felis.
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
