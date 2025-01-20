@@ -40,7 +40,7 @@ $masterclasses = $wpdb->get_results($query);
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/index-masterclass.css" type="text/css">
 
 
-<section>
+<section class="main_portada_masterclass">
     <div class="portada_masterclass">
     </div>
 

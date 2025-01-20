@@ -11,17 +11,17 @@ body {
 
 .encabezado_zone {}
 
-.encabezado_zone_container {
+/* .encabezado_zone_container {
     background: #ECECEC;
-}
+} */
 
-.encabezado_zone_subcontainer {
+/* .encabezado_zone_subcontainer {
     max-width: 1800px;
     margin: 0 auto;
     padding: 2rem 0;
-}
+} */
 
-.encabezado_zone_subtitle {
+/* .encabezado_zone_subtitle {
     font-family: Poppins;
     font-size: 27px;
     font-weight: 500;
@@ -38,7 +38,7 @@ body {
     text-align: left;
     color: #CF9B24;
     padding: 2rem 0;
-}
+} */
 
 .encabezado_zone_items {
     display: flex;
@@ -67,22 +67,21 @@ body {
     width: 100%;
 }
 
-.encabezado_zone_form_maincontainer {
+/* .encabezado_zone_form_maincontainer {
     display: flex;
     flex-direction: column;
     gap: 2rem;
     padding-right: 2rem;
+} */
 
-}
 
-
-.encabezado_zone_form_container {
+/* .encabezado_zone_form_container {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 2rem;
-}
+} */
 
 .encabezado_zone_form_lado {
     width: 100%;
@@ -107,6 +106,7 @@ body {
     height: 50px;
     border-radius: 10px;
     border: 1px solid #F3F7FB;
+    padding: 0.5rem 1.5rem;
 
 
 }
@@ -126,6 +126,134 @@ body {
 }
 
 
+@media(max-width: 1024px) {
+
+    .portada_masterclass_movil {
+        padding-top: 5rem;
+    }
+
+    .encabezado_zone {
+        background: #FFFFFF;
+        padding-top: 5rem;
+    }
+
+    .encabezado_zone_container {
+        background: #FFFFFF;
+    }
+
+
+    .encabezado_zone_img {
+        display: none;
+    }
+
+    .encabezado_zone_img_movil img {
+        width: 100%;
+    }
+
+    .encabezado_zone_subcontainer {}
+
+    .encabezado_zone_subtitle {
+        text-align: left;
+        color: #CF9B24;
+        font-family: Poppins;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 32px;
+        padding: 1rem 1rem;
+    }
+
+    .encabezado_zone_title {
+        font-family: Poppins;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: normal;
+        text-align: left;
+        color: #0A033C;
+        padding: 0 1rem;
+    }
+
+    .encabezado_zone_form_container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        margin: 0 1rem;
+        background: #f7f3f3;
+        box-shadow: 0px 6px 20px 0px #0000000D;
+    }
+
+    .encabezado_zone_form_maincontainer {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: center;
+    }
+
+    .btn_send {
+        margin: 2rem 1rem;
+    }
+
+
+}
+
+@media(min-width: 1024px) {
+
+    .encabezado_zone {
+        padding-top: 8rem;
+    }
+
+
+    .encabezado_zone_container {
+        background: #ECECEC;
+    }
+
+    .encabezado_zone_img_movil {
+        display: none;
+    }
+
+    .encabezado_zone_subcontainer {
+        max-width: 1800px;
+        margin: 0 auto;
+        padding: 2rem 0;
+    }
+
+    .encabezado_zone_subtitle {
+        font-family: Poppins;
+        font-size: 27px;
+        font-weight: 500;
+        line-height: 32px;
+        text-align: left;
+        color: #CF9B24;
+    }
+
+    .encabezado_zone_title {
+        font-family: Poppins;
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 32px;
+        text-align: left;
+        color: #CF9B24;
+        padding: 2rem 0;
+    }
+
+    .encabezado_zone_form_container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .encabezado_zone_form_maincontainer {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding-right: 2rem;
+    }
+
+}
+
 
 
 
@@ -142,22 +270,24 @@ body {
 
 /* segunda zona */
 
-.datos {}
+/* .datos {
+    padding: 4rem 0;
+} */
 
 .datos_container {
-    max-width: 1300px;
+    max-width: 1450px;
     margin: 0 auto;
     padding: 2rem 0;
 }
 
-.datos_title {
+/* .datos_title {
     font-family: Poppins;
     font-size: 36px;
     font-weight: 600;
     line-height: 21px;
     text-align: left;
     color: #0E2A46;
-}
+} */
 
 .datos_sections {
     display: flex;
@@ -166,20 +296,26 @@ body {
     justify-content: space-between;
 }
 
-.datos_masterclass {
+/* .datos_masterclass {
     display: flex;
     flex-direction: column;
     align-items: stretch;
     padding: 2rem 0;
     gap: 1rem;
     width: 100%;
-}
+} */
 
-.datos_masterclass_master_section_one {
+/* .datos_masterclass_master_section_one {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-}
+    max-width: 1000px;
+    width: 100%;
+    gap: 1rem;
+    background: #FAFAFA;
+    border-radius: 1px;
+    padding: 0.5rem;
+} */
 
 .datos_masterclass_master_section_two {
     max-width: 1000px;
@@ -187,20 +323,20 @@ body {
     height: 350px;
 }
 
-.datos_masterclass_master_section_two_subcontainer {
+/* .datos_masterclass_master_section_two_subcontainer {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     max-width: 1100px;
     margin: 0 auto;
     padding: 5rem 0;
-}
+} */
 
-.datos_masterclass_master_section_two_imgcontainer {
+/* .datos_masterclass_master_section_two_imgcontainer {
     padding: 3rem 1.5rem;
     background: #dce2ee;
     border-radius: 24px 0px 0px 24px;
-}
+} */
 
 .datos_masterclass_master_section_two_imgcontainer img {}
 
@@ -209,13 +345,13 @@ body {
     display: flex;
     gap: 1rem;
     background: #DCE2EE66;
-    padding: 0 2rem;
-    border-radius: 0px 24px 24px 0px;
+    padding: 2rem;
+    border-radius: 0px 0px 24px 24px;
     flex-direction: column;
     justify-content: center;
 }
 
-.datos_masterclass_master_section_two_titlesection {
+/* .datos_masterclass_master_section_two_titlesection {
     font-family: Poppins;
     font-size: 32px;
     font-weight: 400;
@@ -231,10 +367,10 @@ body {
     line-height: 36px;
     text-align: left;
     color: #0E2A46;
-}
+} */
 
-.datos_masterclass_img {
-    max-width: 500px;
+/* .datos_masterclass_img {
+    max-width: 420px;
     width: 100%;
     max-height: 405px;
     height: 100%;
@@ -247,7 +383,7 @@ body {
     height: 100%;
     object-fit: cover;
     border-radius: 20px;
-}
+} */
 
 .datos_masterclass_perfil {
     display: flex;
@@ -259,7 +395,7 @@ body {
 
 
 
-.datos_masterclass_perfil_subtitle {
+/* .datos_masterclass_perfil_subtitle {
     font-size: 20px;
     font-weight: 500;
     line-height: 23.44px;
@@ -284,14 +420,980 @@ body {
     line-height: 28.13px;
     text-align: left;
     color: #0E2A46;
-}
+} */
 
 .datos_masterclass_perfil_imgs {}
 
-.datos_card {}
+.datos_card {
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    color: #1B1B1BE5;
 
-.datos_container {}
+
+    max-width: 390px;
+    width: 100%;
+    height: auto;
+    background: #FFFFFF;
+    box-shadow: 0px 6px 20px 0px #0000000D;
+    padding: 2rem;
+
+}
+
+
+.datoscard_title {
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 36px;
+    text-align: left;
+    color: #0E2A46;
+    padding-bottom: 1rem;
+}
+
+/* .datoscard {
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    color: #1B1B1BE5;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    padding-bottom: 2rem;
+
+} */
+
+.datos_card_container {}
 
 .datos_card_detalles {}
 
-.datos_card_btn {}
+.datos_card_btn {
+    padding: 1.5rem 0;
+}
+
+.datos_card_btn button {
+    background: #0E2A46;
+    width: 100%;
+    height: 50px;
+    border-radius: 18px;
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 26px;
+    text-align: center;
+    color: #FFFFFF;
+
+}
+
+.datoscard_msg {
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+    text-align: center;
+    color: #0E2A46;
+}
+
+.datoscard_icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+
+
+
+@media(max-width: 1024px) {
+
+    .title_registro {
+        font-family: Poppins;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 21px;
+        text-align: left;
+        color: #0E2A46;
+        padding: 1rem;
+    }
+
+    .datos_masterclass_master_section_two_subcontainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 100%;
+        align-items: center;
+    }
+
+    .datos_masterclass_master_section_two_titlesection {
+        font-family: Poppins;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 21px;
+        text-align: left;
+        color: #0E2A46;
+    }
+
+    .datos_masterclass_master_section_two_textsection {
+        font-family: Poppins;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        text-align: justify;
+        color: #0E2A46;
+    }
+
+    .datos_masterclass_master_section_two_imgcontainer {
+        padding: 2rem 3rem;
+        background: #dce2ee;
+        border-radius: 24px 24px 0px 0px;
+        width: 100%;
+    }
+
+    .datos_masterclass_master_section_two_imgcontainer img {
+        width: 100%;
+    }
+
+    .datos_card {
+        display: none;
+    }
+
+    .datos_masterclass_master_section_one {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        max-width: 1000px;
+        width: 100%;
+        gap: 1rem;
+        background: #FAFAFA;
+        border-radius: 1px;
+        padding: 0.5rem;
+        align-items: center;
+    }
+
+    .datos_masterclass {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 0;
+        gap: 1rem;
+        width: 100%;
+    }
+
+    .datos_masterclass_img {
+        max-width: 120px;
+        width: 100%;
+        max-height: 405px;
+        height: 100%;
+        border-radius: 30px;
+    }
+
+    .datos_masterclass_img img {
+        width: 100%;
+        max-height: 405px;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 20px;
+    }
+
+    .datos_masterclass_perfil_subtitle {
+        font-size: 10px;
+        font-weight: 500;
+        text-align: left;
+        color: #0E2A46;
+        padding-bottom: 0.5rem;
+    }
+
+    .datos_masterclass_perfil_title {
+        color: #CF9B24;
+        font-size: 15px;
+        font-weight: 500;
+        text-align: left;
+        padding-bottom: 0.5rem;
+
+    }
+
+    .datos_masterclass_perfil_cargo {
+        font-size: 10px;
+        font-weight: 400;
+        text-align: left;
+        color: #0E2A46;
+    }
+
+    .datos_title {
+        font-family: Poppins;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 21px;
+        text-align: left;
+        color: #0E2A46;
+    }
+
+    .datos {
+        padding: 0rem 1rem;
+    }
+
+    .encabezado_zone_movil_detalles {
+        width: 100%;
+        padding: 1rem 1rem;
+    }
+
+    .datos_card_detalles {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 2rem 1.5rem;
+        gap: 1rem;
+        background: #f7f3f3;
+        box-shadow: 0px 6px 20px 0px #0000000D;
+    }
+
+    .datoscard {
+        font-family: Poppins;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: left;
+        color: #1B1B1BE5;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 1rem;
+
+    }
+
+    .datos_masterclass_master_section_two {
+        width: 100%;
+        height: auto;
+    }
+
+
+}
+
+@media(min-width: 1024px) {
+
+    .title_registro {
+        display: none;
+    }
+
+    .encabezado_zone_movil_detalles {
+        display: none;
+    }
+
+
+    .datos_masterclass_master_section_two_subcontainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 5rem 0;
+    }
+
+    .datos_masterclass_master_section_two_titlesection {
+        font-family: Poppins;
+        font-size: 32px;
+        font-weight: 400;
+        line-height: 48px;
+        text-align: left;
+        color: #0E2A46;
+    }
+
+    .datos_masterclass_master_section_two_textsection {
+        font-family: Poppins;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 36px;
+        text-align: left;
+        color: #0E2A46;
+    }
+
+    .datos_masterclass_master_section_two_imgcontainer {
+        padding: 3rem 1.5rem;
+        background: #dce2ee;
+        border-radius: 24px 0px 0px 24px;
+    }
+
+    .datos_masterclass_master_section_one {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        max-width: 1000px;
+        width: 100%;
+        gap: 1rem;
+        background: #FAFAFA;
+        border-radius: 1px;
+        padding: 0.5rem;
+    }
+
+    .datos_masterclass {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 2rem 0;
+        gap: 1rem;
+        width: 100%;
+    }
+
+    .datos_masterclass_img {
+        max-width: 420px;
+        width: 100%;
+        max-height: 405px;
+        height: 100%;
+        border-radius: 30px;
+    }
+
+    .datos_masterclass_img img {
+        width: 100%;
+        max-height: 405px;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 20px;
+    }
+
+    .datos_masterclass_perfil_subtitle {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 23.44px;
+        text-align: left;
+        color: #0E2A46;
+        padding-bottom: 1.5rem;
+    }
+
+    .datos_masterclass_perfil_title {
+        color: #CF9B24;
+        font-size: 36px;
+        font-weight: 500;
+        line-height: 42.19px;
+        text-align: left;
+        padding-bottom: 1rem;
+
+    }
+
+    .datos_masterclass_perfil_cargo {
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 28.13px;
+        text-align: left;
+        color: #0E2A46;
+    }
+
+    .datos_title {
+        font-family: Poppins;
+        font-size: 36px;
+        font-weight: 600;
+        line-height: 21px;
+        text-align: left;
+        color: #0E2A46;
+    }
+
+
+    .datos {
+        padding: 4rem 0;
+    }
+
+    .datoscard {
+        font-family: Poppins;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: left;
+        color: #1B1B1BE5;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 1rem;
+        padding-bottom: 2rem;
+
+    }
+
+    .datos_masterclass_master_section_two {
+        max-width: 1000px;
+        width: 100%;
+        height: 350px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* card  */
+
+
+
+
+
+
+/* masterclass */
+
+
+.masterclass_section {}
+
+/* .masterclass_section_container {
+    padding: 4rem 0;
+    margin: 0 auto;
+    max-width: 1800px;
+} */
+
+.masterclass_section_title {
+    font-family: Poppins;
+    text-align: center;
+    color: #0E2A46;
+}
+
+.masterclass_section_button {
+    text-align: end;
+    padding: 2rem 0;
+}
+
+.masterclass_section_button_item {
+    background: #D48A15;
+    border-radius: 10px;
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    color: #FFFFFF;
+    border: none;
+    padding: 0.5rem 1rem;
+}
+
+/* .masterclass_section_main_cards {
+    width: 1500px;
+    max-width: 1500px;
+    margin: 0 auto;
+} */
+
+.masterclass_section_main_cards ul.slick-dots {
+    display: none !important;
+}
+
+
+/* .masterclass_card {
+    border: 1px solid #F1F1F1;
+    padding: 1rem;
+    width: 750px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+} */
+
+/* .masterclass_card_img_content {
+    max-width: 340px;
+    height: 100%;
+} */
+
+/* .masterclass_card_img_content img {
+    border-radius: 10px;
+    width: 100%;
+} */
+
+/* .masterclass_card_information {
+    padding: 0 1rem;
+} */
+
+.masterclass_card_inf_title {
+    color: #080808;
+    font-family: Poppins;
+    /* white-space: nowrap; */
+    overflow: hidden;
+    /* Oculta el texto que se sale del contenedor */
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    /* Necesario para line-clamp */
+    -webkit-line-clamp: 2;
+    /* Limita a 2 líneas */
+    -webkit-box-orient: vertical;
+    /* Define la orientación vertical */
+}
+
+
+
+.masterclass_card_subcont {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.masterclass_card_item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* .masterclass_card_teacher {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+} */
+
+.master_teacher_content1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.master_teacher_imgcont {}
+
+.master_teacher_txtinfo {}
+
+.master_teacher_name {
+    color: #3E3232;
+    font-family: Poppins;
+}
+
+.master_teacher_cargo {
+    font-family: Poppins;
+    color: #3E3232BF;
+}
+
+.master_teacher_content2 {}
+
+.master_teacher_content2_btn {
+    border-radius: 10px;
+    background-color: #0E2A46;
+    border: none;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+
+
+
+@media(max-width: 1024px) {
+
+    .proximos {
+        display: none;
+    }
+
+    .masterclass_card_container_item {
+        padding: 0 0.5rem;
+    }
+
+    .masterclass_card {
+        width: 100%;
+        height: 135px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px 0px #00000014;
+    }
+
+    .masterclass_card_img_content {
+        width: 115px;
+        height: 100%;
+        overflow: hidden;
+        /* Recorta el contenido excedente */
+        position: relative;
+        /* Contexto para el contenido */
+    }
+
+    .masterclass_card_img_content img {
+        width: 100%;
+        /* Ocupar todo el ancho */
+        height: 100%;
+        /* Ocupar todo el alto */
+        object-fit: cover;
+        /* Ajusta la imagen sin distorsionarla */
+    }
+
+    .masterclass_card_information {
+        padding: 0.8rem;
+        width: 250px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        height: 100%;
+        gap: 0rem;
+    }
+
+    #masterclass_card_item_online {
+        display: none;
+    }
+
+    .masterclass_card_item {
+        gap: 0.5rem;
+        font-family: Poppins;
+        font-size: 10px;
+        font-weight: 500;
+    }
+
+    .master_teacher_name {
+        font-size: 10px;
+        font-weight: 500;
+    }
+
+    .master_teacher_cargo {
+        font-size: 8px;
+        font-weight: 400;
+    }
+
+    .master_teacher_content2_btn {
+        width: 62px;
+        height: 21px;
+        font-size: 9px;
+        font-weight: 500;
+        line-height: 20px;
+    }
+
+    .masterclass_card_teacher {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        gap: 1rem;
+    }
+
+    .master_teacher_content1 {
+        gap: 0.5rem;
+    }
+
+    .masterclass_card_subcont {
+        padding: 0.5rem 0;
+        width: 100%;
+    }
+
+
+    .masterclass_card_inf_title {
+        font-size: 12px;
+        font-weight: 500;
+        width: 100%;
+    }
+
+    .master_teacher_imgcont {
+        width: 25px;
+        height: auto;
+    }
+
+    .master_teacher_imgcont img {
+        width: 100%;
+        height: auto;
+    }
+
+    .masterclass_card_img_content img {
+        border-radius: 10px 0px 0px 10px;
+        width: 100%;
+    }
+
+    .masterclass_section_title {
+        font-size: 20px;
+        font-weight: 500;
+        padding-bottom: 2rem;
+    }
+
+    .masterclass_section_button {
+        display: none;
+    }
+
+    .masterclass_section_main_btn_movil {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .masterclass_section_main_btn_movil button {
+        font-family: Poppins;
+        font-size: 12px;
+        font-weight: 500;
+        text-align: center;
+        width: 100%;
+        max-width: 191px;
+        height: 25px;
+        background: #fffaef;
+        border: 1px dashed #CF9B24;
+        padding: 10px 15px 10px 15px;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .masterclass_section_title_vector {
+        position: absolute;
+        transform: translate(-250px, 26px);
+        width: 120px;
+    }
+
+
+    .masterclass_section_container {
+        padding: 2rem 1.5rem;
+        margin: 0 auto;
+    }
+
+    .my-slider-masterclass .slick-prev {
+
+        left: -20px;
+
+    }
+
+    .my-slider-masterclass .slick-next {
+
+        right: -20px;
+
+    }
+
+}
+
+@media(min-width: 1024px) {
+    .masterclass_card {
+        border: 1px solid #F1F1F1;
+        background: #FAFAFA;
+        border-radius: 12px;
+        padding: 1rem;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .master_teacher_imgcont {
+        width: 50px;
+        height: auto;
+    }
+
+    .master_teacher_imgcont img {
+        width: 100%;
+        height: auto;
+    }
+
+
+    .masterclass_card_img_content {
+        max-width: 340px;
+        height: 100%;
+    }
+
+    .masterclass_card_information {
+        padding: 0 1rem;
+    }
+
+
+    .masterclass_card_item {
+        gap: 0.5rem;
+        font-family: Poppins;
+        font-size: 13px;
+        font-weight: 500;
+    }
+
+    .master_teacher_name {
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .master_teacher_cargo {
+        font-size: 12px;
+        font-weight: 400;
+    }
+
+    .master_teacher_content2_btn {
+        width: 120px;
+        height: 40px;
+    }
+
+    .masterclass_card_teacher {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+
+    .master_teacher_content1 {
+        gap: 1rem;
+    }
+
+    .masterclass_card_subcont {
+        padding: 1rem 0;
+    }
+
+    .masterclass_card_inf_title {
+        font-size: 16px;
+        font-weight: 500;
+        width: 360px;
+    }
+
+    .masterclass_card_img_content img {
+        border-radius: 10px;
+        width: 100%;
+        height: 163px;
+        object-fit: cover;
+    }
+
+    .masterclass_section_title {
+        font-size: 52px;
+        font-weight: 500;
+    }
+
+    .masterclass_section_main_btn_movil {
+        display: none;
+    }
+
+    .masterclass_section_title_vector {
+        position: absolute;
+        transform: translate(-565px, 65px);
+    }
+
+    .masterclass_section_main_cards {
+        width: 100%;
+        max-width: 1500px;
+        margin: 0 auto;
+    }
+
+    .masterclass_section_container {
+        padding: 4rem 2rem;
+        margin: 0 auto;
+        max-width: 1800px;
+    }
+
+}
+
+
+
+
+
+.proximos {
+    background: #ECECEC;
+}
+
+.proximos_container {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 4rem 0;
+}
+
+.proximos_title {
+    font-family: Poppins;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 21px;
+    text-align: left;
+    color: #0E2A46;
+    padding-bottom: 3rem;
+}
+
+.proximos_slide {}
+
+.proximos_slide_container {}
+
+
+.masterclass_card_container_item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}

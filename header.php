@@ -12,8 +12,7 @@
     <?php wp_head(); ?> <!-- Llama a la cabecera de WordPress (necesario para plugins y funciones) -->
 
     <!-- Llamar al CSS directamente en la plantilla -->
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/header.css"
-        type="text/css">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/header.css" type="text/css">
 
 </head>
 
@@ -24,7 +23,7 @@
             <div class="header_submain">
                 <div class="header_items">
                     <div class="header_btn_item_img">
-                        <a class="">
+                        <a href="<?php echo home_url('/'); ?>" class="">
                             <img loading="lazy" id="megaMenu-logo"
                                 src="<?php echo get_template_directory_uri(); ?>/assets/images/header-logomentory.png"
                                 alt="menu_logo">
@@ -59,7 +58,7 @@
                     </div>
                     <div class="header_subtns" id="">
                         <a id="">
-                                <img loading="lazy" id="megaMenu-logo"
+                            <img loading="lazy" id="megaMenu-logo"
                                 src="<?php echo get_template_directory_uri(); ?>/assets/images/search.png"
                                 alt="menu_logo">
                         </a>
@@ -75,15 +74,16 @@
 
         <div class="header_main_movil">
             <div class="header_main_movil_parte1">
-                <img loading="lazy"
-                    src="<?php echo get_template_directory_uri(); ?>/assets/images/header-logomentory.png"
-                    alt="menu_logo">
+                <a href="<?php echo home_url('/'); ?>">
+                    <img loading="lazy"
+                        src="<?php echo get_template_directory_uri(); ?>/assets/images/header-logomentory.png"
+                        alt="menu_logo">
+                </a>
             </div>
             <div class="header_main_movil_parte2">
                 <button class="btn_movil_header_aula">Aula Virtual</button>
                 <button id="open-dialog" class="btn_movil_header_burger">
-                    <img loading="lazy"
-                        src="<?php echo get_template_directory_uri(); ?>/assets/images/menu-movil.png"
+                    <img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/assets/images/menu-movil.png"
                         alt="menu_logo">
                 </button>
             </div>
@@ -96,8 +96,37 @@
                         <button class="close-btn" id="close-dialog">✖</button>
                     </div>
                     <div class="dialog_container">
-                        <h2>Diálogo Personalizado</h2>
-                        <p>Este es un diálogo con estilos que puedes personalizar según tus necesidades.</p>
+
+                        <a href="<?php echo home_url('/'); ?>">
+                            <div class="dialog_container_item">
+                                Inicio
+                            </div>
+                        </a>
+
+                        <a href="">
+                            <div class="dialog_container_item">
+                                Nosotros
+                            </div>
+                        </a>
+
+                        <a href="<?php echo home_url('/programas/'); ?>">
+                            <div class="dialog_container_item">
+                                Programas
+                            </div>
+                        </a>
+
+                        <a href="<?php echo home_url('/masterclass/'); ?>">
+                            <div class="dialog_container_item">
+                                Masterclass
+                            </div>
+                        </a>
+
+                        <a href="">
+                            <div class="dialog_container_item">
+                                Mentory in house
+                            </div>
+                        </a>
+
                     </div>
                 </div>
             </div>

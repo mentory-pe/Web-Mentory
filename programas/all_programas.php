@@ -9,7 +9,7 @@ $page_title = is_search() ? 'Resultados de búsqueda: ' . get_search_query() : g
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/index-program.css" type="text/css">
 
 
-<section>
+<section class="main_program_portada">
     <div class="program_portada">
     </div>
 
@@ -109,11 +109,11 @@ $page_title = is_search() ? 'Resultados de búsqueda: ' . get_search_query() : g
                                         <div>
                                             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/card_program1.png" alt="">
                                         </div>
-                                        <div>6 Modulos</div>
+                                        <div><?php echo esc_html($program->nro_modulos); ?> Modulos</div>
                                     </div>
                                     <div class="card_program_datos_item">
                                         <div><img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/card_program2.png" alt=""></div>
-                                        <div>40 horas</div>
+                                        <div><?php echo esc_html($program->nro_horas); ?></div>
                                     </div>
                                     <div class="card_program_datos_item">
                                         <div><img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/card_program3.png" alt=""></div>
@@ -125,6 +125,18 @@ $page_title = is_search() ? 'Resultados de búsqueda: ' . get_search_query() : g
                                 </div>
                                 <div class="card_program_txt_desc">
                                 <?php echo esc_html($program->descripcion); ?>
+                                </div>
+
+                                <div class="card_program_movil_dates">
+                                    <div class="card_program_movil_dates_item">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/program-index/clock.png" alt="">
+                                        <?php echo esc_html($program->nro_horas); ?>
+                                    </div>
+
+                                    <div class="card_program_movil_dates_item">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/program-index/modulos.png" alt="">
+                                        <?php echo esc_html($program->nro_modulos); ?> Modulos
+                                    </div>
                                 </div>
                                 <div class="card_program_btn_cont">
                                     <a href="<?php echo esc_url($program_url); ?>">

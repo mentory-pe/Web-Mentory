@@ -156,6 +156,9 @@ body {
 
 
 @media(max-width: 1024px) {
+    .zona_portada_detail {
+        padding-top: 4rem;
+    }
     .zona_portada_detail_items_imgzone {
         width: 100%;
         height: auto;
@@ -183,6 +186,10 @@ body {
 
 /* Estilos para pantallas mayores a 1920px */
 @media (min-width: 1536px) {
+
+    .zona_portada_detail {
+        padding-top: 6rem;
+    }
     .zona_portada_detail_items_imgzone {
         width: 800px;
         max-width: 100%;

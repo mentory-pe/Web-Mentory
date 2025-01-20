@@ -347,7 +347,7 @@ get_header(); // Carga el encabezado del tema (header.php)
                     src="<?php echo get_template_directory_uri(); ?>/assets/images/index/vector_masterclass.png" alt="">
             </div>
             <div class="masterclass_section_button">
-                <a href="">
+                <a href="<?php echo home_url('/masterclass/'); ?>">
                     <button class="masterclass_section_button_item">VER TODOS</button>
                 </a>
             </div>
@@ -355,110 +355,113 @@ get_header(); // Carga el encabezado del tema (header.php)
 
 
                 <div class="my-slider-masterclass">
-
                     <?php
-                // Obtener todas las masterclass de la base de datos
-                global $wpdb;
-                $table_name = $wpdb->prefix . 'masterclass';
-                $table_relation = $wpdb->prefix . 'masterclass_docente';
-                $table_docente = $wpdb->prefix . 'docentes';
+                    // Obtener todas las masterclass con fechas próximas o del día de hoy
+                    global $wpdb;
+                    $table_name = $wpdb->prefix . 'masterclass';
+                    $table_relation = $wpdb->prefix . 'masterclass_docente';
+                    $table_docente = $wpdb->prefix . 'docentes';
 
-                $masterclasses = $wpdb->get_results("SELECT * FROM $table_name");
+                    // Obtener la fecha actual
+                    $fecha_actual = current_time('Y-m-d');
 
-                if ($masterclasses) :
-                    foreach ($masterclasses as $masterclass) : ?>
+                    // Consulta solo las masterclasses con fecha_inicio >= hoy
+                    $masterclasses = $wpdb->get_results(
+                        $wpdb->prepare("SELECT * FROM $table_name WHERE fecha_inicio >= %s ORDER BY fecha_inicio ASC", $fecha_actual)
+                    );
 
-                    <?php if (!empty($masterclass->link_inscripcion)) : ?>
-
-                    <div>
-                        <div class="masterclass_card_container_item">
-                            <div class="masterclass_card">
-                                <div class="masterclass_card_img_content">
-                                    <img src="<?php echo esc_url($masterclass->img_masterclass); ?>" alt="">
-                                </div>
-                                <div class="masterclass_card_information">
-                                    <div class="masterclass_card_inf_title">
-                                        <?php echo esc_html($masterclass->nombreMasterclass); ?>
-                                    </div>
-                                    <div class="masterclass_card_subcont">
-                                        <div class="masterclass_card_item">
-                                            <div><img
-                                                    src="<?php echo get_template_directory_uri(); ?>/assets/images/index/teacher_item1.png"
-                                                    alt=""></div>
-                                            <div>
-                                                <?php echo esc_html($masterclass->fecha_inicio); ?>
+                    if ($masterclasses) :
+                        foreach ($masterclasses as $masterclass) : 
+                            if (!empty($masterclass->link_inscripcion)) : ?>
+                                <div>
+                                    <div class="masterclass_card_container_item">
+                                        <div class="masterclass_card">
+                                            <div class="masterclass_card_img_content">
+                                                <img src="<?php echo esc_url($masterclass->img_masterclass); ?>" alt="">
                                             </div>
-                                        </div>
-                                        <div class="masterclass_card_item">
-                                            <div><img
-                                                    src="<?php echo get_template_directory_uri(); ?>/assets/images/index/teacher_item2.png"
-                                                    alt=""></div>
-                                            <div>Hora :
-                                                <?php echo esc_html($masterclass->hora_inicio); ?>
-                                            </div>
-                                        </div>
-                                        <div id="masterclass_card_item_online" class="masterclass_card_item">
-                                            <div><img
-                                                    src="<?php echo get_template_directory_uri(); ?>/assets/images/index/teacher_item3.png"
-                                                    alt=""></div>
-                                            <div>Online</div>
-                                        </div>
-                                    </div>
-                                    <div class="masterclass_card_teacher">
-                                    <?php
-                                        // Obtener los docentes relacionados con la masterclass
-                                        $docentes = $wpdb->get_results($wpdb->prepare(
-                                            "SELECT d.nombre, d.apellidos, d.cargo, d.foto_url
-                                            FROM $table_docente AS d
-                                            INNER JOIN $table_relation AS r ON d.id = r.docente_id
-                                            WHERE r.masterclass_id = %d",
-                                            $masterclass->id
-                                        ));
-
-                                        if ($docentes) :
-                                            foreach ($docentes as $docente) : ?>
-                                                <div class="master_teacher_content1">
-                                                    <div class="master_teacher_imgcont">
-                                                        <img style="border-radius: 50%;" src="<?php echo esc_url($docente->foto_url); ?>" alt="">
+                                            <div class="masterclass_card_information">
+                                                <div class="masterclass_card_inf_title">
+                                                    <?php echo esc_html($masterclass->nombreMasterclass); ?>
+                                                </div>
+                                                <div class="masterclass_card_subcont">
+                                                    <div class="masterclass_card_item">
+                                                        <div>
+                                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/teacher_item1.png" alt="">
+                                                        </div>
+                                                        <div>
+                                                            <?php echo esc_html($masterclass->fecha_inicio); ?>
+                                                        </div>
                                                     </div>
-                                                    <div class="master_teacher_txtinfo">
-                                                        <div class="master_teacher_name">
-                                                            <?php echo esc_html($docente->nombre . ' ' . $docente->apellidos); ?>
+                                                    <div class="masterclass_card_item">
+                                                        <div>
+                                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/teacher_item2.png" alt="">
                                                         </div>
-                                                        <div class="master_teacher_cargo">
-                                                            <?php echo esc_html($docente->cargo); ?>
+                                                        <div>Hora: <?php echo esc_html($masterclass->hora_inicio); ?></div>
+                                                    </div>
+                                                    <div id="masterclass_card_item_online" class="masterclass_card_item">
+                                                        <div>
+                                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/teacher_item3.png" alt="">
                                                         </div>
+                                                        <div>Online</div>
                                                     </div>
                                                 </div>
-                                            <?php endforeach;
-                                        else : ?>
-                                            <p>No hay docentes asociados a esta masterclass.</p>
-                                        <?php endif; ?>
+                                                <div class="masterclass_card_teacher">
+                                                    <?php
+                                                    // Obtener los docentes relacionados con la masterclass
+                                                    $docentes = $wpdb->get_results(
+                                                        $wpdb->prepare(
+                                                            "SELECT d.nombre, d.apellidos, d.cargo, d.foto_url
+                                                            FROM $table_docente AS d
+                                                            INNER JOIN $table_relation AS r ON d.id = r.docente_id
+                                                            WHERE r.masterclass_id = %d",
+                                                            $masterclass->id
+                                                        )
+                                                    );
 
-                                        <div class="master_teacher_content2">
-                                            <a href="<?php echo esc_html($masterclass->link_inscripcion); ?>">
-                                                <button class="master_teacher_content2_btn">
-                                                    ASISTIR
-                                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/arrow.png"
-                                                        alt="">
-                                                </button>
-                                            </a>
+                                                    if ($docentes) :
+                                                        foreach ($docentes as $docente) : ?>
+                                                            <div class="master_teacher_content1">
+                                                                <div class="master_teacher_imgcont">
+                                                                    <img style="border-radius: 50%;" src="<?php echo esc_url($docente->foto_url); ?>" alt="">
+                                                                </div>
+                                                                <div class="master_teacher_txtinfo">
+                                                                    <div class="master_teacher_name">
+                                                                        <?php echo esc_html($docente->nombre . ' ' . $docente->apellidos); ?>
+                                                                    </div>
+                                                                    <div class="master_teacher_cargo">
+                                                                        <?php echo esc_html($docente->cargo); ?>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        <?php endforeach;
+                                                    else : ?>
+                                                        <p>No hay docentes asociados a esta masterclass.</p>
+                                                    <?php endif; ?>
+
+                                                    <div class="master_teacher_content2">
+                                                        <a href="<?php echo esc_html($masterclass->link_inscripcion); ?>">
+                                                            <button class="master_teacher_content2_btn">
+                                                                ASISTIR
+                                                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/arrow.png" alt="">
+                                                            </button>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
+                            <?php endif; ?>
+                        <?php endforeach;
+                    else : ?>
+                        <div>
+                            <div style="text-align: center;">
+                                <p>No hay masterclass disponibles en este momento.</p>
                             </div>
                         </div>
-                    </div>
-
                     <?php endif; ?>
-                    <?php endforeach;
-                else : ?>
-                    <p>No hay masterclass disponibles en este momento.</p>
-                    <?php endif; ?>
-
-
-
                 </div>
+
 
 
             </div>

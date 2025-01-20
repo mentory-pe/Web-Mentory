@@ -40,7 +40,7 @@ body {
     align-items: center;
 }
 
-.card_program_imgcont {
+/* .card_program_imgcont {
     max-width: 344px;
     height: 190px;
     overflow: hidden;
@@ -52,7 +52,7 @@ body {
 
 .card_program_imgcont img {
     border-radius: 14px 14px 0 0;
-}
+} */
 
 .card_program_imgcont img {
     width: 100%;
@@ -60,14 +60,14 @@ body {
     object-fit: contain;
 }
 
-.card_program_txtcont {
+/* .card_program_txtcont {
     width: 332px;
     height: 250px;
     border-radius: 40px;
     transform: translateY(-25px);
     background: #FAFAFA;
     padding: 1rem;
-}
+} */
 
 .card_program_datos {
     display: flex;
@@ -108,14 +108,15 @@ body {
     -webkit-box-orient: vertical;
 }
 
-.card_program_btn_cont {
+/* .card_program_btn_cont {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     padding: 1rem 0;
-}
+} */
 
+/* 
 .card_program_btn {
     background: #0E2A46;
     color: #FFFFFF;
@@ -129,7 +130,7 @@ body {
     max-width: 380px;
     width: 100%;
 }
-
+ */
 
 /* search programs */
 /* .search_programs {
@@ -234,6 +235,12 @@ body {
 
 
 @media(min-width: 1024px) {
+
+    .main_program_portada {
+
+        padding-top: 8rem;
+    }
+
     .search_programs {
         display: flex;
         flex-direction: row;
@@ -253,9 +260,91 @@ body {
         justify-items: center;
     }
 
+    .card_program_movil_dates {
+        display: none;
+    }
+
+    .card_program_txtcont {
+        width: 332px;
+        height: 250px;
+        border-radius: 40px;
+        transform: translateY(-25px);
+        background: #FAFAFA;
+        padding: 1rem;
+    }
+
+
+    .card_program_btn {
+        background: #0E2A46;
+        color: #FFFFFF;
+        font-family: Poppins;
+        font-size: 20px;
+        font-weight: 500;
+        text-align: center;
+        padding: 10px 25px 10px 25px;
+        border-radius: 5px;
+        border: none;
+        max-width: 380px;
+        width: 100%;
+    }
+
+    .card_program_btn_cont {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 0.5rem 0;
+    }
+
+    .card_program_imgcont {
+        max-width: 344px;
+        height: 190px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .card_program_imgcont img {
+        border-radius: 14px 14px 0 0;
+    }
+
+
+
 }
 
+
+
 @media(max-width: 1024px) {
+    .card_program_datos {
+        display: none;
+    }
+
+    .card_program_txt_desc {
+        display: none;
+    }
+
+    .card_program_movil_dates {
+        display: flex;
+        justify-content: space-around;
+        padding: 1rem 0;
+    }
+
+    .card_program_movil_dates_item {
+        background: #EAF4FF;
+        padding: 0.3rem 1rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    .main_program_portada {
+        padding-top: 5rem;
+    }
+
     .search_programs {
         display: flex;
         flex-direction: column;
@@ -274,6 +363,49 @@ body {
         align-items: stretch;
         justify-items: center;
     }
+
+    .card_program_txtcont {
+        width: 100%;
+        height: 230px;
+        background: white;
+        padding: 0rem 1rem;
+    }
+
+
+    .card_program_btn {
+        background: #fffaef;
+        border: 1px dashed #CF9B24;
+        font-family: Poppins;
+        font-size: 15px;
+        font-weight: 500;
+        text-align: center;
+        padding: 10px 15px 10px 15px;
+        border-radius: 5px;
+        width: 100%;
+    }
+
+
+    .card_program_btn_cont {
+        padding: 1rem;
+        width: 100%;
+    }
+
+    .card_program_imgcont {
+        max-width: 344px;
+        height: 190px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px 10px 0 0;
+        padding: 1rem 1rem 0rem 1rem;
+        background: white;
+    }
+
+    .card_program_imgcont img {
+        border-radius: 14px;
+    }
+
 
 }
 
