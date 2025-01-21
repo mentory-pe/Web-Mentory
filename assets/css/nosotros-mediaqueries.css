@@ -1,0 +1,94 @@
+@media screen and (max-width:1200px) {
+    .about-img img {
+        height: 100%;
+        width: auto;
+    }
+
+    .mission-vision-container {
+        width: 80%;
+    }
+}
+
+
+
+
+@media screen and (max-width:900px) {
+    .about-img{
+        display: none;
+    }
+    
+    .about-details-container {
+        width: 80%;
+    }
+
+    .mission-vision-container {
+        width: 90%;
+    }
+
+    .mission-vision-card {
+        flex-direction: column;
+    }
+
+    .mission-vision-card-img img {
+        width: 100px;
+    }
+
+    .mission-vision-card-details {
+        width: 80%;
+        padding: 0 1rem;
+    }
+    
+
+    .pillars-details {
+        flex-direction: column;
+    }
+
+    .pillars-card-img img {
+        width: 150px;
+        height: auto;
+    }
+
+    .pillars-card-text{
+        width: 80%;
+        margin: auto;
+
+    }
+
+    .services-container {
+        flex-direction: column;
+    }
+
+    .services-card-img {
+        width: fit-content;
+    }
+
+    .services-card-img img {
+        width: 300px;
+    }
+
+    /* .teachers-container {
+        flex-wrap: wrap;
+    }
+
+    .teachers-details-1 {
+        width: 100%;
+    }
+
+    .teachers-title img {
+        width: 80%;
+        margin: auto;
+    }
+
+    .teachers-img-1 {
+        flex-direction: column;
+    }
+
+    .teachers-img-1 img {
+        width: 80%;
+        height: auto;
+    }
+
+    .teachers-details-2 {
+        width: 100%;
+    } */
+}

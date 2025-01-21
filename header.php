@@ -19,8 +19,8 @@
 
 <body <?php body_class(); ?>>
 
-    <header style="background-color: #ffffff">
-        <div style="" class="header_main">
+    <header>
+        <div class="header_main">
             <div class="header_submain">
                 <div class="header_items">
                     <div class="header_btn_item_img">
@@ -36,7 +36,7 @@
                                 <span>Inicio</span>
                             </button>
                         </a>
-                        <a href="">
+                        <a href="<?php echo home_url('/nosotros/'); ?>">
                             <button class="item__menu">
                                 <span>Nosotros</span>
                             </button>

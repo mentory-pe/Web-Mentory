@@ -5,7 +5,7 @@
 
         <div class="footer_sub">
             <div class="footer_sub_item">
-               <img src="<?php echo get_template_directory_uri(); ?>/assets/images/footer/mentory_footer.png" alt=""> 
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/footer/mentory_footer.png" alt=""> 
             </div>
             <div class="footer_sub_container">
                 <div class="footer_sub_item">
