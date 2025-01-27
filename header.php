@@ -18,7 +18,7 @@
 
 <body <?php body_class(); ?>>
 
-    <header style="background-color: #ffffff">
+    <header>
         <div style="" class="header_main">
             <div class="header_submain">
                 <div class="header_items">

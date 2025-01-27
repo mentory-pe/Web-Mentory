@@ -220,7 +220,7 @@ get_header(); // Carga el encabezado del tema (header.php)
                                             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/card_program1.png"
                                                 alt="">
                                         </div>
-                                        <div> 
+                                        <div>
                                             <?php echo esc_attr($program->nro_modulos); ?> Modulos
                                         </div>
                                     </div>
@@ -228,7 +228,9 @@ get_header(); // Carga el encabezado del tema (header.php)
                                         <div><img
                                                 src="<?php echo get_template_directory_uri(); ?>/assets/images/index/card_program2.png"
                                                 alt=""></div>
-                                        <div><?php echo esc_attr($program->nro_horas); ?></div>
+                                        <div>
+                                            <?php echo esc_attr($program->nro_horas); ?>
+                                        </div>
 
                                     </div>
                                     <div class="card_program_datos_item">
@@ -373,40 +375,45 @@ get_header(); // Carga el encabezado del tema (header.php)
                     if ($masterclasses) :
                         foreach ($masterclasses as $masterclass) : 
                             if (!empty($masterclass->link_inscripcion)) : ?>
-                                <div>
-                                    <div class="masterclass_card_container_item">
-                                        <div class="masterclass_card">
-                                            <div class="masterclass_card_img_content">
-                                                <img src="<?php echo esc_url($masterclass->img_masterclass); ?>" alt="">
+                    <div>
+                        <div class="masterclass_card_container_item">
+                            <div class="masterclass_card">
+                                <div class="masterclass_card_img_content">
+                                    <img src="<?php echo esc_url($masterclass->img_masterclass); ?>" alt="">
+                                </div>
+                                <div class="masterclass_card_information">
+                                    <div class="masterclass_card_inf_title">
+                                        <?php echo esc_html($masterclass->nombreMasterclass); ?>
+                                    </div>
+                                    <div class="masterclass_card_subcont">
+                                        <div class="masterclass_card_item">
+                                            <div>
+                                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/teacher_item1.png"
+                                                    alt="">
                                             </div>
-                                            <div class="masterclass_card_information">
-                                                <div class="masterclass_card_inf_title">
-                                                    <?php echo esc_html($masterclass->nombreMasterclass); ?>
-                                                </div>
-                                                <div class="masterclass_card_subcont">
-                                                    <div class="masterclass_card_item">
-                                                        <div>
-                                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/teacher_item1.png" alt="">
-                                                        </div>
-                                                        <div>
-                                                            <?php echo esc_html($masterclass->fecha_inicio); ?>
-                                                        </div>
-                                                    </div>
-                                                    <div class="masterclass_card_item">
-                                                        <div>
-                                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/teacher_item2.png" alt="">
-                                                        </div>
-                                                        <div>Hora: <?php echo esc_html($masterclass->hora_inicio); ?></div>
-                                                    </div>
-                                                    <div id="masterclass_card_item_online" class="masterclass_card_item">
-                                                        <div>
-                                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/teacher_item3.png" alt="">
-                                                        </div>
-                                                        <div>Online</div>
-                                                    </div>
-                                                </div>
-                                                <div class="masterclass_card_teacher">
-                                                    <?php
+                                            <div>
+                                                <?php echo esc_html($masterclass->fecha_inicio); ?>
+                                            </div>
+                                        </div>
+                                        <div class="masterclass_card_item">
+                                            <div>
+                                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/teacher_item2.png"
+                                                    alt="">
+                                            </div>
+                                            <div>Hora:
+                                                <?php echo esc_html($masterclass->hora_inicio); ?>
+                                            </div>
+                                        </div>
+                                        <div id="masterclass_card_item_online" class="masterclass_card_item">
+                                            <div>
+                                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/teacher_item3.png"
+                                                    alt="">
+                                            </div>
+                                            <div>Online</div>
+                                        </div>
+                                    </div>
+                                    <div class="masterclass_card_teacher">
+                                        <?php
                                                     // Obtener los docentes relacionados con la masterclass
                                                     $docentes = $wpdb->get_results(
                                                         $wpdb->prepare(
@@ -420,45 +427,47 @@ get_header(); // Carga el encabezado del tema (header.php)
 
                                                     if ($docentes) :
                                                         foreach ($docentes as $docente) : ?>
-                                                            <div class="master_teacher_content1">
-                                                                <div class="master_teacher_imgcont">
-                                                                    <img style="border-radius: 50%;" src="<?php echo esc_url($docente->foto_url); ?>" alt="">
-                                                                </div>
-                                                                <div class="master_teacher_txtinfo">
-                                                                    <div class="master_teacher_name">
-                                                                        <?php echo esc_html($docente->nombre . ' ' . $docente->apellidos); ?>
-                                                                    </div>
-                                                                    <div class="master_teacher_cargo">
-                                                                        <?php echo esc_html($docente->cargo); ?>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        <?php endforeach;
-                                                    else : ?>
-                                                        <p>No hay docentes asociados a esta masterclass.</p>
-                                                    <?php endif; ?>
-
-                                                    <div class="master_teacher_content2">
-                                                        <a href="<?php echo esc_html($masterclass->link_inscripcion); ?>">
-                                                            <button class="master_teacher_content2_btn">
-                                                                ASISTIR
-                                                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/arrow.png" alt="">
-                                                            </button>
-                                                        </a>
-                                                    </div>
+                                        <div class="master_teacher_content1">
+                                            <div class="master_teacher_imgcont">
+                                                <img style="border-radius: 50%;"
+                                                    src="<?php echo esc_url($docente->foto_url); ?>" alt="">
+                                            </div>
+                                            <div class="master_teacher_txtinfo">
+                                                <div class="master_teacher_name">
+                                                    <?php echo esc_html($docente->nombre . ' ' . $docente->apellidos); ?>
+                                                </div>
+                                                <div class="master_teacher_cargo">
+                                                    <?php echo esc_html($docente->cargo); ?>
                                                 </div>
                                             </div>
                                         </div>
+                                        <?php endforeach;
+                                                    else : ?>
+                                        <p>No hay docentes asociados a esta masterclass.</p>
+                                        <?php endif; ?>
+
+                                        <div class="master_teacher_content2">
+                                            <a href="<?php echo esc_html($masterclass->link_inscripcion); ?>">
+                                                <button class="master_teacher_content2_btn">
+                                                    ASISTIR
+                                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/arrow.png"
+                                                        alt="">
+                                                </button>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
-                            <?php endif; ?>
-                        <?php endforeach;
-                    else : ?>
-                        <div>
-                            <div style="text-align: center;">
-                                <p>No hay masterclass disponibles en este momento.</p>
                             </div>
                         </div>
+                    </div>
+                    <?php endif; ?>
+                    <?php endforeach;
+                    else : ?>
+                    <div>
+                        <div style="text-align: center;">
+                            <p>No hay masterclass disponibles en este momento.</p>
+                        </div>
+                    </div>
                     <?php endif; ?>
                 </div>
 
@@ -552,7 +561,7 @@ get_header(); // Carga el encabezado del tema (header.php)
 
             <div class="logros_zone_img_movil">
                 <div class="logros_zone_img_movil_title">
-                NUESTROS ALUMNOS SON DE:
+                    NUESTROS ALUMNOS SON DE:
                 </div>
 
                 <div class="logros_zone_img_movil_container">
@@ -665,7 +674,8 @@ get_header(); // Carga el encabezado del tema (header.php)
                                     </div>
                                 </div>
                                 <div class="card_testimonio_txt">
-                                    Ut pharetra ipsum nec leo blandit, sit amet tincidunt eros pharetra. Nam sed imperdiet
+                                    Ut pharetra ipsum nec leo blandit, sit amet tincidunt eros pharetra. Nam sed
+                                    imperdiet
                                     turpis. In hac habitasse platea dictumst.
                                     Praesent nulla massa, hendrerit vestibulum gravida in, feugiat auctor felis.
                                 </div>
@@ -693,7 +703,8 @@ get_header(); // Carga el encabezado del tema (header.php)
                                     </div>
                                 </div>
                                 <div class="card_testimonio_txt">
-                                    Ut pharetra ipsum nec leo blandit, sit amet tincidunt eros pharetra. Nam sed imperdiet
+                                    Ut pharetra ipsum nec leo blandit, sit amet tincidunt eros pharetra. Nam sed
+                                    imperdiet
                                     turpis. In hac habitasse platea dictumst.
                                     Praesent nulla massa, hendrerit vestibulum gravida in, feugiat auctor felis.
                                 </div>
@@ -721,7 +732,8 @@ get_header(); // Carga el encabezado del tema (header.php)
                                     </div>
                                 </div>
                                 <div class="card_testimonio_txt">
-                                    Ut pharetra ipsum nec leo blandit, sit amet tincidunt eros pharetra. Nam sed imperdiet
+                                    Ut pharetra ipsum nec leo blandit, sit amet tincidunt eros pharetra. Nam sed
+                                    imperdiet
                                     turpis. In hac habitasse platea dictumst.
                                     Praesent nulla massa, hendrerit vestibulum gravida in, feugiat auctor felis.
                                 </div>
@@ -749,7 +761,8 @@ get_header(); // Carga el encabezado del tema (header.php)
                                     </div>
                                 </div>
                                 <div class="card_testimonio_txt">
-                                    Ut pharetra ipsum nec leo blandit, sit amet tincidunt eros pharetra. Nam sed imperdiet
+                                    Ut pharetra ipsum nec leo blandit, sit amet tincidunt eros pharetra. Nam sed
+                                    imperdiet
                                     turpis. In hac habitasse platea dictumst.
                                     Praesent nulla massa, hendrerit vestibulum gravida in, feugiat auctor felis.
                                 </div>
@@ -777,7 +790,8 @@ get_header(); // Carga el encabezado del tema (header.php)
                                     </div>
                                 </div>
                                 <div class="card_testimonio_txt">
-                                    Ut pharetra ipsum nec leo blandit, sit amet tincidunt eros pharetra. Nam sed imperdiet
+                                    Ut pharetra ipsum nec leo blandit, sit amet tincidunt eros pharetra. Nam sed
+                                    imperdiet
                                     turpis. In hac habitasse platea dictumst.
                                     Praesent nulla massa, hendrerit vestibulum gravida in, feugiat auctor felis.
                                 </div>
@@ -805,7 +819,8 @@ get_header(); // Carga el encabezado del tema (header.php)
                                     </div>
                                 </div>
                                 <div class="card_testimonio_txt">
-                                    Ut pharetra ipsum nec leo blandit, sit amet tincidunt eros pharetra. Nam sed imperdiet
+                                    Ut pharetra ipsum nec leo blandit, sit amet tincidunt eros pharetra. Nam sed
+                                    imperdiet
                                     turpis. In hac habitasse platea dictumst.
                                     Praesent nulla massa, hendrerit vestibulum gravida in, feugiat auctor felis.
                                 </div>
@@ -867,6 +882,57 @@ get_header(); // Carga el encabezado del tema (header.php)
                     src="<?php echo get_template_directory_uri(); ?>/assets/images/index/elipse5.png" alt="">
                 <img class="imgcircle" style="position: absolute; transform: translate(560px, 140px);"
                     src="<?php echo get_template_directory_uri(); ?>/assets/images/index/elipse6.png" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div>
+        <div>
+            <div>
+                <div>
+                    <div>
+
+                    </div>
+                    <div>
+                        Estudiantes
+                        Inscritos
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <div>
+
+                    </div>
+                    <div>
+                        Estudiantes
+                        Inscritos
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <div>
+
+                    </div>
+                    <div>
+                        Estudiantes
+                        Inscritos
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <div>
+
+                    </div>
+                    <div>
+                        Estudiantes
+                        Inscritos
+                    </div>
+                </div>
             </div>
         </div>
     </div>
