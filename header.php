@@ -43,7 +43,7 @@
                                 <span>Inicio</span>
                             </button>
                         </a>
-                        <a href="">
+                        <a href="<?php echo home_url('/nosotros/'); ?>">
                             <button class="item__menu">
                                 <span>Nosotros</span>
                             </button>
@@ -58,7 +58,7 @@
                                 <span>Masterclass</span>
                             </button>
                         </a>
-                        <a href="">
+                        <a href="<?php echo home_url('/empresas/'); ?>">
                             <button class="item__menu">
                                 <span>Para Empresas</span>
                             </button>
@@ -111,7 +111,7 @@
                             </div>
                         </a>
 
-                        <a href="">
+                        <a href="<?php echo home_url('/nosotros/'); ?>">
                             <div class="dialog_container_item">
                                 Nosotros
                             </div>
@@ -129,9 +129,9 @@
                             </div>
                         </a>
 
-                        <a href="">
+                        <a href="<?php echo home_url('/empresas/'); ?>">
                             <div class="dialog_container_item">
-                                Mentory in house
+                                Para Empresas
                             </div>
                         </a>
 
