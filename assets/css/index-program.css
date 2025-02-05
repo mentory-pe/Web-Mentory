@@ -8,14 +8,14 @@ body {
 }
 
 .program_portada {
-    height: 365px;
-    background-image: url('../images/program-index/header-programs.png');
-    background-size: cover;
-    /* Ajusta la imagen para cubrir todo el área */
+    height: 250px;
+    background-image: url('../images/program-index/Background_programas.png');
+    background-size: 100% auto;
+    /* Ajusta el ancho al 100% y mantiene la proporción */
+    background-position: center top;
+    /* Centrado en la parte superior */
     background-repeat: no-repeat;
-    /* Evita que la imagen se repita */
-    background-position: center center;
-    /* Centra la imagen en la pantalla */
+    /* No repetir la imagen */
 }
 
 .program_portada_txt {
@@ -179,9 +179,6 @@ body {
 
 
 
-.allprograms_cards {
-    padding-bottom: 3rem;
-}
 
 .allprograms_cards_container {}
 
@@ -243,17 +240,16 @@ body {
 
     .search_programs {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
         gap: 0rem;
-        padding: 4rem 0;
     }
 
     .programs-grid {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 16px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
         justify-content: center;
         align-content: center;
         align-items: stretch;
@@ -308,6 +304,17 @@ body {
 
     .card_program_imgcont img {
         border-radius: 14px 14px 0 0;
+    }
+
+
+    .allprograms_cards {
+        padding: 3rem 0rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+        max-width: 1300px;
+        margin: 0 auto;
     }
 
 
@@ -404,6 +411,16 @@ body {
 
     .card_program_imgcont img {
         border-radius: 14px;
+    }
+
+    .allprograms_cards {
+        padding: 3rem 0rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        max-width: 1300px;
+        margin: 0 auto;
     }
 
 
@@ -527,4 +544,196 @@ body {
         text-align: center;
 
     }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* acccordion
+ */
+
+.main_class_accordion {
+    border: 1px solid #E8E8E8;
+    width: 100%;
+    background-color: #ffffff;
+    margin: 2rem 0;
+}
+
+.accordion {
+    width: 100%;
+    background-color: #ffffff;
+    border: none;
+    outline: none;
+    text-align: left;
+    padding: 15px 20px;
+    font-size: 18px;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.2s linear;
+    display: flex;
+    text-decoration: none;
+
+}
+
+.accordion:after {
+    font-size: 18px;
+    float: right;
+    text-decoration: none;
+}
+
+.accordion.is-open:after {}
+
+.accordion:hover,
+.accordion.is-open {
+    background-color: #ffffff;
+    text-decoration: none;
+}
+
+.accordioncontenido {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 1rem 0;
+    gap: 1rem;
+}
+
+.accordion-content {
+    background-color: white;
+    border-left: 1px solid whitesmoke;
+    border-right: 1px solid whitesmoke;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-in-out;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Ocultar el checkbox original */
+input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #E09B00;
+    border-radius: 4px;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+
+/* Estilo cuando está marcado */
+input[type="checkbox"]:checked {
+    background-color: #E09B00;
+    border-color: #E09B00;
+}
+
+/* Agregar un check personalizado */
+input[type="checkbox"]:checked::after {
+    content: "✔";
+    color: white;
+    /* Color del check */
+    font-size: 14px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+}
+
+.item_checkbox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
 }

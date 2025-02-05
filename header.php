@@ -4,12 +4,20 @@
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        <?php wp_title(''); ?>
-        <?php if(wp_title('', false)) { echo ' | '; } ?>
-        <?php bloginfo('name'); ?>
-    </title>
+
+    <?php
+        global $page_title;
+        if (!isset($page_title)) {
+            $page_title = get_the_title(); // Si no está definido, usa el título normal
+        }
+    ?>
+
+    <title><?php echo esc_html($page_title); ?></title>
+
     <?php wp_head(); ?> <!-- Llama a la cabecera de WordPress (necesario para plugins y funciones) -->
+
+    <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico" type="image/x-icon">
 
     <!-- Llamar al CSS directamente en la plantilla -->
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/header.css" type="text/css">

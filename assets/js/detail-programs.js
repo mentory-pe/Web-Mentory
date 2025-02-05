@@ -19,26 +19,41 @@ buttons.forEach(button => {
 
 
 
-// Accordion
-// Seleccionar todos los encabezados del accordion
-const accordionHeaders = document.querySelectorAll('.accordion-header');
 
-accordionHeaders.forEach(header => {
-  header.addEventListener('click', () => {
-    // Alternar la clase 'active' en el header clicado
-    header.classList.toggle('active');
 
-    // Seleccionar el contenido relacionado
-    const content = header.nextElementSibling;
 
-    if (header.classList.contains('active')) {
-      // Expandir el contenido
-      content.style.maxHeight = content.scrollHeight + 'px';
-      content.style.padding = '0px 20px';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//pseudocode accordion 
+
+const accordionBtns = document.querySelectorAll(".accordion");
+
+accordionBtns.forEach((accordion) => {
+  accordion.onclick = function () {
+    this.classList.toggle("is-open");
+
+    let content = this.nextElementSibling;
+    console.log(content);
+
+    if (content.style.maxHeight) {
+      //this is if the accordion is open
+      content.style.maxHeight = null;
     } else {
-      // Colapsar el contenido
-      content.style.maxHeight = '0';
-      content.style.padding = '0 20px';
+      //if the accordion is currently closed
+      content.style.maxHeight = content.scrollHeight + "px";
+      console.log(content.style.maxHeight);
     }
-  });
+  };
 });

@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    font-family: Poppins;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+section {
+    padding: 4rem 0;
+}
+
+
+/* HERO */
+.hero {
+    background-image: url('../images/contacto/Recurso 1@4x.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    width: auto;
+}
+
+
+/* INFORMATION SECTION */
+
+.information-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.information-img {
+    width: 30%;
+}
+
+.information-img img {
+    width: 100%;
+}
+
+.information-form-container {
+    width: 50%;
+}
+
+.information-title {
+    padding: 2rem;
+}
+
+.information-title img {
+    width: 100%;
+}
+
+.information-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-container-1, .form-container-2, .form-container-3 {
+    display: flex;
+    gap: 2rem;
+}
+
+input {
+    font-family: Poppins;
+    box-sizing: border-box;
+    font-size: 1.1rem;
+}
+
+.form-input {
+    width: 50%;
+    padding: 1rem 2rem;
+    border-radius: 40px;
+    border: 2px solid #777777;
+}
+
+.form-input:focus {
+    border: 2px solid #000000;
+
+}
+
+.form-container-3 input{
+    width: 100%;
+}
+
+.submit-button {
+    text-align: center;
+}
+
+.submit-button input {
+    padding: 0.5rem 2rem;
+    font-weight: 600;
+    font-size: 1.2rem;
+    border: 2px solid transparent;
+    outline: none;
+    background-color: #CF9B24;
+    cursor: pointer;
+}
+
+.submit-button input:focus {
+    border: 2px solid #84600d;
+}
+
+
+/* GET THERE SECTION */
+
+.get-there-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.get-there-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 30%;
+}
+
+.get-there-card {
+    display: flex;
+    gap: 1rem;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.get-there-card-img {
+    width: 100px;
+}
+
+.get-there-card-img img {
+    width: 100%;
+}
+
+.get-there-card-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.get-there-card-title {
+    font-weight: 600;
+}
+
+.get-there-card-text {
+    line-height: 1.2rem;
+}
+
+.get-there-map {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.get-there-title {
+    width: 40%;
+}
+
+.get-there-title img {
+    width: 100%;
+}
+
+.get-there-img {
+    width: 100%;
+}
+
+.get-there-img img {
+    width: 100%;
+}

@@ -1,7 +1,5 @@
 <?php
 
-get_header();
-
 
 
 // Obtener el slug de la masterclass desde la URL
@@ -26,6 +24,12 @@ if ($masterclass_slug) {
         ?>
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/detail-masterclas.css"
     type="text/css">
+
+    <?php
+global $page_title;
+$page_title = ($masterclass->nombreMasterclass);
+get_header();
+?>
 <section>
 
     <div class="encabezado_zone">

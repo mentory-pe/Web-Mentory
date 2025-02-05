@@ -1,5 +1,4 @@
 <?php
-get_header();
 
 global $wpdb;
 $table_masterclass = $wpdb->prefix . 'masterclass';
@@ -37,6 +36,13 @@ $query = "
 ";
 $masterclasses = $wpdb->get_results($query);
 ?>
+
+<?php
+global $page_title;
+$page_title = 'Masterclass';
+get_header();
+?>
+
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/index-masterclass.css" type="text/css">
 
 

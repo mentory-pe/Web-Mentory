@@ -423,12 +423,12 @@ body {
         margin: 0 auto;
         width: 100%;
         background-image: url('../images/index/new/logros_porta.png');
-        background-size: cover;
-        /* Ajusta la imagen para cubrir todo el área */
+        background-size: 100% auto;
+        /* Ajusta el ancho al 100% y mantiene la proporción */
+        background-position: center top;
+        /* Centrado en la parte superior */
         background-repeat: no-repeat;
-        /* Evita que la imagen se repita */
-        background-position: center center;
-        /* Centra la imagen en la pantalla */
+        /* No repetir la imagen */
     }
 
     .zona_logros_container {
@@ -466,7 +466,9 @@ body {
 
 
 
-
+.my_slider_programs  .slick-next {
+    display: none !important;
+} 
 
 
 

@@ -1,5 +1,7 @@
 <?php
-get_header(); // Carga el encabezado del tema (header.php)
+global $page_title;
+$page_title = 'Mentory';
+get_header();
 ?>
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/index-styles.css" type="text/css">
 

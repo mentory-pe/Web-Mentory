@@ -13,14 +13,14 @@ body {
 
 /* portada */
 .portada_masterclass {
-    height: 365px;
-    background-image: url('../images/masterclass-index/header-masterclass.png');
-    background-size: cover;
-    /* Ajusta la imagen para cubrir todo el área */
+    height: 285px;
+    background-image: url('../images/masterclass-index/Background_masterclass.png');
+    background-size: 100% auto;
+    /* Ajusta el ancho al 100% y mantiene la proporción */
+    background-position: center top;
+    /* Centrado en la parte superior */
     background-repeat: no-repeat;
-    /* Evita que la imagen se repita */
-    background-position: center center;
-    /* Centra la imagen en la pantalla */
+    /* No repetir la imagen */
 }
 
 .portada_masterclass_title {

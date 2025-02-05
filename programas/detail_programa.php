@@ -1,7 +1,3 @@
-<?php
-get_header(); // Carga el encabezado del tema (header.php)
-?>
-
 <!-- Si es solo para pruebas, puedes dejar el CSS aquí -->
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/detail-program.css" type="text/css">
 
@@ -37,6 +33,11 @@ $fecha_formateada = strftime("%d de %B", $timestamp);
 
 
 if (isset($programa) && $programa) : ?>
+<?php
+global $page_title;
+$page_title = ($programa->name);
+get_header();
+?>
 
 <section>
     <div class="zona_portada_detail">

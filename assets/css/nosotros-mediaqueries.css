@@ -1,7 +1,7 @@
 @media screen and (max-width:1200px) {
     .about-img img {
-        height: 100%;
-        width: auto;
+        /* height: 100%;
+        width: auto; */
     }
 
     .mission-vision-container {
@@ -13,16 +13,33 @@
 
 
 @media screen and (max-width:900px) {
+
+    /* ABOUT SECTION */
+
+    #about {
+        padding-bottom: 0;
+    }
+
+    .about-container {
+        flex-direction: column;
+        position: static;
+    }
+
     .about-img{
-        display: none;
+        width: 70%;
     }
     
     .about-details-container {
         width: 80%;
     }
 
+
+    /* MISSION-VISION SECTION */
+
     .mission-vision-container {
         width: 90%;
+        position: static;
+        bottom: 0;
     }
 
     .mission-vision-card {
@@ -37,14 +54,20 @@
         width: 80%;
         padding: 0 1rem;
     }
-    
+
+
+    /* PILLARS SECTION */
+
+    .pillars-container {
+        padding: 2rem 0;
+    }
 
     .pillars-details {
         flex-direction: column;
     }
 
     .pillars-card-img img {
-        width: 150px;
+        width: 100px;
         height: auto;
     }
 
@@ -91,4 +114,14 @@
     .teachers-details-2 {
         width: 100%;
     } */
+
+
+    /* PARTNERS */
+    .partners-img {
+        gap: 1rem;
+    }
+
+    .partners-img img {
+        height: 30px;
+    }
 }

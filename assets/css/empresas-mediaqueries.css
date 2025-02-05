@@ -1,0 +1,105 @@
+@media screen and (max-width:1200px) {
+    /* BENEFITS SECTION */
+
+    .benefits-card {
+        padding: 1rem 0.5rem;
+    }
+
+    .benefits-card-img {
+        height: 75px;
+    }
+
+
+    /* FORM SECTION */
+
+    .form-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .form-container-1, .form-container-2, .form-container-3 {
+        display: flex;
+        gap: 1rem;
+    }
+}
+
+
+@media screen and (max-width:900px) {
+    .about-container, .benefits-container, .reviews-container, .sponsors-container, .form-container {
+        padding: 2rem 0;
+    }
+
+
+    /* ABOUT SECTION */
+
+    .about-container {
+        flex-direction: column;
+        width: 80%;
+    }
+
+    .about-details {
+        width: 100%;
+    }
+
+    .about-img {
+        width: 100%;
+    }
+
+
+    /* BENEFITS SECTION */
+
+    .benefits-details {
+        flex-direction: column;
+        width: 60%;
+        margin: auto;
+    }
+
+    .benefits-card {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .benefits-card-img {
+        height: 50px;
+    }
+
+
+    /* REVIEWS SECTION */
+
+    .reviews-container {
+        flex-direction: column;
+        width: 80%;
+    }
+
+    .reviews-details {
+        width: 100%;
+    }
+
+    .reviews-img {
+        width: 100%;
+    }
+
+
+    /* SPONSORS SECTION */
+    
+    .sponsor {
+        width: 100px;
+    }
+
+
+    /* FORM SECTION */
+    .form-title {
+        width: 80%;
+    }
+
+    .form-container-1, .form-container-2, .form-container-3 {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .form-input {
+        width: 100%;
+    }
+
+}

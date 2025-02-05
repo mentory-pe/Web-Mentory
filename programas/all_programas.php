@@ -1,9 +1,7 @@
 <?php
-get_header(); 
-
-// Obtener el título de la página actual
-$page_title = is_search() ? 'Resultados de búsqueda: ' . get_search_query() : get_the_title();
-
+global $page_title;
+$page_title = 'Programas';
+get_header();
 ?>
 
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/index-program.css" type="text/css">
@@ -25,25 +23,43 @@ $page_title = is_search() ? 'Resultados de búsqueda: ' . get_search_query() : g
     <div class="allprograms_cards">
         <div class="allprograms_cards_container">
             <form class="search_programs" method="get" action="">
-
+                <!-- Input para búsqueda por título -->
                 <div>
-                    <input class="input_search" placeholder="Buscar por título del programa" type="text" id="name" name="name" value="<?php echo isset($_GET['name']) ? esc_attr($_GET['name']) : ''; ?>">
+                    <input class="input_search" placeholder="Buscar por título del programa" type="text" id="name" name="name" 
+                        value="<?php echo isset($_GET['name']) ? esc_attr($_GET['name']) : ''; ?>">
                 </div>
 
-                <div>
-                    <select class="input_search" name="area" id="area">
-                        <option value="">Todas las áreas</option>
-                        <?php
-                        global $wpdb;
-                        $areas = $wpdb->get_results("SELECT * FROM {$wpdb->prefix}areas");
-                        foreach ($areas as $area) :
-                            $selected = (isset($_GET['area']) && $_GET['area'] == $area->id) ? 'selected' : '';
-                            echo '<option value="' . esc_attr($area->id) . '" ' . $selected . '>' . esc_html($area->name) . '</option>';
-                        endforeach;
-                        ?>
-                    </select>
+                <!-- Lista de checkboxes para las áreas -->
+
+
+
+                <div class="main_class_accordion">
+                    <a class="accordion">ÁREAS</a>
+                    <div class="accordion-content">
+                        <div class="accordioncontenido">
+                            <?php
+                                global $wpdb;
+                                $areas = $wpdb->get_results("SELECT * FROM {$wpdb->prefix}areas");
+
+                                // Obtener las áreas seleccionadas en la URL
+                                $selected_areas = isset($_GET['area']) ? (array) $_GET['area'] : [];
+
+                                foreach ($areas as $area) :
+                                    $checked = in_array($area->id, $selected_areas) ? 'checked' : '';
+                                ?>
+                                    <label class="item_checkbox">
+                                        <input type="checkbox" name="area[]" value="<?php echo esc_attr($area->id); ?>" <?php echo $checked; ?>>
+                                        <?php echo esc_html($area->name); ?>
+                                    </label>
+                            <?php endforeach; ?>
+                        </div>
+                    </div>
                 </div>
 
+
+
+
+                <!-- Botón de búsqueda -->
                 <div>
                     <button class="btn_search" type="submit">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/program-index/fi_search.png" alt="">
@@ -53,24 +69,25 @@ $page_title = is_search() ? 'Resultados de búsqueda: ' . get_search_query() : g
             </form>
         </div>
 
-        <div class="subcontainer_allcards" style="max-width: 1600px; margin: 0 auto;">
-            <?php
-            // Filtros de búsqueda
-            $area_filter = isset($_GET['area']) ? intval($_GET['area']) : '';
+        <div class="subcontainer_allcards">
+        <?php
+            // Obtener filtros de búsqueda
             $name_filter = isset($_GET['name']) ? sanitize_text_field($_GET['name']) : '';
+            $selected_areas = isset($_GET['area']) ? (array) $_GET['area'] : [];
 
             // Configuración de paginación
             $programs_per_page = 6;
             $paged = isset($_GET['paged']) ? max(1, intval($_GET['paged'])) : 1;
             $offset = ($paged - 1) * $programs_per_page;
 
-            // Construir consulta con filtros y paginación
+            // Construir consulta SQL dinámicamente
             $query = "SELECT * FROM {$wpdb->prefix}programs WHERE 1=1";
             $query_params = [];
 
-            if (!empty($area_filter)) {
-                $query .= " AND area_id = %d";
-                $query_params[] = $area_filter;
+            if (!empty($selected_areas)) {
+                $placeholders = implode(',', array_fill(0, count($selected_areas), '%d'));
+                $query .= " AND area_id IN ($placeholders)";
+                $query_params = array_merge($query_params, $selected_areas);
             }
 
             if (!empty($name_filter)) {
@@ -78,6 +95,7 @@ $page_title = is_search() ? 'Resultados de búsqueda: ' . get_search_query() : g
                 $query_params[] = '%' . $wpdb->esc_like($name_filter) . '%';
             }
 
+            // Agregar paginación
             $query .= " LIMIT %d OFFSET %d";
             $query_params[] = $programs_per_page;
             $query_params[] = $offset;
@@ -85,10 +103,9 @@ $page_title = is_search() ? 'Resultados de búsqueda: ' . get_search_query() : g
             $programs = $wpdb->get_results($wpdb->prepare($query, ...$query_params));
 
             // Total de programas
-            $total_programs_query = "SELECT COUNT(*) FROM {$wpdb->prefix}programs WHERE 1=1";
-            $total_query_params = $query_params;
-            $total_query_params = array_slice($total_query_params, 0, -2); // Excluir límite y offset
-            $total_programs = $wpdb->get_var($wpdb->prepare($total_programs_query, ...$total_query_params));
+            $total_query = "SELECT COUNT(*) FROM {$wpdb->prefix}programs WHERE 1=1";
+            $total_query_params = array_slice($query_params, 0, -2); // Excluir límite y offset
+            $total_programs = $wpdb->get_var($wpdb->prepare($total_query, ...$total_query_params));
             $total_pages = ceil($total_programs / $programs_per_page);
 
             // Mostrar programas
@@ -207,6 +224,7 @@ $page_title = is_search() ? 'Resultados de búsqueda: ' . get_search_query() : g
     </div>
 </section>
 
+<script src="<?php echo get_template_directory_uri(); ?>/assets/js/index-program.js"></script>
 
 <?php
 get_footer();

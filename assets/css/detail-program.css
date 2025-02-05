@@ -137,8 +137,8 @@ body {
 
 @media (max-width:1536px) and (min-width:1024px) {
     .zona_portada_detail_items_imgzone {
-        width: 800px;
-        max-width: 100%;
+        width: 100%;
+        max-width: 800px;
         height: auto;
         border-radius: 30px;
         position: relative;
@@ -159,6 +159,7 @@ body {
     .zona_portada_detail {
         padding-top: 4rem;
     }
+
     .zona_portada_detail_items_imgzone {
         width: 100%;
         height: auto;
@@ -183,6 +184,13 @@ body {
 
 }
 
+@media (min-width: 1024px) {
+    .zona_portada_detail {
+        padding-top: 6rem;
+    }
+}
+
+
 
 /* Estilos para pantallas mayores a 1920px */
 @media (min-width: 1536px) {
@@ -190,6 +198,7 @@ body {
     .zona_portada_detail {
         padding-top: 6rem;
     }
+
     .zona_portada_detail_items_imgzone {
         width: 800px;
         max-width: 100%;
@@ -270,7 +279,7 @@ body {
 .tab-button {
     position: relative;
     /* Necesario para usar ::after */
-    background-color: #f1f1f1;
+    background-color: #f3f7fb;
     border: none;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
@@ -284,7 +293,7 @@ body {
 
 /* Estilo del botón activo */
 .tab-button.active {
-    background-color: #f1f1f1;
+    background-color: #f3f7fb;
     color: #0E2A46;
     font-weight: bold;
     border-color: #247BA0;
@@ -339,11 +348,15 @@ body {
 
 /* control de media querys
  */
+.tab-buttons {
+    background: #f3f7fb;
+}
 
 @media (max-width:1536px) and (min-width:1024px) {
     .tab-content {
         padding: 0 2rem;
     }
+
     .tab-button {
         padding: 2rem;
         font-size: 24px;
@@ -831,6 +844,7 @@ body {
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    font-weight: 600;
 }
 
 .accordion-item {
@@ -1072,6 +1086,7 @@ body {
         font-size: 24px;
         line-height: 36px;
     }
+
     .teacher_container {
         padding: 2rem 0;
     }
@@ -1112,6 +1127,7 @@ body {
         font-size: 24px;
         line-height: 36px;
     }
+
     .teacher_container {
         padding: 2rem 0;
     }
@@ -1148,6 +1164,7 @@ body {
         height: 130px;
 
     }
+
     .teacher_txtdesc {
         font-size: 14px;
         line-height: 18px;
@@ -1309,7 +1326,7 @@ tamaños a considerar
     /* zona de portada  */
     .zona_portada_detail_title {
         font-family: Poppins;
-        font-size: clamp(47px, 5vw, 67px);
+        font-size: clamp(47px, 5vw, 57px);
         font-weight: 600;
         text-align: left;
         color: #0E2A46;
@@ -1323,7 +1340,7 @@ tamaños a considerar
         align-items: flex-start;
         margin: 0 auto;
         max-width: 1800px;
-        padding: 6rem 0;
+        padding: 6rem 2rem;
         gap: 2rem;
     }
 
@@ -1333,15 +1350,17 @@ tamaños a considerar
         max-width: clamp(350px, 60%, 750px);
     }
 
+    /* 
     .section_detail_lateral_items {
         display: none;
-    }
+    } */
 
     .zona_portada_detail_price {
         display: none;
     }
 
-    #idtab1, #tab2Container{
+    #idtab1,
+    #tab2Container {
         display: none !important;
     }
 
@@ -1352,12 +1371,15 @@ tamaños a considerar
 
 /* Estilos para pantallas mayores a 1920px */
 @media (min-width: 1536px) {
-    #idtab1, #tab2Container {
+
+    #idtab1,
+    #tab2Container {
         display: none !important;
     }
+
     .zona_portada_detail_title {
         font-family: Poppins;
-        font-size: 67px;
+        font-size: 64px;
         font-weight: 600;
         text-align: left;
         color: #0E2A46;
@@ -1447,3 +1469,74 @@ tamaños a considerar
 @media (max-width: 1920px) {
 
 } */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* accordiones  */
+button.accordion {
+    width: 100%;
+    background-color: whitesmoke;
+    border: none;
+    outline: none;
+    text-align: left;
+    padding: 15px 20px;
+    font-size: 18px;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.2s linear;
+}
+
+button.accordion:after {
+    content: "⮟";
+    font-family: "fontawesome";
+    font-size: 18px;
+    float: right;
+    transition: transform 0.4s ease-in-out;
+}
+
+button.accordion.is-open:after {
+    content: "⮟";
+    transform: rotate(180deg);
+    transition: transform 0.4s ease-in-out;
+    /* Transición fluida */
+}
+
+button.accordion:hover,
+button.accordion.is-open {
+    background-color: #ddd;
+}
+
+.accordion-content {
+    background-color: white;
+    border-left: 1px solid whitesmoke;
+    border-right: 1px solid whitesmoke;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-in-out;
+}

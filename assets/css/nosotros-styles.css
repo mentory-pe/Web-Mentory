@@ -7,9 +7,14 @@ body {
     background-color: #f4f4f4;
 }
 
+section {
+    margin: 1rem 0;
+}
+
+
 /* NOSOTROS */
 .hero {
-    background-image: url('../images/nosotros/nosotros-fondo.png');
+    background-image: url('../images/nosotros/Recurso 1@4x.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -17,29 +22,15 @@ body {
     width: auto;
 }
 
-.nosotros-title {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    justify-content: center;
-    padding-top: 10rem;
-    margin: 0 auto;
-    font-family: Poppins;
-    font-size: 64px;
-    font-weight: 600;
-    line-height: 96px;
-    color: #CF9B24;
-    padding: 6rem 0px;
-}
-
 
 /* ABOUT SECTION */
 
 #about {
-    padding-bottom: 400px;
+    padding-bottom: 600px;
 }
 
 .about-container {
+    padding: 2rem 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -51,11 +42,12 @@ body {
     width: fit-content;
     text-align: center;
     display: flex;
+    width: 50%;
 }
 
 .about-img img {
-    height: 600px;
-    width: auto;
+    width: 100%;
+    height: auto;
 }
 
 .about-details-container {
@@ -113,7 +105,12 @@ body {
 /* PILLARS SECTION */
 
 .pillars-container {
-    background-image: radial-gradient(circle, #051525, #0b03a9);
+    background-image: url('../images/nosotros/Recurso 6@4x.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* height: 100vh; */
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -121,16 +118,17 @@ body {
     align-items: center;
     padding: 4rem 0;
     padding-top: 250px;
+    text-align: center;
 }
 
 .pillars-container h2 {
     color: #CF9B24;
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: 600;
 }
 
 .pillars-container h2 span {
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: 700;
 }
 
@@ -148,11 +146,12 @@ body {
 }
 
 .pillars-card-img img {
-    width: 40%;
+    height: 150px;
 }
 
 .pillars-card-text h3 {
-    font-size: 1.5rem;
+    font-size: 2rem;
+    font-weight: 500;
     color: #CF9B24;
 }
 
@@ -418,12 +417,17 @@ body {
 }
 
 .partners-img {
+    width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: 2rem;
+    gap: 5rem;
+}
+
+.partners-img img {
+    height: 50px;
 }
 
 
@@ -1119,10 +1123,6 @@ body {
 
     .logros_zone_img_movil {
         display: none;
-    }
-
-    section.nosotros {
-        padding-top: 8rem;
     }
 
 }
