@@ -166,7 +166,6 @@ Pantallas grandes (escritorio): Más de 1024px.
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        padding: 0 1rem;
     }
 
     .header_main_movil_parte1 {
@@ -179,7 +178,9 @@ Pantallas grandes (escritorio): Más de 1024px.
         width: 100%;
     }
 
-    .header_main_movil_parte2 {}
+    .header_main_movil_parte2 {
+        display: flex;
+    }
 
     .btn_movil_header_aula,
     .btn_movil_header_burger {

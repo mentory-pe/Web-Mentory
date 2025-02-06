@@ -345,7 +345,9 @@ get_header();
 
                         <div class="programs_item_btnsection" style="width: 100%;">
                             <div class="programs_item_sectionbtn">
-                                <button class="programs_item_sectionbtn" >MÁS INFORMACIÓN</button>
+                                <a href="<?php echo esc_url($program_url); ?>" style="text-decoration: none;"> 
+                                    <button class="programs_item_sectionbtn" >MÁS INFORMACIÓN</button>
+                                </a>
                             </div>
                         </div>
 

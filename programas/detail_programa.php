@@ -202,9 +202,7 @@ get_header();
                                     Descripción
                                 </div>
                                 <div class="contenttab1_desc">
-
-                                    <?php echo htmlspecialchars_decode($programa->descripcion); ?>
-
+                                    <?php echo esc_html(wp_unslash($programa->descripcion)); ?>
                                 </div>
                             </div>
 
@@ -212,7 +210,7 @@ get_header();
                             <div class="contenttab1_aprenderas">
                                 <div class="contenttab1_aprenderas_title">¿Qué aprenderás? </div>
                                 <div class="contenttab1_aprenderas_txtdetail">
-                                    <?php echo htmlspecialchars_decode($programa->que_aprenderas); ?>
+                                    <?php echo esc_html(wp_unslash($programa->que_aprenderas)); ?>
                                 </div>
                             </div>
 
@@ -339,14 +337,17 @@ get_header();
                                                 <?php echo esc_html($docente->cargo); ?>
                                             </div>
                                         </div>
-                                        <div>
-                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/detail-programas/linkedin.png"
-                                                alt="">
-                                        </div>
+                                        
+                                        <a href="<?php echo esc_html($docente->url_perfil); ?>" target="_blank"> 
+                                            <div>
+                                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/detail-programas/linkedin.png"
+                                                    alt="">
+                                            </div>
+                                        </a>
                                     </div>
                                 </div>
                                 <div class="teacher_txtdesc">
-                                    <?php echo esc_html($docente->descripcion); ?>
+                                    <?php echo esc_html(wp_unslash($docente->descripcion)); ?>
                                 </div>
                             </div>
                             <?php endforeach; ?>
