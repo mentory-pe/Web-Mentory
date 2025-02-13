@@ -53,9 +53,9 @@ get_header();
                 <!-- zona exclusiva de version movil 
                   -->
                 <div class="zona_portada_detail_price">
-                    <div>
+                    <!-- <div>
                         <?php echo htmlspecialchars_decode($programa->precio); ?>
-                    </div>
+                    </div> -->
                     <div class="zona_portada_detail_price_img">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/detail-programas/icoventa1.png" alt="">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/detail-programas/icoventa2.png" alt="">
@@ -402,9 +402,9 @@ get_header();
                                 </div>
 
 
-                                <div class="detallesprogram_precio">
+                                <!-- <div class="detallesprogram_precio">
                                     <?php echo htmlspecialchars_decode($programa->precio); ?>
-                                </div>
+                                </div> -->
                             </div>
 
                             <div class="section_detail_lateral_items_part2">

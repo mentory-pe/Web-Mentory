@@ -26,10 +26,10 @@ if ($masterclass_slug) {
     type="text/css">
 
     <?php
-global $page_title;
-$page_title = ($masterclass->nombreMasterclass);
-get_header();
-?>
+    global $page_title;
+    $page_title = ($masterclass->nombreMasterclass);
+    get_header();
+    ?>
 <section>
 
     <div class="encabezado_zone">
@@ -56,12 +56,12 @@ get_header();
                         <div class="datoscard">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/detail-masterclass/imgcard1.png"
                                 alt="">
-                            INICIO: 7 Noviembre
+                            INICIO: <?php echo esc_attr($masterclass->fecha_inicio); ?>
                         </div>
                         <div class="datoscard">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/detail-masterclass/imgcard2.png"
                                 alt="">
-                            HORA: 10pm
+                            HORA: <?php echo esc_attr($masterclass->hora_inicio); ?>
                         </div>
                         <div class="datoscard">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/detail-masterclass/imgcard3.png"
@@ -82,7 +82,7 @@ get_header();
                             alt="<?php echo esc_attr($masterclass->nombreMasterclass); ?>">
                     </div>
                     <div class="encabezado_zone_form">
-                        <form action="">
+                        <!-- <form action="">
                             <div class="encabezado_zone_form_maincontainer">
                                 <div class="title_registro">
                                     Registro
@@ -127,7 +127,39 @@ get_header();
 
                                 <button class="btn_send">Asistir</button>
                             </div>
-                        </form>
+                        </form> -->
+
+                        <p>
+                            <?php 
+                            // Obtener la fecha actual
+                            $fecha_actual = date('Y-m-d'); 
+                            
+                            // Obtener la fecha de inicio de la masterclass
+                            $fecha_inicio = esc_attr($masterclass->fecha_inicio); 
+
+                            if ($fecha_inicio > $fecha_actual): ?>
+                                <!-- Mensaje de bienvenida -->
+                                <div class="message_container">
+                                    <div class="message_ingreso_title">
+                                        Ingreso
+                                    </div>
+
+                                    <div class="message_ingreso_text">
+                                        Puedes ingresar al enlace de la reunión
+                                    </div>
+
+                                    <div class="message_ingreso_subtext">
+                                        Haciendo Clic <a href="<?php echo esc_url($masterclass->link_inscripcion); ?>" style="text-decoration: none;" target="_blank"><span class="message_ingreso_link"> AQUÍ</span></a> 
+                                    </div>
+                                </div>
+                            <?php else: ?>
+                                <!-- Mensaje cuando la clase ya concluyó -->
+                                🔴 <strong>La clase ya ha concluido.</strong>
+                            <?php endif; ?>
+                        </p>
+
+
+
                     </div>
                 </div>
             </div>
@@ -182,12 +214,16 @@ get_header();
                                 </div>
                                 <div class="datos_masterclass_perfil_cargo">
                                     <?php echo esc_html($docente->cargo); ?>
-
                                 </div>
 
                             </div>
                             <div class="datos_masterclass_perfil_imgs">
-                                imagenes
+                                <a href="<?php echo esc_html($docente->url_perfil); ?>" target="_blank"> 
+                                    <div>
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/detail-programas/linkedin.png"
+                                            alt="">
+                                    </div>
+                                </a>
                             </div>
                         </div>
 
@@ -233,12 +269,12 @@ get_header();
                             <div class="datoscard">
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/detail-masterclass/imgcard1.png"
                                     alt="">
-                                INICIO: 7 Noviembre
+                                INICIO: <?php echo esc_attr($masterclass->fecha_inicio); ?>
                             </div>
                             <div class="datoscard">
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/detail-masterclass/imgcard2.png"
                                     alt="">
-                                HORA: 10pm
+                                HORA: <?php echo esc_attr($masterclass->hora_inicio); ?>
                             </div>
                             <div class="datoscard">
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/detail-masterclass/imgcard3.png"

@@ -467,7 +467,7 @@ body {
 
 .section_detail_lateral {
     width: 386px;
-    height: 743px;
+    height: 620px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -1394,7 +1394,7 @@ tamaños a considerar
         margin: 0 auto;
         max-width: 1800px;
         gap: 2rem;
-        padding: 6rem 0;
+        padding: 6rem 2rem;
     }
 
 
