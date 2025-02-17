@@ -55,9 +55,9 @@
         <div class="footer_sub">
             <div class="link_zone">NOSOTROS</div>
             <div class="link_zone_items">
-                <div class="link_zone_item"><a href="">Sobre Mentory</a></div>
-                <div class="link_zone_item"><a href="">Para Empresas</a></div>
-                <div class="link_zone_item"><a href="">Masterclass</a></div>
+                <div class="link_zone_item"><a href="<?php echo home_url('/nosotros/'); ?>">Sobre Mentory</a></div>
+                <div class="link_zone_item"><a href="<?php echo home_url('/empresas/'); ?>">Para Empresas</a></div>
+                <div class="link_zone_item"><a href="<?php echo home_url('/masterclass/'); ?>">Masterclass</a></div>
                 <div class="link_zone_item"><a href="">Beneficios</a></div>
             </div>
         </div>
@@ -78,7 +78,7 @@
         <div class="link_zone">OTROS</div>
             <div class="link_zone_items">
                 <div class="link_zone_item"><a href="">Libro de Reclamaciones</a></div>
-                <div class="link_zone_item"><a href="">Termino y condiciones</a></div>
+                <div class="link_zone_item"><a href="<?php echo home_url('/terminos-y-condiciones/'); ?>">Termino y condiciones</a></div>
                 <div class="link_zone_item"><a href="">Nuestras Políticas</a></div>
                 <div class="link_zone_item"><a href="">Política de Privacidad</a></div>
                 <div class="link_zone_item"><a href="">Protocolo de Admisión</a></div>

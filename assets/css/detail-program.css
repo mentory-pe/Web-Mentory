@@ -369,6 +369,14 @@ body {
         margin: 0 auto;
         align-items: center;
     }
+
+    .tabs {
+        max-width: 850px;
+        width: 100%;
+        margin: 0 auto;
+        font-family: Arial, sans-serif;
+        background-color: white;
+    }
 }
 
 /* Estilos para pantallas mayores a 1920px */
@@ -589,6 +597,10 @@ body {
     color: #0E2A46;
 }
 
+.contenttab1_cert_img img {
+    width: 100%;
+}
+
 /* control de media querys
  */
 
@@ -606,6 +618,7 @@ body {
         padding: 3rem 1.5rem;
         background: #dce2ee;
         border-radius: 24px 0px 0px 24px;
+        max-width: 450px;
     }
 
     .contenttab1_cert_txtcont_title {

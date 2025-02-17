@@ -116,6 +116,8 @@ input {
     flex-direction: column;
     gap: 1rem;
     width: 30%;
+    justify-content: center;
+    align-items: center;
 }
 
 .get-there-card {
@@ -167,6 +169,6 @@ input {
     width: 100%;
 }
 
-.get-there-img img {
+.get-there-img iframe {
     width: 100%;
 }

@@ -137,7 +137,7 @@ if ($masterclass_slug) {
                             // Obtener la fecha de inicio de la masterclass
                             $fecha_inicio = esc_attr($masterclass->fecha_inicio); 
 
-                            if ($fecha_inicio > $fecha_actual): ?>
+                            if ($fecha_inicio > $fecha_actual || $fecha_inicio == $fecha_actual ): ?>
                                 <!-- Mensaje de bienvenida -->
                                 <div class="message_container">
                                     <div class="message_ingreso_title">

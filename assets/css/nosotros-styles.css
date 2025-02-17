@@ -60,8 +60,16 @@ section {
     text-align: justify;
 }
 
-.about-title img {
+.about-title {
     width: 60%;
+}
+
+.about-title img {
+    width: 100%;
+}
+
+.about-text-container {
+    width: 100%;
 }
 
 
@@ -259,7 +267,7 @@ section {
 @media(max-width: 1024px) {
 
     .area_section {
-        padding: 4rem 0rem;
+        padding: 4rem 1rem;
         margin: 0 auto;
         max-width: 1800px;
     }
@@ -394,6 +402,15 @@ section {
 } */
 
 
+.teachers-title {
+    width: 60%;
+    margin-bottom: 2rem;
+}
+
+.teachers-title img {
+    width: 100%;
+}
+
 /* PARTNERS */
 
 .partners-container {
@@ -429,11 +446,6 @@ section {
 .partners-img img {
     height: 50px;
 }
-
-
-
-
-
 
 
 

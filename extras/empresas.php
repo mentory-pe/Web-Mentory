@@ -13,7 +13,8 @@ get_header(); // Carga el encabezado del tema (header.php)
                 <h2>¿Qué es Mentory <br><span>para Empresas?</span></h2>
             </div>
             <div class="about-text">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error et voluptas adipisci hic, repellat laborum, tempora neque accusantium ex temporibus perspiciatis, aliquid dolorum velit qui delectus ut illum nisi. Atque.</p>
+                <p>En Mentory para Empresas, transformamos la capacitación en un motor de crecimiento para tu organización. Diseñamos planes de formación a medida, alineados con tus objetivos y necesidades, para que tu equipo desarrolle las habilidades clave que impulsan el éxito.</p>
+                <p>¡Haz crecer tu empresa con Mentory para Empresas! </p>
             </div>
             <div class="about-button">
 
@@ -31,54 +32,57 @@ get_header(); // Carga el encabezado del tema (header.php)
         <h2>
             Beneficios
         </h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio cum voluptatibus velit voluptates, distinctio necessitatibus assumenda culpa illum quo totam sequi minus quis magnam tempora officia. Molestiae, accusantium beatae? Assumenda?</p>
+        <p>Cada programa está diseñado para brindarte habilidades prácticas y aplicables de inmediato en tu profesión. Especialízate en temas clave como Construcción, Management, Mantenimiento, Minería, Proyectos y Energía & Electricidad
+        </p>
         <div class="benefits-details">
             <div class="benefits-card">
                 <div class="benefits-card-img">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/empresas/ico.png"
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/empresas/cap.png"
                     alt="">
                 </div>
                 <div class="benefits-card-title">
                     <h3>Capacitación</h3>
                 </div>
                 <div class="benefits-card-text">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore reiciendis a animi doloribus est ad in at.</p>
+                    <p>Capacitación a medida online sincrónica o inhouse.</p>
                 </div>
             </div>
             <div class="benefits-card">
                 <div class="benefits-card-img">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/empresas/ico.png"
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/empresas/talento.png"
                     alt="">
                 </div>
                 <div class="benefits-card-title">
                     <h3>Talento</h3>
                 </div>
                 <div class="benefits-card-text">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore reiciendis a animi doloribus est ad in at.</p>
+                    <p>Mejora el talento de tu equipo con perfiles más competitivos.</p>
                 </div>
             </div>
             <div class="benefits-card">
                 <div class="benefits-card-img">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/empresas/ico.png"
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/empresas/productvidad.png"
                     alt="">
                 </div>
                 <div class="benefits-card-title">
                     <h3>Productividad</h3>
                 </div>
                 <div class="benefits-card-text">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore reiciendis a animi doloribus est ad in at.</p>
+                    <p>Aumenta la productividad y calidad de trabajo.
+                    </p>
                 </div>
             </div>
             <div class="benefits-card">
                 <div class="benefits-card-img">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/empresas/ico.png"
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/empresas/seguimiento.png"
                     alt="">
                 </div>
                 <div class="benefits-card-title">
                     <h3>Seguimiento</h3>
                 </div>
                 <div class="benefits-card-text">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi nesciunt culpa hic, possimus tenetur libero, quibusdam voluptatum reiciendis esse velit ipsam ducimus quis. Quos possimus est, ab repudiandae dolor ullam. lore</p>
+                    <p>Supervisa el progreso de las capacitaciones de tu equipo en tiempo real con nuestra plataforma.
+                    </p>
                 </div>
             </div>
         </div>
@@ -92,7 +96,8 @@ get_header(); // Carga el encabezado del tema (header.php)
                 <h2>No solo tomes <br><span>Nuestra Palabra...</span></h2>
             </div>
             <div class="reviews-text">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum ipsa debitis nam, eius, error impedit, sapiente non vel illo voluptate nihil nulla quidem. Esse rerum, ullam accusantium eveniet repellendus vero.</p>
+                <p>En Mentory, nos enorgullecemos de ayudar a nuestros socios a alcanzar sus metas. Aquí tienes lo que algunos de ellos tienen que decir sobre su
+                experiencia con nosotros.</p>
             </div>
         </div>
         <div class="reviews-img">
@@ -109,39 +114,39 @@ get_header(); // Carga el encabezado del tema (header.php)
         </div>
         <div class="sponsors-details">
             <div class="sponsor">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/empresas/sponsor-ejemplo.png"
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/empresas/Minera Andalucita.png"
                 alt="">
             </div>
             <div class="sponsor">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/empresas/sponsor-ejemplo.png"
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/empresas/Minera Poderosa.jpg"
+                alt="Minera Poderosa">
+            </div>
+            <div class="sponsor">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/empresas/Minera Saucito.png"
                 alt="">
             </div>
             <div class="sponsor">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/empresas/sponsor-ejemplo.png"
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/empresas/Minera Triton.png"
                 alt="">
             </div>
             <div class="sponsor">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/empresas/sponsor-ejemplo.png"
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/empresas/1-300x180.png"
                 alt="">
             </div>
             <div class="sponsor">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/empresas/sponsor-ejemplo.png"
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/empresas/2-300x180.png"
                 alt="">
             </div>
             <div class="sponsor">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/empresas/sponsor-ejemplo.png"
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/empresas/3-300x180.png"
                 alt="">
             </div>
             <div class="sponsor">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/empresas/sponsor-ejemplo.png"
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/empresas/4-300x180.png"
                 alt="">
             </div>
             <div class="sponsor">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/empresas/sponsor-ejemplo.png"
-                alt="">
-            </div>
-            <div class="sponsor">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/empresas/sponsor-ejemplo.png"
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/empresas/5-300x180.png"
                 alt="">
             </div>
         </div>
@@ -156,28 +161,28 @@ get_header(); // Carga el encabezado del tema (header.php)
         <form action="" class="form">
             <div class="form-container-1">
                 <label for="input-1">
-                    <p>Nombres</p>
-                    <input type="text" placeholder="Nombres" class="form-input" id="input-1">
+                    <p>Nombre de la Empresa</p>
+                    <input type="text" placeholder="Ingresa el nombre de la empresa" class="form-input" id="input-1">
                 </label>
                 <label for="input-2">
-                    <p>Apellidos</p>
-                    <input type="text" placeholder="Apellidos" class="form-input" id="input-2">
+                    <p>Nombre de Contacto</p>
+                    <input type="text" placeholder="Ingresa tu nombre" class="form-input" id="input-2">
                 </label>
             </div>
             <div class="form-container-3">
                 <label for="input-3">
-                    <p>Texto 1</p>
-                    <input type="text" placeholder="DNI" class="form-input" id="input-3">
+                    <p>Correo Electrónico</p>
+                    <input type="text" placeholder="Ingresa tu correo electrónico" class="form-input" id="input-3">
                 </label>
                 <label for="input-4">
-                    <p>Texto 2</p>
+                    <p>Número de Contacto</p>
                     <input type="text" placeholder="Celular" class="form-input" id="input-4">
                 </label>
             </div>
             <div class="form-container-3">
                 <label for="input-5">
-                    <p>Texto 3</p>
-                    <textarea class="textarea" id="input-5" rows="3" placeholder="Ingresa el texto"></textarea>
+                    <p>Déjanos un Mensaje</p>
+                    <textarea class="textarea" id="input-5" rows="3" placeholder="Escríbenos tu mensaje ..."></textarea>
                 </label>
             </div>
             <div class="submit-button">

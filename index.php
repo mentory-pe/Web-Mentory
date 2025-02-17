@@ -231,7 +231,7 @@ get_header();
 
 
             <div class="testimonio_imgcontainer">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/new/Recurso 1.png" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/new/Ariam.png" alt="">
             </div>
             <div class="testimonio_texts_container">
                  <div id="title_testimonio_web" class="testimonio_text_title">
@@ -247,16 +247,15 @@ get_header();
                     <img id="imglogo_testimonios" src="<?php echo get_template_directory_uri(); ?>/assets/images/index/new/vector_1.png" alt="">
                  </div>
 
-                 <div class="testimonio_testigo">
-                    Miguel Rodriguez
+                 <div class="testimonio_testigo" style="text-align: center;">
+                    Ariam Rojas
                  </div>
 
                  <div class="testimonio_textos">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam aperiam neque amet dolores corporis repellat sint quae aliquid, quis perferendis, veritatis culpa quos reiciendis recusandae non animi. Animi, perferendis nihil.
-
+                        Estudiar en Mentory fue una de las mejores decisiones de mi vida. Desde el primer día, las prácticas me impulsaron a conseguir mi primer trabajo en el área. 
                     <br> <br>
 
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga at alias voluptatem a
+                        La formación es real, aplicable y, sobre todo, transformadora. ¡Gracias, Mentory, por abrirme las puertas al mundo laboral!
                  </div>
             </div>
         </div>

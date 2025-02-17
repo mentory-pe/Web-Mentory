@@ -9,7 +9,7 @@ get_header(); // Carga el encabezado del tema (header.php)
 <section id="about">
     <div class="about-container">
         <div class="about-img">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/Recurso 3@4x.png"
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/nosotros_portada.png"
             alt="">
         </div>
         <div class="about-details-container">
@@ -18,9 +18,9 @@ get_header(); // Carga el encabezado del tema (header.php)
                 alt="">
             </div>
             <div class="about-text-container">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis minus culpa sequi nostrum? Nihil enim veritatis iusto suscipit corrupti dolores deleniti adipisci vitae dolorum corporis animi magni, ipsa unde perspiciatis!</p>
+                <p>Somos una institución peruana comprometida con la especialización y el crecimiento de quienes buscan destacar en sectores de alta demanda como Energía & Electricidad, Construcción, Minería, Mantenimiento, Seguridad, Operaciones & Logística, Proyectos y Management.</p>
                 <br>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit modi repudiandae, commodi cupiditate incidunt ipsam vitae recusandae. Molestias, repellendus ratione deleniti dolores ullam necessitatibus consequuntur repellat, aperiam tenetur ad ea?</p>
+                <p>Nos enfocamos en brindar capacitación de alto nivel, combinando expertise técnico, metodologías innovadoras y una visión estratégica, para que nuestros alumnos adquieran las habilidades que realmente impulsan su desarrollo profesional. En Mentory, formamos a los profesionales que lideran el futuro.</p>
             </div>
         </div>
     </div>
@@ -35,7 +35,7 @@ get_header(); // Carga el encabezado del tema (header.php)
             </div>
             <div class="mission-vision-card-details">
                 <h2>MISIÓN</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel nesciunt autem ratione? Distinctio veniam quod error omnis, dolore quibusdam repellendus tempora magni, cumque molestias suscipit expedita, voluptatum neque reprehenderit blanditiis!</p>
+                <p>Potenciar el desarrollo profesional de nuestros estudiantes a través de programas de especialización de alta calidad que combinan la flexibilidad del aprendizaje online con clases en vivo y prácticas aplicadas.</p>
             </div>
         </div>
         <div class="mission-vision-card">
@@ -45,7 +45,7 @@ get_header(); // Carga el encabezado del tema (header.php)
                 </div>
             <div class="mission-vision-card-details">
                 <h2>VISIÓN</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel nesciunt autem ratione? Distinctio veniam quod error omnis, dolore quibusdam repellendus tempora magni, cumque molestias suscipit expedita, voluptatum neque reprehenderit blanditiis!</p>
+                <p>Ser reconocidos como la institución líder en educación técnica especializada en Perú y Latinoamérica, destacándonos por nuestra excelencia académica, docentes de clase mundial y alianzas estratégicas.</p>
             </div>
         </div>
     </div>
@@ -147,7 +147,7 @@ get_header(); // Carga el encabezado del tema (header.php)
                                     Programa de <span>Especialización <br>Diseñados</span> para tu Éxito
                                 </div>
                                 <div class="service-card-text">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus qui voluptatibus facilis exercitationem. Consequatur, nostrum laborum! Eos architecto, dolores, porro voluptates repellendus laboriosam excepturi culpa fugit quo qui veniam quos.</p>
+                                <p>Cada programa está diseñado para brindarte habilidades prácticas y aplicables de inmediato en tu profesión. Especialízate en temas clave como Construcción, Management, Mantenimiento, Minería, Proyectos y Energía & Electricidad </p>
                                 </div>
                             </div>
                         </div>
@@ -163,7 +163,8 @@ get_header(); // Carga el encabezado del tema (header.php)
                                 Clases en <span>Vivo</span> y Experiencia <span>Interactiva</span>
                             </div>
                             <div class="service-card-text">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus qui voluptatibus facilis exercitationem. Consequatur, nostrum laborum! Eos architecto, dolores, porro voluptates repellendus laboriosam excepturi culpa fugit quo qui veniam quos.</p>
+                                <p>Conéctate desde cualquier lugar y disfruta de clases dinámicas y accesibles. Interactúa en tiempo real, resuelve tus dudas, participa en debates y comparte experiencias con estudiantes e instructores de todo el mundo. ¡Tu aprendizaje no tiene fronteras! 
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -178,7 +179,7 @@ get_header(); // Carga el encabezado del tema (header.php)
                                 Talleres <span>Prácticos</span> y Evaluaciones <span>Personalizadas</span>
                             </div>
                             <div class="service-card-text">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus qui voluptatibus facilis exercitationem. Consequatur, nostrum laborum! Eos architecto, dolores, porro voluptates repellendus laboriosam excepturi culpa fugit quo qui veniam quos.</p>
+                                <p>Pon en práctica lo aprendido con dinámicas grupales y simulaciones guiadas por expertos. Recibe retroalimentación personalizada que te permitirá identificar y mejorar tus fortalezas. </p>
                             </div>
                         </div>
                     </div>
@@ -193,7 +194,7 @@ get_header(); // Carga el encabezado del tema (header.php)
                                 Programa de <span>Especialización <br>Diseñados</span> para tu Éxito
                             </div>
                             <div class="service-card-text">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus qui voluptatibus facilis exercitationem. Consequatur, nostrum laborum! Eos architecto, dolores, porro voluptates repellendus laboriosam excepturi culpa fugit quo qui veniam quos.</p>
+                                <p>Cada programa está diseñado para brindarte habilidades prácticas y aplicables de inmediato en tu profesión. Especialízate en temas clave como Construcción, Management, Mantenimiento, Minería, Proyectos y Energía & Electricidad</p>
                             </div>
                         </div>
                     </div>
@@ -208,7 +209,7 @@ get_header(); // Carga el encabezado del tema (header.php)
                                 Clases en <span>Vivo</span> y Experiencia <span>Interactiva</span>
                             </div>
                             <div class="service-card-text">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus qui voluptatibus facilis exercitationem. Consequatur, nostrum laborum! Eos architecto, dolores, porro voluptates repellendus laboriosam excepturi culpa fugit quo qui veniam quos.</p>
+                                <p>Conéctate desde cualquier lugar y disfruta de clases dinámicas y accesibles. Interactúa en tiempo real, resuelve tus dudas, participa en debates y comparte experiencias con estudiantes e instructores de todo el mundo. ¡Tu aprendizaje no tiene fronteras! </p>
                             </div>
                         </div>
                     </div>
@@ -223,7 +224,7 @@ get_header(); // Carga el encabezado del tema (header.php)
                                 Talleres <span>Prácticos</span> y Evaluaciones <span>Personalizadas</span>
                             </div>
                             <div class="service-card-text">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus qui voluptatibus facilis exercitationem. Consequatur, nostrum laborum! Eos architecto, dolores, porro voluptates repellendus laboriosam excepturi culpa fugit quo qui veniam quos.</p>
+                                <p>Pon en práctica lo aprendido con dinámicas grupales y simulaciones guiadas por expertos.Recibe retroalimentación personalizada que te permitirá identificar y mejorar tus fortalezas. </p>
                             </div>
                         </div>
                     </div>
@@ -291,9 +292,9 @@ get_header(); // Carga el encabezado del tema (header.php)
 
 <section id="teachers">
     <div class="area_container">
-        <div class="area_section">
+        <div class="area_section teachers-container">
 
-            <div class="area_section_title">
+            <div class="teachers-title">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/nuestros-docentes.png"
                 alt="">
             </div>
@@ -301,10 +302,50 @@ get_header(); // Carga el encabezado del tema (header.php)
             <div class="area_section_slide">
 
                 <div class="slider-areas">
+                <div>
+    <div class="area_section_card_v1">
+        <div class="area_section_card_img">
+            <a href="https://www.linkedin.com/in/ivan-turco-29299324/" target="_blank" rel="noopener noreferrer">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/docentes/Recurso 9Ivan Turco.png" alt="Ivan Turco">
+            </a>
+        </div>
+    </div>
+</div>
+
+<div>
+    <div class="area_section_card_v2">
+        <div class="area_section_card_img">
+            <a href="https://www.linkedin.com/in/gonzalo-gomez-fabrifor/" target="_blank" rel="noopener noreferrer">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/docentes/Recurso 7Gonzalo Gomez.png" alt="Gonzalo Gómez">
+            </a>
+        </div>
+    </div>
+</div>
+
+<div>
+    <div class="area_section_card_v1">
+        <div class="area_section_card_img">
+            <a href="https://www.linkedin.com/in/percy-franz-coca-mallma-39374973/" target="_blank" rel="noopener noreferrer">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/docentes/Recurso 6Percy coca.png" alt="Percy coca">
+            </a>
+        </div>
+    </div>
+</div>
+
+<div>
+    <div class="area_section_card_v2">
+        <div class="area_section_card_img">
+            <a href="https://www.linkedin.com/in/ivandavilasalas/" target="_blank" rel="noopener noreferrer">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/docentes/Recurso 5Ivan davila.png" alt="Ivan davila">
+            </a>
+        </div>
+    </div>
+</div>
+<!--
                     <div>
                         <div class="area_section_card_v1">
                             <div class="area_section_card_img">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/docente-ejemplo.png"
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/docentes/Gonzalo-Laura.png"
                                     alt="">
                             </div>
                         </div>
@@ -313,7 +354,7 @@ get_header(); // Carga el encabezado del tema (header.php)
                     <div>
                         <div class="area_section_card_v2">
                             <div class="area_section_card_img">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/docente-ejemplo.png"
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/docentes/Ing. Carlos Torres.jfif"
                                     alt="">
                             </div>
                         </div>
@@ -322,7 +363,7 @@ get_header(); // Carga el encabezado del tema (header.php)
                     <div>
                         <div class="area_section_card_v1">
                             <div class="area_section_card_img">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/docente-ejemplo.png"
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/docentes/Ing. Danilo Espinoza.jpeg"
                                     alt="">
                             </div>
                         </div>
@@ -331,7 +372,7 @@ get_header(); // Carga el encabezado del tema (header.php)
                     <div>
                         <div class="area_section_card_v2">
                             <div class="area_section_card_img">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/docente-ejemplo.png"
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/docentes/Ing. Diego Arias.jfif"
                                     alt="">
                             </div>
                         </div>
@@ -340,7 +381,7 @@ get_header(); // Carga el encabezado del tema (header.php)
                     <div>
                         <div class="area_section_card_v1">
                             <div class="area_section_card_img">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/docente-ejemplo.png"
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/docentes/Ing. Evandro Quadros.jpeg"
                                     alt="">
                             </div>
                         </div>
@@ -349,11 +390,156 @@ get_header(); // Carga el encabezado del tema (header.php)
                     <div>
                         <div class="area_section_card_v2">
                             <div class="area_section_card_img">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/docente-ejemplo.png"
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/docentes/Ing. Jose Salazar.jpeg"
                                     alt="">
                             </div>
                         </div>
                     </div>
+
+                    <div>
+                        <div class="area_section_card_v1">
+                            <div class="area_section_card_img">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/docentes/Ing. Maria Teresa Romero.jpeg"
+                                    alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="area_section_card_v2">
+                            <div class="area_section_card_img">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/docentes/Ing. Maryury Garcia.jfif"
+                                    alt="">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <div class="area_section_card_v1">
+                            <div class="area_section_card_img">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/docentes/Ing. Mg. Aníbal Montoya.jpg"
+                                    alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="area_section_card_v2">
+                            <div class="area_section_card_img">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/docentes/Ing. Richard Mera.jpeg"
+                                    alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="area_section_card_v1">
+                            <div class="area_section_card_img">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/docentes/Ing. van Turco.png"
+                                    alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="area_section_card_v2">
+                            <div class="area_section_card_img">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/docentes/Iván Dávila.jpg"
+                                    alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="area_section_card_v1">
+                            <div class="area_section_card_img">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/docentes/Ivan Ruiz Flores.jpg"
+                                    alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="area_section_card_v2">
+                            <div class="area_section_card_img">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/docentes/Jorge Noé.jpg"
+                                    alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="area_section_card_v1">
+                            <div class="area_section_card_img">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/docentes/Jose Contreras.jpg"
+                                    alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="area_section_card_v2">
+                            <div class="area_section_card_img">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/docentes/Jose Miguel Diaz Galinos.jpg"
+                                    alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="area_section_card_v1">
+                            <div class="area_section_card_img">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/docentes/Luis Pacheco.jpg"
+                                    alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="area_section_card_v2">
+                            <div class="area_section_card_img">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/docentes/Marco Villalobos.jpeg"
+                                    alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="area_section_card_v1">
+                            <div class="area_section_card_img">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/docentes/Paola Ramirez.png"
+                                    alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="area_section_card_v2">
+                            <div class="area_section_card_img">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/docentes/percy coca.jpg"
+                                    alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="area_section_card_v1">
+                            <div class="area_section_card_img">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/docentes/Silvia Rosas.jpeg"
+                                    alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="area_section_card_v2">
+                            <div class="area_section_card_img">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/docentes/Victor Turco.jpeg "
+                                    alt="">
+                            </div>
+                        </div>
+                    </div>
+                     -->
                 </div>
             </div>
         </div>
@@ -372,6 +558,8 @@ get_header(); // Carga el encabezado del tema (header.php)
         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/Recurso 16@4x.png"
         alt="">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/Recurso 15@4x.png"
+        alt="">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/logo-ccl.jpg"
         alt="">
     </div>
 </div>

@@ -408,7 +408,7 @@ get_header();
                             </div>
 
                             <div class="section_detail_lateral_items_part2">
-                                <a href="">
+                                <a href="https://wa.me/51952111289?text=Hola,%20quiero%20más%20información%20Sobre%20<?php echo esc_html($programa->name); ?>.">
                                     <button class="section_detail_lateral_btn">Más Información </button>
                                 </a>
 
