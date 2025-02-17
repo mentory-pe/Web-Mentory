@@ -14,7 +14,7 @@ body {
 /* portada */
 .portada_masterclass {
     height: 285px;
-    background-image: url('../images/masterclass-index/Background_masterclass.png');
+    background-image: url('../images/masterclass-index/Background_masterclass.webp');
     background-size: 100% auto;
     /* Ajusta el ancho al 100% y mantiene la proporción */
     background-position: center top;

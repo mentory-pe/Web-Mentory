@@ -65,11 +65,6 @@
                         </a>
                     </div>
                     <div class="header_subtns" id="">
-                        <a id="">
-                            <img loading="lazy" id="megaMenu-logo"
-                                src="<?php echo get_template_directory_uri(); ?>/assets/images/search.png"
-                                alt="menu_logo">
-                        </a>
                         <a id="" class="" target="_blank" href="">
                             <button class="item__aulavirtual">
                                 <span>Aula Virtual</span>

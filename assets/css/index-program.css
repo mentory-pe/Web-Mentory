@@ -9,7 +9,7 @@ body {
 
 .program_portada {
     height: 250px;
-    background-image: url('../images/program-index/Background_programas.png');
+    background-image: url('../images/program-index/Background_programas.webp');
     background-size: 100% auto;
     /* Ajusta el ancho al 100% y mantiene la proporción */
     background-position: center top;

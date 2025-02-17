@@ -15,7 +15,7 @@ section {
 /* EMPRESAS */
 
 .hero {
-    background-image: url('../images/empresas/MENTORY-PARA-EMPRESAS.png');
+    background-image: url('../images/empresas/MENTORY-PARA-EMPRESAS.webp');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -76,6 +76,7 @@ section {
 .benefits-container h2 {
     font-size: 3rem;
     color: #b06906;
+    margin: 0;
 }
 
 .benefits-container p {
@@ -164,7 +165,7 @@ section {
 
 /* SPONSORS SECTION */
 
-.sponsors-container {
+/* .sponsors-container {
     width: 100%;
     margin: auto;
     padding: 4rem 0;
@@ -203,7 +204,128 @@ section {
 
 .sponsor img {
     width: 100%;
+} */
+
+
+
+/* zona de areas SERVICES SECTION  */
+
+.area_container {
+    background: #ffffff;
 }
+
+.area_section_slide {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.area_section_card_v1 {
+    /* background: #fffaef; */
+    border-radius: 10px;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    align-items: start;
+    justify-content: flex-start;
+}
+
+.area_section_card_v2 {
+    /* background: #ebf5ff; */
+    border-radius: 10px;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    align-items: start;
+    justify-content: flex-start;
+}
+
+.area_section_card_img {
+    width: 100%;
+}
+
+.area_section_card_img img {
+    margin: auto;
+    width: 100%;
+}
+
+
+
+@media(max-width: 1024px) {
+
+    .area_section {
+        padding: 4rem 1rem;
+        margin: 0 auto;
+        max-width: 1800px;
+    }
+
+    #area_vector_web {
+        display: none;
+    }
+
+    .area_section_card_v1 {
+        width: 170px;
+        height: 55px;
+    }
+
+    .area_section_card_v2 {
+        width: 170px;
+        height: 55px;
+    }
+
+    .area_section_card_img {
+        width: 100%;
+    }
+
+    .area_section_card_img img {
+        margin: auto;
+        width: 100%;
+    }
+
+    .area_section_slide {
+        padding: 0 1rem;
+    }
+
+    .area_section_slide .slick-prev {
+        display: none !important;
+    }
+
+    .area_section_slide .slick-next {
+        display: none !important;
+    }
+
+}
+
+@media(min-width: 1024px) {
+
+    .area_section {
+        padding: 2rem 2rem;
+        margin: 0 auto;
+        max-width: 1800px;
+    }
+
+    #area_vector_movil {
+        display: none;
+    }
+
+    .area_section_card_v1 {
+        /* width: 424px; */
+        height: auto;
+        padding: 0 1rem;
+    }
+
+    .area_section_card_v2 {
+        /* width: 424px; */
+        height: auto;
+        padding: 0 1rem;
+    }
+
+    .area_section_slide ul.slick-dots {
+        display: none !important;
+    }
+
+}
+
+
 
 
 /* FORM SECTION */

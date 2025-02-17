@@ -1,5 +1,7 @@
 <div class="hero">
 <?php
+global $page_title;
+$page_title = 'Nosotros';
 get_header(); // Carga el encabezado del tema (header.php)
 ?>
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/nosotros-styles.css" type="text/css">
@@ -9,12 +11,12 @@ get_header(); // Carga el encabezado del tema (header.php)
 <section id="about">
     <div class="about-container">
         <div class="about-img">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/nosotros_portada.png"
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/nosotros_portada.webp"
             alt="">
         </div>
         <div class="about-details-container">
             <div class="about-title">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/quienes-somos.png"
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/quienes-somos.webp"
                 alt="">
             </div>
             <div class="about-text-container">
@@ -30,7 +32,7 @@ get_header(); // Carga el encabezado del tema (header.php)
     <div class="mission-vision-container">
         <div class="mission-vision-card">
             <div class="mission-vision-card-img">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/Recurso 4@4x.png"
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/Recurso 4@4x.webp"
                 alt="">
             </div>
             <div class="mission-vision-card-details">
@@ -40,7 +42,7 @@ get_header(); // Carga el encabezado del tema (header.php)
         </div>
         <div class="mission-vision-card">
             <div class="mission-vision-card-img">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/Recurso 5@4x.png"
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/Recurso 5@4x.webp"
                     alt="">
                 </div>
             <div class="mission-vision-card-details">
@@ -57,7 +59,7 @@ get_header(); // Carga el encabezado del tema (header.php)
         <div class="pillars-details">
             <div class="pillars-details-card">
                 <div class="pillars-card-img">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/Recurso 9@4x.png"
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/Recurso 9@4x.webp"
                     alt="">
                 </div>
                 <div class="pillars-card-text">
@@ -67,7 +69,7 @@ get_header(); // Carga el encabezado del tema (header.php)
             </div>
             <div class="pillars-details-card">
                 <div class="pillars-card-img">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/Recurso 8@4x.png"
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/Recurso 8@4x.webp"
                     alt="">
                 </div>
                 <div class="pillars-card-text">
@@ -77,7 +79,7 @@ get_header(); // Carga el encabezado del tema (header.php)
             </div>
             <div class="pillars-details-card">
                 <div class="pillars-card-img">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/Recurso 7@4x.png"
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/Recurso 7@4x.webp"
                     alt="">
                 </div>
                 <div class="pillars-card-text">
@@ -93,7 +95,7 @@ get_header(); // Carga el encabezado del tema (header.php)
     <div class="services-container">
         <div class="services-card">
             <div class="services-card-img">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/service-img.png"
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/service-img.webp"
                 alt="">
             </div>
             <div class="services-card-details">
@@ -105,7 +107,7 @@ get_header(); // Carga el encabezado del tema (header.php)
         </div>
         <div class="services-card">
             <div class="services-card-img">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/service-img.png"
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/service-img.webp"
                 alt="">
             </div>
             <div class="services-card-details">
@@ -115,7 +117,7 @@ get_header(); // Carga el encabezado del tema (header.php)
         </div>
         <div class="services-card">
             <div class="services-card-img">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/service-img.png"
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/service-img.webp"
                 alt="">
             </div>
             <div class="services-card-details">
@@ -139,7 +141,7 @@ get_header(); // Carga el encabezado del tema (header.php)
                     <div>
                         <div class="area_section_card_v1">
                             <div class="area_section_card_img">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/Recurso 10@4x.png"
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/Recurso 10@4x.webp"
                                     alt="">
                             </div>
                             <div class="service-card-details">
@@ -156,7 +158,7 @@ get_header(); // Carga el encabezado del tema (header.php)
                     <div>
                         <div class="area_section_card_v2">
                             <div class="area_section_card_img">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/Recurso 11@4x.png"
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/Recurso 11@4x.webp"
                                     alt="">
                             </div>
                             <div class="area_section_card_title">
@@ -172,7 +174,7 @@ get_header(); // Carga el encabezado del tema (header.php)
                     <div>
                         <div class="area_section_card_v1">
                             <div class="area_section_card_img">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/Recurso 12@4x.png"
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/Recurso 12@4x.webp"
                                     alt="">
                             </div>
                             <div class="area_section_card_title">
@@ -187,7 +189,7 @@ get_header(); // Carga el encabezado del tema (header.php)
                     <div>
                         <div class="area_section_card_v2">
                             <div class="area_section_card_img">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/Recurso 10@4x.png"
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/Recurso 10@4x.webp"
                                     alt="">
                             </div>
                             <div class="area_section_card_title">
@@ -202,7 +204,7 @@ get_header(); // Carga el encabezado del tema (header.php)
                     <div>
                         <div class="area_section_card_v1">
                             <div class="area_section_card_img">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/Recurso 11@4x.png"
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/Recurso 11@4x.webp"
                                     alt="">
                             </div>
                             <div class="area_section_card_title">
@@ -217,7 +219,7 @@ get_header(); // Carga el encabezado del tema (header.php)
                     <div>
                         <div class="area_section_card_v2">
                             <div class="area_section_card_img">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/Recurso 12@4x.png"
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/Recurso 12@4x.webp"
                                     alt="">
                             </div>
                             <div class="area_section_card_title">
@@ -232,7 +234,7 @@ get_header(); // Carga el encabezado del tema (header.php)
                     <!-- <div>
                         <div class="area_section_card_v1">
                             <div class="area_section_card_img">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/service-img.png"
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/service-img.webp"
                                     alt="">
                             </div>
                             <div class="area_section_card_title">
@@ -247,7 +249,7 @@ get_header(); // Carga el encabezado del tema (header.php)
                     <!-- <div>
                         <div class="area_section_card_v2">
                             <div class="area_section_card_img">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/service-img.png"
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/service-img.webp"
                                     alt="">
                             </div>
                             <div class="area_section_card_title">
@@ -271,18 +273,18 @@ get_header(); // Carga el encabezado del tema (header.php)
     <div class="teachers-container">
         <div class="teachers-details-1">
             <div class="teachers-title">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/nuestros-docentes.png"
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/nuestros-docentes.webp"
                 alt="">
             </div>
             <div class="teachers-img-1">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/docente-ejemplo.png"
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/docente-ejemplo.webp"
                 alt="">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/docente-ejemplo.png"
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/docente-ejemplo.webp"
                 alt="">
             </div>
         </div>
         <div class="teachers-details-2">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/docente-ejemplo.png"
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/docente-ejemplo.webp"
             alt="">
         </div>
     </div>
@@ -295,7 +297,7 @@ get_header(); // Carga el encabezado del tema (header.php)
         <div class="area_section teachers-container">
 
             <div class="teachers-title">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/nuestros-docentes.png"
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/nuestros-docentes.webp"
                 alt="">
             </div>
 
@@ -306,7 +308,7 @@ get_header(); // Carga el encabezado del tema (header.php)
     <div class="area_section_card_v1">
         <div class="area_section_card_img">
             <a href="https://www.linkedin.com/in/ivan-turco-29299324/" target="_blank" rel="noopener noreferrer">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/docentes/Recurso 9Ivan Turco.png" alt="Ivan Turco">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/docentes/Recurso 9Ivan Turco.webp" alt="Ivan Turco">
             </a>
         </div>
     </div>
@@ -316,7 +318,7 @@ get_header(); // Carga el encabezado del tema (header.php)
     <div class="area_section_card_v2">
         <div class="area_section_card_img">
             <a href="https://www.linkedin.com/in/gonzalo-gomez-fabrifor/" target="_blank" rel="noopener noreferrer">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/docentes/Recurso 7Gonzalo Gomez.png" alt="Gonzalo Gómez">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/docentes/Recurso 7Gonzalo Gomez.webp" alt="Gonzalo Gómez">
             </a>
         </div>
     </div>
@@ -326,7 +328,7 @@ get_header(); // Carga el encabezado del tema (header.php)
     <div class="area_section_card_v1">
         <div class="area_section_card_img">
             <a href="https://www.linkedin.com/in/percy-franz-coca-mallma-39374973/" target="_blank" rel="noopener noreferrer">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/docentes/Recurso 6Percy coca.png" alt="Percy coca">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/docentes/Recurso 6Percy coca.webp" alt="Percy coca">
             </a>
         </div>
     </div>
@@ -336,7 +338,7 @@ get_header(); // Carga el encabezado del tema (header.php)
     <div class="area_section_card_v2">
         <div class="area_section_card_img">
             <a href="https://www.linkedin.com/in/ivandavilasalas/" target="_blank" rel="noopener noreferrer">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/docentes/Recurso 5Ivan davila.png" alt="Ivan davila">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/docentes/Recurso 5Ivan davila.webp" alt="Ivan davila">
             </a>
         </div>
     </div>
@@ -345,7 +347,7 @@ get_header(); // Carga el encabezado del tema (header.php)
                     <div>
                         <div class="area_section_card_v1">
                             <div class="area_section_card_img">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/docentes/Gonzalo-Laura.png"
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/docentes/Gonzalo-Laura.webp"
                                     alt="">
                             </div>
                         </div>
@@ -435,7 +437,7 @@ get_header(); // Carga el encabezado del tema (header.php)
                     <div>
                         <div class="area_section_card_v1">
                             <div class="area_section_card_img">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/docentes/Ing. van Turco.png"
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/docentes/Ing. van Turco.webp"
                                     alt="">
                             </div>
                         </div>
@@ -507,7 +509,7 @@ get_header(); // Carga el encabezado del tema (header.php)
                     <div>
                         <div class="area_section_card_v1">
                             <div class="area_section_card_img">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/docentes/Paola Ramirez.png"
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/docentes/Paola Ramirez.webp"
                                     alt="">
                             </div>
                         </div>
@@ -553,11 +555,11 @@ get_header(); // Carga el encabezado del tema (header.php)
 <div class="partners-container">
     <h2><span>SOCIOS</span> ESTRATÉGICOS</h2>
     <div class="partners-img">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/Recurso 17@4x.png"
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/Recurso 17@4x.webp"
         alt="">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/Recurso 16@4x.png"
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/Recurso 16@4x.webp"
         alt="">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/Recurso 15@4x.png"
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/Recurso 15@4x.webp"
         alt="">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/logo-ccl.jpg"
         alt="">

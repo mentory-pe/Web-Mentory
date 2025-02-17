@@ -14,7 +14,7 @@ section {
 
 /* NOSOTROS */
 .hero {
-    background-image: url('../images/nosotros/Recurso 1@4x.png');
+    background-image: url('../images/nosotros/Recurso 1@4x.webp');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -113,7 +113,7 @@ section {
 /* PILLARS SECTION */
 
 .pillars-container {
-    background-image: url('../images/nosotros/Recurso 6@4x.png');
+    background-image: url('../images/nosotros/Recurso 6@4x.webp');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -251,6 +251,10 @@ section {
     width: 100%;
 }
 
+.service-card-details {
+    width: 100%;
+}
+
 .area_section_card_title {
     font-family: Poppins;
     font-size: 1.2;
@@ -263,6 +267,9 @@ section {
     font-weight: 700;
 }
 
+.service-card-text {
+    width: 100%;
+}
 
 @media(max-width: 1024px) {
 
@@ -327,13 +334,15 @@ section {
     }
 
     .area_section_card_v1 {
-        width: 424px;
+        /* width: 424px; */
         height: auto;
+        padding: 0 1rem;
     }
 
     .area_section_card_v2 {
-        width: 424px;
+        /* width: 424px; */
         height: auto;
+        padding: 0 1rem;
     }
 
     .area_section_card_title {

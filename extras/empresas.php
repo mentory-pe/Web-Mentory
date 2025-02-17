@@ -1,10 +1,10 @@
-<div class="hero">
-<?php
-get_header(); // Carga el encabezado del tema (header.php)
-?>
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/empresas-styles.css" type="text/css">
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/empresas-mediaqueries.css" type="text/css">
-</div>
+<?php
+global $page_title;
+$page_title = 'Para Empresas';
+get_header(); // Carga el encabezado del tema (header.php)
+?>
 
 <section id="about">
     <div class="about-container">
@@ -21,7 +21,7 @@ get_header(); // Carga el encabezado del tema (header.php)
             </div>
         </div>
         <div class="about-img">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/empresas/about-img.png"
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/empresas/about-img.webp"
             alt="">
         </div>
     </div>
@@ -37,7 +37,7 @@ get_header(); // Carga el encabezado del tema (header.php)
         <div class="benefits-details">
             <div class="benefits-card">
                 <div class="benefits-card-img">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/empresas/cap.png"
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/empresas/cap.webp"
                     alt="">
                 </div>
                 <div class="benefits-card-title">
@@ -49,7 +49,7 @@ get_header(); // Carga el encabezado del tema (header.php)
             </div>
             <div class="benefits-card">
                 <div class="benefits-card-img">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/empresas/talento.png"
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/empresas/talento.webp"
                     alt="">
                 </div>
                 <div class="benefits-card-title">
@@ -61,7 +61,7 @@ get_header(); // Carga el encabezado del tema (header.php)
             </div>
             <div class="benefits-card">
                 <div class="benefits-card-img">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/empresas/productvidad.png"
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/empresas/productvidad.webp"
                     alt="">
                 </div>
                 <div class="benefits-card-title">
@@ -74,7 +74,7 @@ get_header(); // Carga el encabezado del tema (header.php)
             </div>
             <div class="benefits-card">
                 <div class="benefits-card-img">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/empresas/seguimiento.png"
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/empresas/seguimiento.webp"
                     alt="">
                 </div>
                 <div class="benefits-card-title">
@@ -101,20 +101,20 @@ get_header(); // Carga el encabezado del tema (header.php)
             </div>
         </div>
         <div class="reviews-img">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/empresas/review-img.png"
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/empresas/review-img.webp"
             alt="">
         </div>
     </div>
 </section>
 
-<section id="sponsors">
+<!-- <section id="sponsors">
     <div class="sponsors-container">
         <div class="sponsors-title">
             <h2>Empresas que <br><span>Confían en Nosotros</span></h2>
         </div>
         <div class="sponsors-details">
             <div class="sponsor">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/empresas/Minera Andalucita.png"
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/empresas/Minera Andalucita.webp"
                 alt="">
             </div>
             <div class="sponsor">
@@ -122,36 +122,342 @@ get_header(); // Carga el encabezado del tema (header.php)
                 alt="Minera Poderosa">
             </div>
             <div class="sponsor">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/empresas/Minera Saucito.png"
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/empresas/Minera Saucito.webp"
                 alt="">
             </div>
             <div class="sponsor">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/empresas/Minera Triton.png"
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/empresas/Minera Triton.webp"
                 alt="">
             </div>
             <div class="sponsor">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/empresas/1-300x180.png"
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/empresas/1-300x180.webp"
                 alt="">
             </div>
             <div class="sponsor">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/empresas/2-300x180.png"
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/empresas/2-300x180.webp"
                 alt="">
             </div>
             <div class="sponsor">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/empresas/3-300x180.png"
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/empresas/3-300x180.webp"
                 alt="">
             </div>
             <div class="sponsor">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/empresas/4-300x180.png"
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/empresas/4-300x180.webp"
                 alt="">
             </div>
             <div class="sponsor">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/empresas/5-300x180.png"
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/empresas/5-300x180.webp"
                 alt="">
             </div>
         </div>
     </div>
+</section> -->
+
+
+<section id="services">
+    <div class="area_container">
+        <div class="area_section">
+
+            <div class="area_section_slide">
+
+                <div class="slider-areas">
+                    <div>
+                        <div class="area_section_card_v1">
+                            <div class="area_section_card_img">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/empresas/Logos de empresas/1-300x180.webp"
+                                    alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="area_section_card_v2">
+                            <div class="area_section_card_img">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/empresas/Logos de empresas/2-300x180.webp"
+                                    alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="area_section_card_v1">
+                            <div class="area_section_card_img">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/empresas/Logos de empresas/3-300x180.webp"
+                                    alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="area_section_card_v2">
+                            <div class="area_section_card_img">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/empresas/Logos de empresas/4-300x180.webp"
+                                    alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="area_section_card_v1">
+                            <div class="area_section_card_img">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/empresas/Logos de empresas/5-300x180.webp"
+                                    alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="area_section_card_v2">
+                            <div class="area_section_card_img">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/empresas/Logos de empresas/6-300x180.webp"
+                                    alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="area_section_card_v1">
+                            <div class="area_section_card_img">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/empresas/Logos de empresas/7-300x180.webp"
+                                    alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="area_section_card_v2">
+                            <div class="area_section_card_img">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/empresas/Logos de empresas/8-300x180.webp"
+                                    alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--  -->
+                    <div>
+                        <div class="area_section_card_v1">
+                            <div class="area_section_card_img">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/empresas/Logos de empresas/9-300x180.webp"
+                                    alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="area_section_card_v2">
+                            <div class="area_section_card_img">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/empresas/Logos de empresas/10-300x180.webp"
+                                    alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="area_section_card_v1">
+                            <div class="area_section_card_img">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/empresas/Logos de empresas/11-300x180.webp"
+                                    alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- <div>
+                        <div class="area_section_card_v2">
+                            <div class="area_section_card_img">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/empresas/Logos de empresas/12-300x180 (1).webp"
+                                    alt="">
+                            </div>
+                        </div>
+                    </div> -->
+
+                    <div>
+                        <div class="area_section_card_v1">
+                            <div class="area_section_card_img">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/empresas/Logos de empresas/12-300x180.webp"
+                                    alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="area_section_card_v2">
+                            <div class="area_section_card_img">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/empresas/Logos de empresas/13-300x180.webp"
+                                    alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="area_section_card_v1">
+                            <div class="area_section_card_img">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/empresas/Logos de empresas/14-300x180.webp"
+                                    alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="area_section_card_v2">
+                            <div class="area_section_card_img">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/empresas/Logos de empresas/15-300x180.webp"
+                                    alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="area_section_card_v1">
+                            <div class="area_section_card_img">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/empresas/Logos de empresas/16-300x180.webp"
+                                    alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="area_section_card_v2">
+                            <div class="area_section_card_img">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/empresas/Logos de empresas/17-300x180.webp"
+                                    alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="area_section_card_v1">
+                            <div class="area_section_card_img">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/empresas/Logos de empresas/18-300x180.webp"
+                                    alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="area_section_card_v2">
+                            <div class="area_section_card_img">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/empresas/Logos de empresas/19-300x180.webp"
+                                    alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="area_section_card_v1">
+                            <div class="area_section_card_img">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/empresas/Logos de empresas/20-300x180.webp"
+                                    alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="area_section_card_v2">
+                            <div class="area_section_card_img">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/empresas/Logos de empresas/21-300x180.webp"
+                                    alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="area_section_card_v1">
+                            <div class="area_section_card_img">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/empresas/Logos de empresas/22-300x180.webp"
+                                    alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="area_section_card_v2">
+                            <div class="area_section_card_img">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/empresas/Logos de empresas/23-300x180.webp"
+                                    alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="area_section_card_v1">
+                            <div class="area_section_card_img">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/empresas/Logos de empresas/24-300x180.webp"
+                                    alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="area_section_card_v2">
+                            <div class="area_section_card_img">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/empresas/Logos de empresas/25-300x180.webp"
+                                    alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="area_section_card_v1">
+                            <div class="area_section_card_img">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/empresas/Logos de empresas/26-300x180.webp"
+                                    alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="area_section_card_v2">
+                            <div class="area_section_card_img">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/empresas/Logos de empresas/Minera Andalucita.webp"
+                                    alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="area_section_card_v1">
+                            <div class="area_section_card_img">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/empresas/Logos de empresas/Minera Poderosa.jpg"
+                                    alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="area_section_card_v2">
+                            <div class="area_section_card_img">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/empresas/Logos de empresas/Minera Saucito.webp"
+                                    alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="area_section_card_v1">
+                            <div class="area_section_card_img">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/empresas/Logos de empresas/Minera Triton.webp"
+                                    alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- <div>
+                        <div class="area_section_card_v2">
+                            <div class="area_section_card_img">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/empresas/Logos de empresas/8-300x180.webp"
+                                    alt="">
+                            </div>
+                        </div>
+                    </div> -->
+
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
+
+
+
 
 <section id="form">
     <div class="form-container">
@@ -191,6 +497,42 @@ get_header(); // Carga el encabezado del tema (header.php)
         </form>
     </div>
 </section>
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.slider-areas').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            arrows: true,
+            dots: true,
+            speed: 300,
+            infinite: true,
+            autoplaySpeed: 5000,
+            autoplay: true,
+            responsive: [
+                {
+                    breakpoint: 991,
+                    settings: {
+                        slidesToShow: 3,
+                    }
+                },
+                {
+                    breakpoint: 767,
+                    settings: {
+                        slidesToShow: 2,
+                    }
+                }
+            ]
+        });
+    });
+</script>
+
 
 
 <?php

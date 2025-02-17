@@ -82,7 +82,7 @@
                 <div class="link_zone_item"><a href="">Nuestras Políticas</a></div>
                 <div class="link_zone_item"><a href="">Política de Privacidad</a></div>
                 <div class="link_zone_item"><a href="">Protocolo de Admisión</a></div>
-                <div class="link_zone_item"><a href="">Contáctanos</a></div>
+                <div class="link_zone_item"><a href="<?php echo home_url('/contacto/'); ?>">Contáctanos</a></div>
                 <div class="link_zone_item"><a href="">Buzón Denuncias</a></div>
             </div>
         </div>

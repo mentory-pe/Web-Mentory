@@ -49,6 +49,10 @@
 
     /* BENEFITS SECTION */
 
+    .benefits-container p {
+        width: 80%;
+    }
+
     .benefits-details {
         flex-direction: column;
         width: 60%;

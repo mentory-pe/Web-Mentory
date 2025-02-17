@@ -1,12 +1,15 @@
 <?php
+global $page_title;
+$page_title = 'Terminos y Condiciones';
 get_header(); // Carga el encabezado del tema (header.php)
 ?>
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/terminos.css" type="text/css">
+<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/terminos-mediaqueries.css" type="text/css">
 
 
-<header class="terms__header">
-        <h1 class="terms__title">Términos y Condiciones</h1>
-    </header>
+<div class="terms__header">
+    <h1 class="terms__title">Términos y Condiciones</h1>
+</div>
 
     <div class="terms__container">
         <div class="terms__section-content">
