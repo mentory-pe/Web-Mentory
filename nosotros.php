@@ -1,9 +1,9 @@
-<div class="hero">
 <?php
 global $page_title;
 $page_title = 'Nosotros';
 get_header(); // Carga el encabezado del tema (header.php)
 ?>
+<div class="hero">
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/nosotros-styles.css" type="text/css">
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/nosotros-mediaqueries.css" type="text/css">
 </div>

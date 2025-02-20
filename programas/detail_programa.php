@@ -1,5 +1,5 @@
 <!-- Si es solo para pruebas, puedes dejar el CSS aquí -->
-<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/detail-program.css" type="text/css">
+<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/detail-program.css?19022024" type="text/css">
 
 <?php
 // Verificar si el área y el programa están disponibles
@@ -34,97 +34,52 @@ $fecha_formateada = strftime("%d de %B", $timestamp);
 
 if (isset($programa) && $programa) : ?>
 <?php
+// Definir variables dinámicas para meta etiquetas
 global $page_title;
-$page_title = ($programa->name);
+$page_title = $programa->name ?? "Programa no encontrado";
+
+// Obtener la URL actual
+$url_actual = esc_url(home_url($_SERVER['REQUEST_URI']));
+
+
+$descripcion = !empty($programa->descripcion) ? strip_tags($programa->descripcion) : "Descubre más sobre nuestros programas educativos.";
+$imagen = !empty($programa->image_url) ? esc_url($programa->image_url) : get_template_directory_uri() . "/assets/images/default-image.jpg";
+
+
+$meta_tags = "
+    <meta name='description' content='" . esc_attr($descripcion) . "' />
+
+    <!-- Open Graph (Facebook, LinkedIn) -->
+    <meta property='og:title' content='" . esc_html($page_title) . "' />
+    <meta property='og:description' content='" . esc_attr($descripcion) . "' />
+    <meta property='og:image' content='" . esc_url($imagen) . "' />
+    <meta property='og:url' content='" . esc_url($url_actual) . "' />
+    <meta property='og:type' content='article' />
+
+    <!-- Twitter Cards -->
+    <meta name='twitter:card' content='summary_large_image' />
+    <meta name='twitter:title' content='" . esc_html($page_title) . "' />
+    <meta name='twitter:description' content='" . esc_attr($descripcion) . "' />
+    <meta name='twitter:image' content='" . esc_url($imagen) . "' />
+";
+
+// Almacenar las meta etiquetas en la variable global para usarlas en header.php
+$GLOBALS['extra_meta_tags'] = $meta_tags;
+
 get_header();
 ?>
 
+
 <section>
-    <div class="zona_portada_detail">
-        <div class="zona_portada_detail_container">
-            <div class="zona_portada_detail_items">
-                <div class="zona_portada_detail_subtitle">
-                    <?php echo esc_html($programa->tipo_especializacion); ?>
-                </div>
-                <div class="zona_portada_detail_title">
-                    <?php echo esc_html($programa->name); ?>
-                </div>
-
-                <!-- zona exclusiva de version movil 
-                  -->
-                <div class="zona_portada_detail_price">
-                    <!-- <div>
-                        <?php echo htmlspecialchars_decode($programa->precio); ?>
-                    </div> -->
-                    <div class="zona_portada_detail_price_img">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/detail-programas/icoventa1.png" alt="">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/detail-programas/icoventa2.png" alt="">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/detail-programas/icoventa3.png" alt="">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/detail-programas/icoventa4.png" alt="">
-
-                    </div>
-                </div>
-
-
-
-                <div class="zona_portada_detail_cards_detail">
-                    <div class="zona_portada_detail_cards_detail_item">
-                        <div class="zona_portada_detail_cards_detail_item_image">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/detail-programas/yellow.png"
-                                alt="">
-                            <img style="position: absolute; transform: translate(-43px, 12px);"
-                                src="<?php echo get_template_directory_uri(); ?>/assets/images/detail-programas/calendar1.png"
-                                alt="">
-                        </div>
-                        <div class="zona_portada_detail_cards_detail_item_txt">
-                            <div class="zona_portada_detail_cards_detail_item_title">INICIO</div>
-                            <div class="zona_portada_detail_cards_detail_item_fecha">
-                                <?php echo htmlspecialchars_decode($fecha_formateada); ?>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="zona_portada_detail_cards_detail_item">
-                        <div class="zona_portada_detail_cards_detail_item_image">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/detail-programas/bluecard.png"
-                                alt="">
-                            <img style="position: absolute; transform: translate(-43px, 12px);"
-                                src="<?php echo get_template_directory_uri(); ?>/assets/images/detail-programas/live.png"
-                                alt="">
-                        </div>
-                        <div class="zona_portada_detail_cards_detail_item_txt">
-                            <div class="zona_portada_detail_cards_detail_item_title">MODALIDAD</div>
-                            <div class="zona_portada_detail_cards_detail_item_fecha">Online en vivo</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="zona_portada_detail_items_imgzone">
-                <?php if (!empty($programa->link_video)) : ?>
-                    <img src="<?php echo esc_url($programa->image_url); ?>" alt="<?php echo esc_attr($programa->name); ?>">
-                    <div class="play-icon"></div>
-                <?php else : ?>
-                    <!-- Opcional: Mostrar un marcador de posición si no hay imagen -->
-                     <style>
-                        .zona_portada_detail_items_imgzone::after{
-                            background-color: transparent !important;
-                        }
-                     </style>
-                    <img src="<?php echo esc_url($programa->image_url); ?>" alt="<?php echo esc_attr($programa->name); ?>">
-                <?php endif; ?>
-            </div>
-
-            <div class="zona_portada_detail_items_imgzone_condicional">
-                
-            </div>
-
-        </div>
+    <div class="zona_portada_detail" style="background-image: url(<?php echo esc_url($programa->image_url); ?>);">
+        
     </div>
+
+    <div class="zona_portada_movil">
+        <img src="<?php echo esc_url($programa->image_url); ?>" alt="img_movil">
+    </div>
+
 </section>
-
-
-
-
-
 
 <section>
     <div class="section_detail">
@@ -202,7 +157,7 @@ get_header();
                                     Descripción
                                 </div>
                                 <div class="contenttab1_desc">
-                                    <?php echo esc_html(wp_unslash($programa->descripcion)); ?>
+                                    <?php echo htmlspecialchars_decode($programa->descripcion); ?>
                                 </div>
                             </div>
 
@@ -210,7 +165,7 @@ get_header();
                             <div class="contenttab1_aprenderas">
                                 <div class="contenttab1_aprenderas_title">¿Qué aprenderás? </div>
                                 <div class="contenttab1_aprenderas_txtdetail">
-                                    <?php echo esc_html(wp_unslash($programa->que_aprenderas)); ?>
+                                    <?php echo htmlspecialchars_decode($programa->que_aprenderas); ?>
                                 </div>
                             </div>
 
@@ -337,13 +292,22 @@ get_header();
                                                 <?php echo esc_html($docente->cargo); ?>
                                             </div>
                                         </div>
+
+
+                                        <?php if (!empty($programa->url_perfil)) : ?>
+                                            <a href="<?php echo esc_html($docente->url_perfil); ?>" target="_blank"> 
+                                                <div>
+                                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/detail-programas/linkedin.png"
+                                                        alt="">
+                                                </div>
+                                            </a>
+                                        <?php else : ?>
+                                            
+                                        <?php endif; ?>
+
+
                                         
-                                        <a href="<?php echo esc_html($docente->url_perfil); ?>" target="_blank"> 
-                                            <div>
-                                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/detail-programas/linkedin.png"
-                                                    alt="">
-                                            </div>
-                                        </a>
+                                        
                                     </div>
                                 </div>
                                 <div class="teacher_txtdesc">
@@ -416,15 +380,26 @@ get_header();
                                     Comparte este Programa
                                 </div>
 
+
+
                                 <div class="section_detail_lateral_img_items">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/detail-programas/icoventa1.png"
-                                        alt="">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/detail-programas/icoventa2.png"
-                                        alt="">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/detail-programas/icoventa3.png"
-                                        alt="">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/detail-programas/icoventa4.png"
-                                        alt="">
+                                    <a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo  $url_actual;?>" target="_blank">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/detail-programas/icoventa1.png" alt="">
+                                    </a>
+                                    <a href="https://www.instagram.com/mentory.pe" target="_blank">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/detail-programas/icoventa2.png" alt="">
+                                    </a>
+                                    <a href="https://twitter.com/intent/tweet?url=<?php echo  $url_actual;?>&text=Mira esta increíble página web! &via=Mentory&hashtags=web,desarrollo,tecnologia" target="_blank">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/detail-programas/icoventa3.png" alt="">
+                                    </a>
+
+                                    <a href="https://www.linkedin.com/sharing/share-offsite/?url=<?php echo  $url_actual;?>&title=Mi Página Web Increíble&summary=Descubre información valiosa en esta página&source=MiSitioWeb" target="_blank">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/detail-programas/icoventa4.png" alt="">
+                                    </a>
+
+
+
+                                    
                                 </div>
                             </div>
                         </div>
@@ -453,7 +428,31 @@ programa no encontrado
 <?php endif; ?>
 
 
+<section>
+    <div class="certificado_portada">
+        <div class="certificado_portada_container">
+            <div class="certificado_portada_text">
+                <div class="certificado_portada_item">
+                    <span class="certificado_portada_txtsmll">
+                        Comparte tus logros
+                    </span> <br>
+                    <span class="certificado_portada_txtsmll">
+                        con tu </span> 
+                        <span class="certificado_portada_txtbg">
+                            Certificado
+                        </span>
+                    <img src="https://mentory.pe/wp-content/uploads/2025/02/vector-removed.png" alt="">
+                </div>
 
+                <div class="certificado_portada_item_texto">
+                    Cuando termines el programa tendrás acceso al 
+                    certificado digital para compartirlo con tu familia, 
+                    amigos, empleadores y la comunidad.
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 
 

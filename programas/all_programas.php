@@ -141,7 +141,7 @@ get_header();
                                     <?php echo esc_html($program->name); ?>
                                 </div>
                                 <div class="card_program_txt_desc">
-                                <?php echo esc_html($program->descripcion); ?>
+                                    <?php echo htmlspecialchars_decode($program->descripcion); ?>
                                 </div>
 
                                 <div class="card_program_movil_dates">

@@ -7,14 +7,6 @@ body {
     background-color: #f4f4f4;
 }
 
-
-.zona_portada_detail {
-    background: #ECECEC;
-}
-
-
-
-
 .zona_portada_detail_subtitle {
     font-family: Poppins;
     text-align: left;
@@ -158,6 +150,13 @@ body {
 @media(max-width: 1024px) {
     .zona_portada_detail {
         padding-top: 4rem;
+        margin: 0 auto;
+        width: 100%;
+        height: 100%;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+        max-height: 210px;
     }
 
     .zona_portada_detail_items_imgzone {
@@ -187,6 +186,13 @@ body {
 @media (min-width: 1024px) {
     .zona_portada_detail {
         padding-top: 6rem;
+        margin: 0 auto;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        max-height: 800px;
     }
 }
 
@@ -197,6 +203,13 @@ body {
 
     .zona_portada_detail {
         padding-top: 6rem;
+        margin: 0 auto;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        max-height: 800px;
     }
 
     .zona_portada_detail_items_imgzone {
@@ -465,6 +478,7 @@ body {
     margin: 0 auto;
     max-width: 1800px;
     background: #FFFFFF;
+    padding-bottom: 3rem;
 }
 
 .section_detail_txt_container_tabitem {
@@ -502,6 +516,10 @@ body {
 @media(max-width: 1024px) {
     .section_detail_txt_container_tabitem {
         display: none;
+    }
+
+    .certificado_portada {
+        display: none !important;
     }
 }
 
@@ -605,6 +623,15 @@ body {
  */
 
 @media (max-width:1536px) and (min-width:1024px) {
+
+    .bloque {
+        display: none;
+    }
+
+    .contenttab1_cert {
+        display: none !important;
+    }
+
     .contenttab1_cert {
         display: flex;
         flex-direction: row;
@@ -666,6 +693,14 @@ body {
 
 /* Estilos para pantallas mayores a 1920px */
 @media (min-width: 1536px) {
+    .bloque {
+        display: none;
+    }
+
+    .contenttab1_cert {
+        display: none !important;
+    }
+
     .contenttab1_cert {
         display: flex;
         flex-direction: row;
@@ -1336,6 +1371,10 @@ tamaños a considerar
 
 @media (max-width:1535px) and (min-width:1024px) {
 
+    .zona_portada_movil {
+        display: none;
+    }
+
     /* zona de portada  */
     .zona_portada_detail_title {
         font-family: Poppins;
@@ -1384,6 +1423,10 @@ tamaños a considerar
 
 /* Estilos para pantallas mayores a 1920px */
 @media (min-width: 1536px) {
+
+    .zona_portada_movil {
+        display: none;
+    }
 
     #idtab1,
     #tab2Container {
@@ -1437,6 +1480,20 @@ tamaños a considerar
 
 
 @media(max-width: 1024px) {
+
+    .zona_portada_detail {
+        display: none !important;
+    }
+
+    .zona_portada_movil {
+        padding-top: 5rem;
+    }
+
+
+    .zona_portada_movil img {
+        width: 100%;
+    }
+
     .zona_portada_detail_cards_detail {
         display: none;
     }
@@ -1553,3 +1610,78 @@ button.accordion.is-open {
     overflow: hidden;
     transition: max-height 0.2s ease-in-out;
 }
+
+
+
+
+
+
+
+
+
+
+
+.certificado_portada {
+    background-image: url('https://mentory.pe/wp-content/uploads/2025/02/Recurso-1_11zon.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.certificado_portada_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.certificado_portada_text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 600px;
+    width: 100%;
+    padding: 6rem 0;
+}
+
+
+.certificado_portada_item {
+    padding-bottom: 2rem;
+}
+
+.certificado_portada_txtsmll {
+    font-size: 32px;
+    font-weight: 400;
+    font-family: Poppins;
+    text-align: left;
+    color: #000000;
+}
+
+.certificado_portada_txtbg {
+    font-size: 56px;
+    font-weight: 400;
+    font-family: Poppins;
+    text-align: left;
+    color: #000000;
+}
+
+.certificado_portada_item_texto {
+    font-family: Poppins;
+    text-align: left;
+    color: #0E2A46;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+    padding-right: 2rem;
+    max-width: 500px;
+    width: 100%;
+}
+
+.certificado_portada_item img {
+    position: absolute;
+    transform: translate(-25px, -50px);
+}
+
+
+@media (min-width: 1024px) {}
+
+@media (max-width: 1024px) {}

@@ -21,7 +21,7 @@
 
     <!-- Llamar al CSS directamente en la plantilla -->
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/header.css" type="text/css">
-
+    <?php if (!empty($GLOBALS['extra_meta_tags'])) echo $GLOBALS['extra_meta_tags']; ?>
 </head>
 
 <body <?php body_class(); ?>>
