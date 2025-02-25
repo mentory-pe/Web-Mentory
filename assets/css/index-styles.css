@@ -103,7 +103,7 @@ body {
     .primera_zona {
         margin: 0 auto;
         width: 100%;
-        background-image: url('../images/index/new/portada1.jpg');
+        background-image: url('https://mentory.pe/wp-content/uploads/2025/02/portada1_11zon.webp');
         background-size: cover;
         /* Ajusta la imagen para cubrir todo el área */
         background-repeat: no-repeat;
@@ -423,7 +423,7 @@ body {
     .zona_logros {
         margin: 0 auto;
         width: 100%;
-        background-image: url('../images/index/new/logros_porta.png');
+        background-image: url('https://mentory.pe/wp-content/uploads/2025/02/logros_porta_11zon.webp');
         background-size: 100% auto;
         /* Ajusta el ancho al 100% y mantiene la proporción */
         background-position: center top;

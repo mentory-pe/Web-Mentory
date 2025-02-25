@@ -4,8 +4,8 @@ $page_title = 'Nosotros';
 get_header(); // Carga el encabezado del tema (header.php)
 ?>
 <div class="hero">
-<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/nosotros-styles.css" type="text/css">
-<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/nosotros-mediaqueries.css" type="text/css">
+<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/nosotros-styles.css?20022025" type="text/css">
+<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/nosotros-mediaqueries.css?20022025" type="text/css">
 </div>
 
 <section id="about">
@@ -16,7 +16,7 @@ get_header(); // Carga el encabezado del tema (header.php)
         </div>
         <div class="about-details-container">
             <div class="about-title">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/quienes-somos.webp"
+                <img src="https://mentory.pe/wp-content/uploads/2025/02/quienes-somos.png"
                 alt="">
             </div>
             <div class="about-text-container">
@@ -59,7 +59,7 @@ get_header(); // Carga el encabezado del tema (header.php)
         <div class="pillars-details">
             <div class="pillars-details-card">
                 <div class="pillars-card-img">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/Recurso 9@4x.webp"
+                    <img src="https://mentory.pe/wp-content/uploads/2025/02/Recurso-9@4x.png"
                     alt="">
                 </div>
                 <div class="pillars-card-text">
@@ -69,7 +69,7 @@ get_header(); // Carga el encabezado del tema (header.php)
             </div>
             <div class="pillars-details-card">
                 <div class="pillars-card-img">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/Recurso 8@4x.webp"
+                    <img src="https://mentory.pe/wp-content/uploads/2025/02/Recurso-8@4x.png"
                     alt="">
                 </div>
                 <div class="pillars-card-text">
@@ -79,7 +79,7 @@ get_header(); // Carga el encabezado del tema (header.php)
             </div>
             <div class="pillars-details-card">
                 <div class="pillars-card-img">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/Recurso 7@4x.webp"
+                    <img src="https://mentory.pe/wp-content/uploads/2025/02/Recurso-7@4x.png"
                     alt="">
                 </div>
                 <div class="pillars-card-text">
@@ -555,11 +555,11 @@ get_header(); // Carga el encabezado del tema (header.php)
 <div class="partners-container">
     <h2><span>SOCIOS</span> ESTRATÉGICOS</h2>
     <div class="partners-img">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/Recurso 17@4x.webp"
+        <img src="https://mentory.pe/wp-content/uploads/2025/02/socio-ejemplo.png"
         alt="">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/Recurso 16@4x.webp"
+        <img src="https://mentory.pe/wp-content/uploads/2025/02/Recurso-16@4x.png"
         alt="">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/Recurso 15@4x.webp"
+        <img src="https://mentory.pe/wp-content/uploads/2025/02/Recurso-15@4x.png"
         alt="">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros/logo-ccl.jpg"
         alt="">

@@ -294,7 +294,7 @@ get_header();
                                         </div>
 
 
-                                        <?php if (!empty($programa->url_perfil)) : ?>
+                                        <?php if (!empty($docente->url_perfil)) : ?>
                                             <a href="<?php echo esc_html($docente->url_perfil); ?>" target="_blank"> 
                                                 <div>
                                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/detail-programas/linkedin.png"

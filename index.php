@@ -3,7 +3,7 @@ global $page_title;
 $page_title = 'Mentory';
 get_header();
 ?>
-<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/index-styles.css" type="text/css">
+<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/index-styles.css?20022024" type="text/css">
 
 <section class="">
 
@@ -30,14 +30,14 @@ get_header();
                 </div>
             </div>
             <div class="primera_zona_item2">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/new/sujeto_1.png" alt="">
+                <img src="https://mentory.pe/wp-content/uploads/2025/02/sujeto_1.png" alt="">
             </div>
         </div>
     </div>
 </div>
 
 <div class="primera_zona_movile">
-    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/new/PORTAMOVIL.png" alt="">
+    <img src="https://mentory.pe/wp-content/uploads/2025/02/PORTAMOVIL_11zon.webp" alt="">
 </div>
 
 </section>
@@ -69,7 +69,7 @@ get_header();
             </div>
 
             <div class="zona_logros_imgslogros_item2">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/new/logrosmap.png" alt="">
+                <img src="https://mentory.pe/wp-content/uploads/2025/02/logrosmap.png" alt="">
             </div>
 
         </div>
@@ -231,7 +231,7 @@ get_header();
 
 
             <div class="testimonio_imgcontainer">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/new/Ariam.png" alt="">
+                <img src="https://mentory.pe/wp-content/uploads/2025/02/Ariam_11zon-scaled.webp" alt="">
             </div>
             <div class="testimonio_texts_container">
                  <div id="title_testimonio_web" class="testimonio_text_title">
@@ -345,7 +345,7 @@ get_header();
                         <div class="programs_item_btnsection" style="width: 100%;">
                             <div class="programs_item_sectionbtn">
                                 <a href="<?php echo esc_url($program_url); ?>" style="text-decoration: none;"> 
-                                    <button class="programs_item_sectionbtn" >MÁS INFORMACIÓN</button>
+                                    <button class="programs_item_sectionbtn" >CONOCER MÁS</button>
                                 </a>
                             </div>
                         </div>
@@ -411,7 +411,7 @@ get_header();
     <div class="contac">
         <div class="contac_container">
             <div class="contac_imgcont">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/new/sujeto_2.png" alt="">
+                <img src="https://mentory.pe/wp-content/uploads/2025/02/sujeto_2_11zon.webp" alt="">
             </div>
             <div class="contac_txt_cont">
 

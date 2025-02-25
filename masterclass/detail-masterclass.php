@@ -148,13 +148,29 @@ if ($masterclass_slug) {
                                         Puedes ingresar al enlace de la reunión
                                     </div>
 
+                                    <div>
+                                        <img src="https://mentory.pe/wp-content/uploads/2025/02/play.gif" alt="">
+                                    </div>
+
                                     <div class="message_ingreso_subtext">
                                         Haciendo Clic <a href="<?php echo esc_url($masterclass->link_inscripcion); ?>" style="text-decoration: none;" target="_blank"><span class="message_ingreso_link"> AQUÍ</span></a> 
                                     </div>
                                 </div>
                             <?php else: ?>
                                 <!-- Mensaje cuando la clase ya concluyó -->
-                                🔴 <strong>La clase ya ha concluido.</strong>
+                                <div class="message_container">
+                                    <br>
+                                    <div class="message_ingreso_title">
+                                    🔴 La clase ya ha concluido.
+                                    </div>
+
+                                    <br>
+                                    <div>
+                                        <img src="https://mentory.pe/wp-content/uploads/2025/02/Call-silent.gif" alt="">
+                                    </div>
+
+                                    <br>
+                                </div>
                             <?php endif; ?>
                         </p>
 

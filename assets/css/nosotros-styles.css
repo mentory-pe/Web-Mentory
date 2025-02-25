@@ -285,12 +285,12 @@ section {
 
     .area_section_card_v1 {
         width: 170px;
-        height: 55px;
+        height: auto;
     }
 
     .area_section_card_v2 {
         width: 170px;
-        height: 55px;
+        height: auto;
     }
 
     .area_section_card_title {
