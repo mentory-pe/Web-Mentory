@@ -467,9 +467,9 @@ body {
 
 
 
-.my_slider_programs  .slick-next {
+.my_slider_programs .slick-next {
     display: none !important;
-} 
+}
 
 
 
@@ -814,14 +814,19 @@ body {
 }
 
 .programs_item_imgcontainer {
-    max-width: 550px;
+    max-width: 650px;
     width: 100%;
 }
 
 .programs_item_imgcontainer img {
-    width: 100%;
-    border-radius: 50% 30% 50% 30% / 30% 50% 30% 50%;
     object-fit: cover;
+    width: 100%;
+    -webkit-border-top-left-radius: 600px;
+    -webkit-border-bottom-left-radius: 600px;
+    -moz-border-radius-topleft: 600px;
+    -moz-border-radius-bottomleft: 600px;
+    border-top-left-radius: 600px;
+    border-bottom-left-radius: 600px;
 }
 
 
@@ -922,6 +927,11 @@ body {
         z-index: 1;
         display: flex;
         flex-direction: column;
+        max-width: 300px;
+    }
+
+    .programs_item_title_zone img {
+        width: 100%;
     }
 
     .programs_item_ProgramName {
@@ -939,14 +949,14 @@ body {
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        gap: 3rem;
+        gap: 0.5rem;
     }
 
     .programs_item_txt_datos {
         height: 60px;
         color: #606060;
         font-weight: 500;
-        font-size: 20px;
+        font-size: 16px;
         line-height: 18px;
         text-align: center;
     }

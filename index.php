@@ -3,7 +3,7 @@ global $page_title;
 $page_title = 'Mentory';
 get_header();
 ?>
-<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/index-styles.css?20022024" type="text/css">
+<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/index-styles.css?26022025" type="text/css">
 
 <section class="">
 
@@ -307,12 +307,34 @@ get_header();
                                     </div>
 
                                     <div class="programs_item_group_datos">
+
+                                        <div class="programs_item_group_item">
+                                            <div class="programs_item_group_img">
+                                                <img src="https://mentory.pe/wp-content/uploads/2025/02/iconos-12.png" alt="">
+                                            </div>
+                                            <div class="programs_item_txt_datos">
+                                                Inicio: 
+                                            <b>
+                                                <?php 
+                                                    $fecha = esc_attr($program->fecha_inicio); // Obtener la fecha
+                                                    setlocale(LC_TIME, 'es_ES.UTF-8', 'es_ES', 'Spanish_Spain', 'es_MX.UTF-8', 'es_MX', 'es'); 
+                                                    
+                                                    $timestamp = strtotime($fecha);
+                                                    $fecha_formateada = strftime("%d de %B", $timestamp);
+
+                                                    echo ucfirst($fecha_formateada); // Capitaliza la primera letra
+                                                ?>
+                                            </b> 
+
+                                            </div>
+                                        </div>
+                                        <div class="vertical-line"></div>
                                         <div class="programs_item_group_item">
                                             <div class="programs_item_group_img">
                                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/new/ico_libro.png" alt="">
                                             </div>
                                             <div class="programs_item_txt_datos">
-                                            <?php echo esc_attr($program->nro_modulos); ?> Módulos
+                                             <b> <?php echo esc_attr($program->nro_modulos); ?> </b> Módulos
                                             </div>
                                         </div>
                                         <div class="vertical-line"></div>
@@ -321,7 +343,7 @@ get_header();
                                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/new/ico_reloj.png" alt="">
                                             </div>
                                             <div class="programs_item_txt_datos">
-                                                <?php echo esc_attr($program->nro_horas); ?>
+                                               <b><?php echo esc_attr($program->nro_horas); ?></b> 
                                             </div>
                                         </div>
                                         <div class="vertical-line"></div>
@@ -330,7 +352,7 @@ get_header();
                                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/new/ico_ordenador.png" alt="">
                                             </div>
                                             <div class="programs_item_txt_datos">
-                                                Online <br>
+                                                <b>Online</b>  <br>
                                                 en vivo 
                                             </div>
                                         </div>
