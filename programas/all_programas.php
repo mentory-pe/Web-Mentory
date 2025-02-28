@@ -4,7 +4,7 @@ $page_title = 'Programas';
 get_header();
 ?>
 
-<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/index-program.css" type="text/css">
+<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/index-program.css?26022025" type="text/css">
 
 
 <section class="main_program_portada">
@@ -81,7 +81,7 @@ get_header();
             $offset = ($paged - 1) * $programs_per_page;
 
             // Construir consulta SQL dinámicamente
-            $query = "SELECT * FROM {$wpdb->prefix}programs WHERE 1=1";
+            $query = "SELECT * FROM {$wpdb->prefix}programs WHERE 1=1 ORDER BY fecha_inicio ASC";
             $query_params = [];
 
             if (!empty($selected_areas)) {

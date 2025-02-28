@@ -142,21 +142,19 @@ get_header();
                                         <div class="master_teacher_content1">
 
 
-                                                <?php foreach ($docentes_nombres as $index => $nombre) : ?>
-                                                        <?php if (!empty($docentes_fotos[$index])) : ?>
-                                                        
-                                                            <div class="master_teacher_imgcont">
-                                                                <img style="border-radius: 50%;" src="<?php echo esc_url(trim($docentes_fotos[$index])); ?>" alt="<?php echo esc_attr($nombre); ?>"
-                                                                alt="<?php echo esc_attr($nombre); ?>">
-                                                            </div>
-                                                        <?php endif; ?>
-                                                        
-                                                        
-                                                        <div class="master_teacher_txtinfo">
-                                                            <div class="master_teacher_name"><?php echo esc_html($nombre); ?></div>
-                                                            <div class="master_teacher_cargo">Expositor</div>
-                                                        </div>
-                                                <?php endforeach; ?>
+                                        <?php foreach ($docentes_nombres as $index => $nombre) : ?>
+                                            <?php if (!empty($docentes_fotos[$index])) : ?>
+                                                <div class="master_teacher_imgcont">
+                                                    <img style="border-radius: 50%;" src="<?php echo esc_url(trim($docentes_fotos[$index])); ?>" alt="<?php echo esc_attr($nombre); ?>">
+                                                </div>
+
+                                                <div class="master_teacher_txtinfo">
+                                                    <div class="master_teacher_name"><?php echo esc_html($nombre); ?></div>
+                                                    <div class="master_teacher_cargo">Expositor</div>
+                                                </div>
+                                                <?php break; // Detiene el bucle después de encontrar el primer docente con foto ?>
+                                            <?php endif; ?>
+                                        <?php endforeach; ?>
 
 
 

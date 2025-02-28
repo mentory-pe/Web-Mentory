@@ -1273,7 +1273,15 @@ body {
     align-items: center;
 }
 
-.detallesprogram_img {}
+.detallesprogram_img {
+    max-width: 25px;
+    width: 100%;
+    height: 25px;
+}
+
+.detallesprogram_img img {
+    width: 100%;
+}
 
 .detallesprogram_txt {
     font-family: Poppins;

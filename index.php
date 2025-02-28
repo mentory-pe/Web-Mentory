@@ -3,7 +3,7 @@ global $page_title;
 $page_title = 'Mentory';
 get_header();
 ?>
-<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/index-styles.css?26022025" type="text/css">
+<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/index-styles.css?28022025" type="text/css">
 
 <section class="">
 

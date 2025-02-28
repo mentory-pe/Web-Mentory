@@ -195,7 +195,7 @@ if ($masterclass_slug) {
             </div>
             <div class="datos_sections">
                 <div class="datos_masterclass">
-                    <div class="datos_masterclass_master_section_one">
+                    
 
 
                         <!-- Información adicional -->
@@ -214,36 +214,35 @@ if ($masterclass_slug) {
                                 if ($docentes) : ?>
 
                         <?php foreach ($docentes as $docente) : ?>
-
-                        <div class="datos_masterclass_img">
-                            <img src="<?php echo esc_html($docente->foto_url); ?>" alt="">
-                        </div>
-                        <div class="datos_masterclass_perfil">
-                            <div class="datos_masterclass_perfil_datos">
-                                <div class="datos_masterclass_perfil_subtitle">
-                                    PERFIL DEL MENTOR
-
+                            <div class="datos_masterclass_master_section_one">
+                                <div class="datos_masterclass_img">
+                                    <img src="<?php echo esc_html($docente->foto_url); ?>" alt="">
                                 </div>
-                                <div class="datos_masterclass_perfil_title">
-                                    <?php echo esc_html($docente->nombre . ' ' . $docente->apellidos); ?>
+                                <div class="datos_masterclass_perfil">
+                                    <div class="datos_masterclass_perfil_datos">
+                                        <div class="datos_masterclass_perfil_subtitle">
+                                            PERFIL DEL MENTOR
 
-                                </div>
-                                <div class="datos_masterclass_perfil_cargo">
-                                    <?php echo esc_html($docente->cargo); ?>
-                                </div>
+                                        </div>
+                                        <div class="datos_masterclass_perfil_title">
+                                            <?php echo esc_html($docente->nombre . ' ' . $docente->apellidos); ?>
 
-                            </div>
-                            <div class="datos_masterclass_perfil_imgs">
-                                <a href="<?php echo esc_html($docente->url_perfil); ?>" target="_blank"> 
-                                    <div>
-                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/detail-programas/linkedin.png"
-                                            alt="">
+                                        </div>
+                                        <div class="datos_masterclass_perfil_cargo">
+                                            <?php echo esc_html($docente->cargo); ?>
+                                        </div>
+
                                     </div>
-                                </a>
+                                    <div class="datos_masterclass_perfil_imgs">
+                                        <a href="<?php echo esc_html($docente->url_perfil); ?>" target="_blank"> 
+                                            <div>
+                                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/detail-programas/linkedin.png"
+                                                    alt="">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-
-
 
 
                         <?php endforeach; ?>
@@ -255,7 +254,7 @@ if ($masterclass_slug) {
 
 
 
-                    </div>
+                    
 
                     <div class="datos_masterclass_master_section_two">
                         <div class="datos_masterclass_master_section_two_subcontainer">

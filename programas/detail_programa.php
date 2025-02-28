@@ -1,5 +1,5 @@
 <!-- Si es solo para pruebas, puedes dejar el CSS aquí -->
-<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/detail-program.css?19022024" type="text/css">
+<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/detail-program.css?29022025" type="text/css">
 
 <?php
 // Verificar si el área y el programa están disponibles
@@ -103,6 +103,31 @@ get_header();
 
 
                             <div id="idtab1" class="section_detail_lateral_items">
+                                <div class="detallesprogram">
+                                    <div class="detallesprogram_img">
+                                        <img src="https://mentory.pe/wp-content/uploads/2025/02/calendar-1.png"
+                                            alt="">
+                                    </div>
+                                    <div class="detallesprogram_txt">
+                                      
+                                        <?php 
+                                        // Obtener la fecha actual
+                                        $fecha_actual = date('Y-m-d'); 
+                                        
+                                        // Obtener la fecha de inicio del programa
+                                        $fecha_inicio = esc_attr($programa->fecha_inicio); 
+
+                                        if ($fecha_inicio > $fecha_actual || $fecha_inicio == $fecha_actual ): ?>
+                                            <!-- Mensaje de bienvenida -->
+                                            Inicio: <?php echo htmlspecialchars_decode($programa->fecha_inicio); ?>
+                                        <?php else: ?>
+                                            <!-- Mensaje cuando la clase ya concluyó -->
+                                            Proximamente
+                                        <?php endif; ?>
+
+                                    </div>
+                                </div>
+
                                 <div class="detallesprogram">
                                     <div class="detallesprogram_img">
                                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/detail-programas/icodetalle1.png"
@@ -324,6 +349,30 @@ get_header();
                         <div class="section_detail_lateral">
                             <div class="section_detail_lateral_items">
                                 <div class="detallesprogram_title">Detalles del Programa</div>
+
+                                <div class="detallesprogram">
+                                    <div class="detallesprogram_img">
+                                        <img src="https://mentory.pe/wp-content/uploads/2025/02/calendar-1.png"
+                                            alt="">
+                                    </div>
+                                    <div class="detallesprogram_txt">
+                                        <?php 
+                                        // Obtener la fecha actual
+                                        $fecha_actual = date('Y-m-d'); 
+                                        
+                                        // Obtener la fecha de inicio del programa
+                                        $fecha_inicio = esc_attr($programa->fecha_inicio); 
+
+                                        if ($fecha_inicio > $fecha_actual || $fecha_inicio == $fecha_actual ): ?>
+                                            <!-- Mensaje de bienvenida -->
+                                            Inicio: <?php echo htmlspecialchars_decode($programa->fecha_inicio); ?>
+                                        <?php else: ?>
+                                            <!-- Mensaje cuando la clase ya concluyó -->
+                                            Proximamente
+                                        <?php endif; ?>
+                                    </div>
+                                </div>
+
                                 <div class="detallesprogram">
                                     <div class="detallesprogram_img">
                                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/detail-programas/icodetalle1.png"
